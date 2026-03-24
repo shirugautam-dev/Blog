@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       content.innerHTML = `<article class="article-body">
       <div class="home-header">
-        <a href="index.html">← Back to Home</a> <a href="book-reviews.html" class="header-link">Book Reviews</a> </div>
+        <a href="index.html">← Back to Home</a> <a href="book-reviews.html" class="header-link">BOOK REVIEWS</a> </div>
         <hr>
         ${marked.parse(md)}
         <footer class="article-end">
