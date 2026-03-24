@@ -88,7 +88,7 @@ if (!postSlug) {
     container.innerHTML = `
       <div class="home-header">
         <h1>Srijana’s thoughts</h1>
-        <a href="book-reviews.html" class="header-link">Book Reviews</a>
+        <a href="book-reviews.html" class="header-link">BOOK REVIEWS</a>
       </div>
     `;
 
