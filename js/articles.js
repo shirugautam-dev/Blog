@@ -111,7 +111,7 @@ if (!postSlug) {
   const post = document.createElement("article");
   post.className = "srijana-post";
 
-  const url = `https://yourusername.github.io/your-repo/?post=${article.slug}`;
+  const url = `https://shirugautam-dev.github.io/your-repo/?post=${article.slug}`;
 
   const formattedDate = new Date(article.date).toLocaleDateString("en-US", {
     year: "numeric",
