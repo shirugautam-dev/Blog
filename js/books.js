@@ -6,7 +6,7 @@ if (container && typeof books !== "undefined") {
       "★".repeat(book.rating) + "☆".repeat(5 - book.rating);
 
     const card = `
-      <a href="books/${book.slug}.html" class="book-link">
+      <a href="books_htmls/${book.slug}.html" class="book-link">
         <div class="book-card">
           <img src="${book.cover}" class="book-cover" />
 
