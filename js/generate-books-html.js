@@ -69,7 +69,7 @@ files.forEach(file => {
 <body>
 
   <div class="page-container">
-    <div class="book-banner" style="background-image: url('../${cover}')">
+    <div class="book-banner" style="background-image: url('${cover}')">
       <div class="banner-overlay">
         <h1 class="banner-title">${data.title}</h1>
       </div>
