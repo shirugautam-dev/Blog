@@ -9,7 +9,7 @@
   <script>
     const isGitHub = location.hostname.includes("github.io");
     const base = isGitHub ? "/Blog/" : "/";
-    document.write(`<base href="${base}">`);
+    document.write('<base href="' + base + '">');
   </script>
 </head>
 <body>
