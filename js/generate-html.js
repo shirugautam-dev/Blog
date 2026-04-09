@@ -31,6 +31,7 @@ function generateHTML(article) {
   <meta property="og:type" content="article">
 
   <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>

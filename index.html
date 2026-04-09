@@ -20,6 +20,11 @@
   <meta name="twitter:title" content="Srijana’s thoughts">
   <meta name="twitter:description" content="Thoughtful reflections and book reviews.">
   <meta name="twitter:image" content="https://shirugautam-dev.github.io/Images/Self_org.jpg">
+  <script>
+    const isGitHub = location.hostname.includes("github.io");
+    const base = isGitHub ? "/Blog/" : "/";
+    document.write(`<base href="${base}">`);
+</script>
 </head>
 
 <body>

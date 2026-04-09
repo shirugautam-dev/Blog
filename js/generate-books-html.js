@@ -57,6 +57,11 @@ files.forEach(file => {
   <meta property="og:type" content="article">
 
   <link rel="stylesheet" href="../style.css">
+  <script>
+    const isGitHub = location.hostname.includes("github.io");
+    const base = isGitHub ? "/Blog/" : "/";
+    document.write('<base href="' + base + '">');
+  </script>
 </head>
 
 <body>
