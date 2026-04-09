@@ -55,7 +55,7 @@ files.forEach(file => {
   <meta property="og:description" content="${data.excerpt}">
   <meta property="og:image" content="../${cover}">
   <meta property="og:type" content="article">
-
+<link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="../style.css">
   <script>
     const isGitHub = location.hostname.includes("github.io");
