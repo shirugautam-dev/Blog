@@ -24,7 +24,7 @@ files.forEach(file => {
 
   // ✅ EXTRACT FIRST IMAGE (cover)
   const imgMatch = content.match(/!\[.*?\]\((.*?)\)/);
-  const cover = imgMatch ? imgMatch[1] : "images/default.jpg";
+  const cover = imgMatch ? imgMatch[1] : "Images/default.jpg";
 
   // ✅ REMOVE FIRST IMAGE FROM CONTENT
   const contentWithoutCover = content.replace(/!\[.*?\]\((.*?)\)/, "").trim();
@@ -64,17 +64,12 @@ files.forEach(file => {
 <body>
 
   <div class="page-container">
-
-  <div class="book-banner">
-  <img src="../${cover}" alt="cover">
-
-  <div class="banner-overlay">
-    <h1 class="banner-title">${data.title}</h1>
-  </div>
-</div>
-
+    <div class="book-banner" style="background-image: url('../${cover}')">
+      <div class="banner-overlay">
+        <h1 class="banner-title">${data.title}</h1>
+      </div>
+    </div>
     <div class="content"></div>
-
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
 

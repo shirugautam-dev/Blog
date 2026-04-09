@@ -8,7 +8,7 @@ if (container && typeof books !== "undefined") {
     const card = `
       <a href="books_htmls/${book.slug}.html" class="book-link">
         <div class="book-card">
-          <img src="${book.cover}" class="book-cover" />
+          <img src="./${book.cover}" class="book-cover" />
 
           <div class="book-content">
             <h3 class="book-title">${book.title}</h3>
