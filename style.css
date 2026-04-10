@@ -608,10 +608,7 @@ body.dark #theme-toggle {
   align-items: flex-end;   /* push overlay to bottom */
 }
 
-/* remove this completely if present */
-.book-banner img {
-  display: none;
-}
+
 
 .banner-overlay {
   margin: 20px;
