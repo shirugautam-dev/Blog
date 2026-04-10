@@ -6,7 +6,7 @@ const books = [
     "excerpt": "This is my review on Britt_Mary_was_here",
     "rating": 1,
     "cover": "Images/Britt_Mary_was_here.jpg",
-    "date": "2026-04-09T00:00:00.000Z"
+    "date": "Apr 9, 2026"
   },
   {
     "title": "THE ANSWER IS NO",
@@ -14,7 +14,7 @@ const books = [
     "excerpt": "This is my review on Book The Answer is No",
     "rating": 2,
     "cover": "Images/The_Answer_is_No.jpg",
-    "date": "2026-04-10T00:00:00.000Z"
+    "date": "Apr 10, 2026"
   },
   {
     "title": "Mother Mary Comes To Me",
@@ -22,7 +22,7 @@ const books = [
     "excerpt": "This is my review on Mother_Mary_Comes_to_Me",
     "rating": 3,
     "cover": "Images/Mother_Mary_Comes_to_Me.jpg",
-    "date": "2026-04-11T00:00:00.000Z"
+    "date": "Apr 11, 2026"
   },
   {
     "title": "MY FRIENDS",
@@ -30,7 +30,7 @@ const books = [
     "excerpt": "This is my review on Friends",
     "rating": 4,
     "cover": "Images/Friends.jpg",
-    "date": "2026-09-12T00:00:00.000Z"
+    "date": "Sep 12, 2026"
   }
 ];
 
