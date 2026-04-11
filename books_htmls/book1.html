@@ -3,75 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>BRITT-MARIE WAS HERE</title>
-  <meta name="description" content="This is my review on Britt_Mary_was_here">
-
-  <!-- OG TAGS -->
-  <meta property="og:title" content="BRITT-MARIE WAS HERE">
-  <meta property="og:description" content="This is my review on Britt_Mary_was_here">
-  <meta property="og:image" content="Images/Britt_Mary_was_here.jpg">
-  <meta property="og:type" content="article">
-
-  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="../style.css">
-
-  <script>
-    const isGitHub = location.hostname.includes("github.io");
-    const base = isGitHub ? "/Blog/" : "/";
-    document.write('<base href="' + base + '">');
-  </script>
 </head>
 
 <body>
 
-  <div class="page-container">
+<div class="page-container">
 
-    <div class="book-hero">
-      <div class="book-hero-img">
-        <img src="Images/Britt_Mary_was_here.jpg" alt="BRITT-MARIE WAS HERE">
-      </div>
-
-      <div class="book-hero-content">
-        <h1 class="book-hero-title">BRITT-MARIE WAS HERE</h1>
-
-        <div class="book-rating">
-          ★☆☆☆☆
-        </div>
-
-        <div class="book-meta">
-          Apr 9, 2026
-        </div>
-      </div>
+  <div class="book-hero">
+    <div class="book-hero-img">
+      <img src="Images/Britt_Mary_was_here.jpg" alt="BRITT-MARIE WAS HERE">
     </div>
 
-    <div class="content"></div>
+    <div class="book-hero-content">
+      <h1 class="book-hero-title">BRITT-MARIE WAS HERE</h1>
 
+      <div class="book-rating">
+        ★☆☆☆☆
+      </div>
+
+      <div class="book-meta">
+        Apr 9, 2026
+      </div>
+    </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <div class="content"></div>
 
-  <script>
-    const slug = "book1";
+</div>
 
-    fetch("../book-reviews/" + slug + ".md")
-      .then(res => res.text())
-      .then(md => {
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
 
-        let cleaned = md.replace(/^---[\s\S]*?---/, "").trim();
-        cleaned = cleaned.replace(/!\[.*?\]\((.*?)\)/, "").trim();
+<script>
+  const slug = "book1";
 
-        document.querySelector(".content").innerHTML = `
-          <article class="article-body">
+  fetch("../book-reviews/" + slug + ".md")
+    .then(res => res.text())
+    .then(md => {
+      let cleaned = md.replace(/^---[\s\S]*?---/, "").trim();
+      cleaned = cleaned.replace(/!\[.*?\]\((.*?)\)/, "").trim();
 
-            <a href="../book-reviews.html" class="back-link">← Back to reviews</a>
-
-            ${marked.parse(cleaned)}
-
-          </article>
-        `;
-      });
-  </script>
+      document.querySelector(".content").innerHTML = `
+        <article class="article-body">
+          <a href="../book-reviews.html" class="back-link">← Back to reviews</a>
+          ${marked.parse(cleaned)}
+        </article>
+      `;
+    });
+</script>
 
 </body>
 </html>
