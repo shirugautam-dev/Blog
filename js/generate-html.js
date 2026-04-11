@@ -32,8 +32,7 @@ function generateHTML(article) {
 <body>
 
   <!-- ✅ THEME TOGGLE BUTTON -->
-  <button id="theme-toggle">🌙</button>
-
+  
   <div class="content"></div>
 
   <!-- Markdown parser -->
