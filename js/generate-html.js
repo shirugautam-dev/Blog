@@ -1,18 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
-// Import your articles list
-const articles = require("./articles-data.js"); 
-// (we'll create this next step)
+const articles = require("./articles-data.js");
 
 const outputDir = path.join(__dirname, "..", "htmls");
 
-// Create folder if not exists
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
 }
 
-// Template
 function generateHTML(article) {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -31,15 +27,20 @@ function generateHTML(article) {
   <meta property="og:type" content="article">
 
   <link rel="stylesheet" href="../style.css">
-  <link rel="icon" href="favicon.ico">
-
 </head>
 
 <body>
 
+  <!-- ✅ THEME TOGGLE BUTTON -->
+  <button id="theme-toggle">🌙</button>
+
   <div class="content"></div>
 
+  <!-- Markdown parser -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+
+  <!-- ✅ THEME SCRIPT -->
+  <script src="../theme.js"></script>
 
   <script>
     const slug = "${article.slug}";
@@ -63,7 +64,6 @@ function generateHTML(article) {
 </html>`;
 }
 
-// Generate files
 articles.forEach(article => {
   const filePath = path.join(outputDir, `${article.slug}.html`);
   fs.writeFileSync(filePath, generateHTML(article));
