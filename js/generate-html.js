@@ -15,7 +15,7 @@ function generateHTML(article) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="icon" href="../favicon.ico">
   <title>${article.title}</title>
   <meta name="description" content="${article.excerpt}">
 
@@ -38,9 +38,8 @@ function generateHTML(article) {
 
   <!-- Markdown parser -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
-
-  <!-- ✅ THEME SCRIPT -->
   <script src="../theme.js"></script>
+  
 
   <script>
     const slug = "${article.slug}";
