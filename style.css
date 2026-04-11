@@ -612,14 +612,18 @@ body.dark #theme-toggle {
 }
 
 .book-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* 🔥 force top alignment */
+  gap: 8px;                     /* clean spacing */
+
   flex: 1;
-  min-width: 0;   /* prevents weird wrapping */
-  max-width: 500px;
+  min-width: 0;
 }
 
 .book-hero-title {
   font-size: 26px;
-  margin: 0 0 12px;
+  margin: 0;
   line-height: 1.2;
   white-space: normal;
   word-break: normal;
@@ -628,10 +632,11 @@ body.dark #theme-toggle {
 .book-meta {
   font-size: 14px;
   color: #777;
+  margin: 0;
 }
 
 .book-rating {
-  margin: 6px 0;
+  margin: 0;
 }
 
 
