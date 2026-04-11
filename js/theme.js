@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("theme-toggle");
 
-  // ✅ Apply saved theme ALWAYS
+  // Apply saved theme
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
   }
 
-  // ✅ Only if toggle exists (homepage)
+  // Only homepage has toggle
   if (toggle) {
-    toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    toggle.textContent =
+      document.body.classList.contains("dark") ? "☀️" : "🌙";
 
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("dark");

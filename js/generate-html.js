@@ -25,7 +25,13 @@ function generateHTML(article) {
   <meta property="og:image" content="https://shirugautam-dev.github.io/Blog/Images/Self_org.jpg">
   <meta property="og:url" content="https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html">
   <meta property="og:type" content="article">
-
+  <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("dark");
+    });
+  }
+</script>
   <link rel="stylesheet" href="../style.css">
 </head>
 
