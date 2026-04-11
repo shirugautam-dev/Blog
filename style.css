@@ -581,7 +581,7 @@ body.dark #theme-toggle {
 }
 
 .page-container {
-  max-width: 720px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -606,9 +606,9 @@ body.dark #theme-toggle {
 
 .book-hero-img img {
  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
+ height: auto;
+ border-radius: 12px;
+ display: block;
 }
 
 .book-hero-content {
@@ -616,7 +616,7 @@ body.dark #theme-toggle {
   flex-direction: column;
   justify-content: flex-start;  /* 🔥 force top alignment */
   gap: 8px;                     /* clean spacing */
-
+max-width: 500px;
   flex: 1;
   min-width: 0;
 }
