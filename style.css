@@ -588,13 +588,15 @@ body.dark #theme-toggle {
 
 .book-hero {
  display: flex;
- gap: 24px;
- align-items: flex-start; /* important */
- background: #ffffff;
- border-radius: 20px;
- padding: 24px;
- margin-bottom: 40px;
- box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  gap: 32px;
+  align-items: center;
+
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 40px;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
 }
 
 .book-hero-img {
@@ -612,22 +614,23 @@ body.dark #theme-toggle {
 .book-hero-content {
   flex: 1;
   min-width: 0;   /* prevents weird wrapping */
+  max-width: 500px;
 }
 
 .book-hero-title {
-  font-size: 28px;
-  margin: 0 0 10px;
+  font-size: 26px;
+  margin: 0 0 12px;
   line-height: 1.2;
+  white-space: normal;
+  word-break: normal;
 }
 
 .book-meta {
   font-size: 14px;
   color: #777;
-  margin-top: 6px;
 }
 
 .book-rating {
-  font-size: 18px;
   margin: 6px 0;
 }
 
