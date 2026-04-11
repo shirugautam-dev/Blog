@@ -33,7 +33,6 @@ const books = [
     "date": "Sep 12, 2026"
   }
 ];
-
 if (typeof module !== "undefined") {
   module.exports = books;
 }
