@@ -62,7 +62,7 @@ files.forEach(file => {
 
   <div class="book-hero">
     <div class="book-hero-img">
-      <img src="${cover}" alt="${data.title}">
+      <img src="../${cover}" alt="${data.title}">
     </div>
 
     <div class="book-hero-content">
