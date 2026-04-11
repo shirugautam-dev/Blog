@@ -589,7 +589,7 @@ body.dark #theme-toggle {
 .book-hero {
  display: flex;
   gap: 32px;
-  align-items: center;
+  align-items: flex-start;
 
   background: #ffffff;
   border-radius: 20px;
