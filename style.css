@@ -687,25 +687,22 @@ body.dark .book-meta {
 }
 
 .article-end {
-  text-align: center;
-  margin: 50px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* 👈 CONTROL SPACING HERE */
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.article-end a {
+  text-decoration: underline;
+}
+
+.article-end- .end-text {
+  letter-spacing: 2px;
   color: #777;
 }
 
-.article-end hr {
-  width: 60%;
-  margin: 20px auto;
-  border: none;
-  border-top: 1px solid #ccc;
-}
 
-.article-end p {
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-.article-end p span {
-  text-align: center;
-  margin: 40px 0;
-  font-size: 20px;
-  color: #888;
-}
+
