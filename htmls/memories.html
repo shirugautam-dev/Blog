@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../favicon.ico">
+  <title>What Are We, If Not Our Memories?</title>
+  <meta name="description" content="A reflection essay exploring how memories shape our identity—our joys, pains, and realities—revealing memory as both a blessing and a burden.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="What Are We, If Not Our Memories?">
+  <meta property="og:description" content="A reflection essay exploring how memories shape our identity—our joys, pains, and realities—revealing memory as both a blessing and a burden.">
+  <meta property="og:image" content="https://shirugautam-dev.github.io/Blog/Images/Self_org.jpg">
+  <meta property="og:url" content="https://shirugautam-dev.github.io/Blog/htmls/memories.html">
+  <meta property="og:type" content="article">
+  <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("dark");
+    });
+  }
+</script>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- ✅ THEME TOGGLE BUTTON -->
+  
+  <div class="content"></div>
+
+  <!-- Markdown parser -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <script src="../theme.js"></script>
+  
+
+  <script>
+    const slug = "memories";
+
+    fetch("../articles/" + slug + ".md")
+      .then(res => res.text())
+      .then(md => {
+        document.querySelector(".content").innerHTML = `
+          <article class="article-body">
+            <div class="home-header">
+              <a href="../index.html">← Back to Home</a>
+            </div>
+
+            ${marked.parse(md)}
+          <!-- ✅ SIGNATURE ENDING -->
+    <div class="signature-end">
+      <div class="end-line"></div>
+
+      <p class="end-text">
+        You’ve reached the end — but maybe not the conclusion.
+      </p>
+
+      <p class="end-sub">
+        Take a moment. Let it sit.
+      </p>
+
+      <div class="end-mark">✦</div>
+    </div>
+            </article>
+        `;
+      });
+  </script>
+
+</body>
+</html>
