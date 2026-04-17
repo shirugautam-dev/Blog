@@ -45,7 +45,7 @@ function generateHTML(article) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
   <script src="../theme.js"></script>
   
-
+<div class = "container">
   <script>
     const slug = "${article.slug}";
 
@@ -69,7 +69,7 @@ function generateHTML(article) {
         \`;
       });
   </script>
-
+</div>
 </body>
 </html>`;
 }
