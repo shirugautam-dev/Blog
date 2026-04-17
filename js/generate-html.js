@@ -45,7 +45,6 @@ function generateHTML(article) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
   <script src="../theme.js"></script>
   
-<div class = "container">
   <script>
     const slug = "${article.slug}";
 
@@ -60,16 +59,16 @@ function generateHTML(article) {
 
             \${marked.parse(md)}
           <div class="article-end">
-          
-            <hr><p><a href="../index.html">← Back </a> <span>✦</span> The End <span>✦</span><a href="../index.html">← Next</a> </p>
-          
-            </div>
+            <a href="#">← Back</a>
+            <span class="end-text">✦ The End ✦</span>
+            <a href="#">Next →</a>            
+          </div>
     
             </article>
         \`;
       });
   </script>
-</div>
+
 </body>
 </html>`;
 }
