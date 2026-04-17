@@ -56,10 +56,10 @@ img {
 
 .intro {
   margin: 30px 0;
-  background-color: #F7F48B;
+  background-color: #FEDB00;/*#F7F48B; */
   padding: 10px;
   border-radius: 16px;
-  background: #FFE066; /*#FFE8A3;*/
+  background: #FEDB00;  /*#FFE066;*/ /*#FFE8A3;*/
   box-shadow: 0 8px 25px rgba(255, 200, 0, 0.15);
 }
 
@@ -126,6 +126,7 @@ img {
 
 .srijana-post h2 a:hover {
   text-decoration: underline;
+  color: #FFC300;
 }
 
 .srijana-post p:not(.post-meta) {
@@ -157,8 +158,9 @@ img {
 }
 
 .share-btn:hover {
-  background: #000;
+ /* background: #000; */
   color: #fff;
+  background: #FFC300;
 }
 
 .article-body {
@@ -275,7 +277,7 @@ body.dark .home-header h1 {
 
 .home-header h1 span,
 .book-header h1 span {
-  color: #FFC300;
+  color: #F6BE00;
 }
 
 body.dark .srijana-post {
@@ -310,7 +312,7 @@ body.dark .share-btn {
 }
 
 body.dark .share-btn:hover {
-  background: #fff;
+  background: #FFC300;
   color: #000;
 }
 
