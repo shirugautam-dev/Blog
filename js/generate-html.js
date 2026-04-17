@@ -59,7 +59,21 @@ function generateHTML(article) {
             </div>
 
             \${marked.parse(md)}
-          </article>
+          <!-- ✅ SIGNATURE ENDING -->
+    <div class="signature-end">
+      <div class="end-line"></div>
+
+      <p class="end-text">
+        You’ve reached the end — but maybe not the conclusion.
+      </p>
+
+      <p class="end-sub">
+        Take a moment. Let it sit.
+      </p>
+
+      <div class="end-mark">✦</div>
+    </div>
+            </article>
         \`;
       });
   </script>
