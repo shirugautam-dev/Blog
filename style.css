@@ -685,4 +685,26 @@ body.dark .book-meta {
   border-radius: 12px;
 }
 
+.article-end {
+  text-align: center;
+  margin: 50px 0 30px;
+  color: #777;
+}
 
+.article-end hr {
+  width: 60%;
+  margin: 20px auto;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.article-end p {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.article-end p span {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 20px;
+  color: #888;
+}
