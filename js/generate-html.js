@@ -55,13 +55,15 @@ function generateHTML(article) {
         document.querySelector(".content").innerHTML = \`
           <article class="article-body">
             <div class="home-header">
-              <a href="../index.html">← Back to Home</a>
+              <a href="../index.html">← Back to Srijana's thoughts</a>
             </div>
 
             \${marked.parse(md)}
           <div class="article-end">
-            <hr><p> <span>✦</span> The End <span>✦</span> </p>
-          </div>
+          
+            <hr><p><a href="../index.html">← Back </a> <span>✦</span> The End <span>✦</span><a href="../index.html">← Next</a> </p>
+          
+            </div>
     
             </article>
         \`;
