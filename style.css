@@ -5,7 +5,7 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-   background: #EDE7DF;
+  background: #708090; /*#EDE7DF*/;
   color: #2D2D2D;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
