@@ -5,7 +5,7 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background: #708090; /*#EDE7DF*/;
+  background: #b6cfe9; /*#EDE7DF*/;
   color: #2D2D2D;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -689,17 +689,15 @@ body.dark .book-meta {
 
 .article-end {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 50px; /* 👈 CONTROL SPACING HERE */
   margin-top: 20px;
   font-size: 14px;
   margin-bottom: 40px;
 }
 
 .article-end a {
-  text-decoration: underline;
-  text-decoration-color: #777;
+  text-decoration: none
 }
 
 .article-end- .end-text {
