@@ -204,8 +204,7 @@ body.dark .rss a {text-decoration: none;
 
 body.dark .read-more {
   text-decoration: none;
-  color: #f6f0f0;
-  border-bottom: 1px solid #222;
+  color: #FFC300;
   font-size: 0.9rem;
   text-decoration: none;
 }
@@ -726,7 +725,7 @@ body.dark .book-meta {
 }
 
 body.dark .article-end a {
-  text-decoration: none
+  text-decoration: none;
   color: #FFC300;
 }
 
