@@ -230,6 +230,18 @@ body.dark .read-more {
   background: #F4EFEA; 
 }
 
+body.dark .site-footer {
+  border-top: 1px solid #E5E0D8;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 2px solid #FFC300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #1e1e1e; 
+}
+
 .footer-social a {
   color: #555;
   margin: 0 6px;
@@ -243,6 +255,18 @@ body.dark .read-more {
 
 .footer-copy {
   font-size: 0.75rem;
+  color: #777;
+}
+
+body.dark .footer-social a {
+  color: #AAA;
+}
+
+body.dark .footer-social a:hover {
+  color: #FFC300;
+}
+
+body.dark .footer-copy {
   color: #777;
 }
 
@@ -737,7 +761,7 @@ body.dark .article-end a {
 
 body.dark .article-end .end-text {
   letter-spacing: 2px;
-  color: #f6f0f0;
+  color: #FFC300;
 }
 
 body.dark .article-body {
