@@ -196,14 +196,6 @@ body.dark .rss a {text-decoration: none;
   margin-bottom: 1.6em;
 }
 
-.article-end {
-  text-align: center;
-  margin-top: 50px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  color: #777;
-}
-
 .read-more {
   text-decoration: none;
   color: #222;
@@ -211,6 +203,13 @@ body.dark .rss a {text-decoration: none;
   font-size: 0.9rem;
 }
 
+body.dark .read-more {
+  text-decoration: none;
+  color: #f6f0f0;
+  border-bottom: 1px solid #222;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
 .container #theme-toggle {
   position: absolute;
   top: 15px;
@@ -251,6 +250,7 @@ body.dark .rss a {text-decoration: none;
 
 a {
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -292,6 +292,12 @@ body.dark .intro p {
 
 body.dark .home-header h1 {
   color: #efe5e5;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+body.dark .home-header a {
+  color: #f6f0f0;
   letter-spacing: -0.5px;
   text-decoration: none;
 }
@@ -720,9 +726,19 @@ body.dark .book-meta {
   text-decoration: none
 }
 
+body.dark .article-end a {
+  text-decoration: none
+}
+
+
 .article-end .end-text {
   letter-spacing: 2px;
   color: #777;
+}
+
+body.dark .article-end .end-text {
+  letter-spacing: 2px;
+  color: #f6f0f0;
 }
 
 body.dark .article-body {
