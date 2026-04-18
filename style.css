@@ -199,7 +199,6 @@ body.dark .rss a {text-decoration: none;
 .read-more {
   text-decoration: none;
   color: #222;
-  border-bottom: 1px solid #222;
   font-size: 0.9rem;
 }
 
@@ -297,7 +296,7 @@ body.dark .home-header h1 {
 }
 
 body.dark .home-header a {
-  color: #f6f0f0;
+  color: #FFC300;
   letter-spacing: -0.5px;
   text-decoration: none;
 }
@@ -728,6 +727,7 @@ body.dark .book-meta {
 
 body.dark .article-end a {
   text-decoration: none
+  color: #FFC300;
 }
 
 
