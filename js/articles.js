@@ -4,6 +4,12 @@ const postSlug = params.get("post");
 if (!postSlug) {
   const articles = [
     {
+      title: "A Life, Then Silence",
+      excerpt: "When someone dies, what actually remains? A thoughtful exploration of identity, ownership, and the illusions we live by.",
+      slug: "death",
+      date: "2026-04-19"
+    },
+    {
       title: "Low-Maintenance Is a Lie We Tell Ourselves",
       excerpt: "Being easy-going shouldn’t cost you your voice. Learn why expressing needs respectfully is essential for emotional well-being.",
       slug: "low-maintenance",
