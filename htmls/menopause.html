@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../favicon.ico">
+  <title>Menopause Burnt Me First, Then Hurt Me in Other Ways</title>
+  <meta name="description" content="My journey through ten years of unexpected symptoms, struggles, and finally — acceptance.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Menopause Burnt Me First, Then Hurt Me in Other Ways">
+  <meta property="og:description" content="My journey through ten years of unexpected symptoms, struggles, and finally — acceptance.">
+  <meta property="og:image" content="https://shirugautam-dev.github.io/Blog/Images/Self_org.jpg">
+  <meta property="og:url" content="https://shirugautam-dev.github.io/Blog/htmls/menopause.html">
+  <meta property="og:type" content="article">
+  <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("dark");
+    });
+  }
+</script>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- ✅ THEME TOGGLE BUTTON -->
+  
+  <div class="content"></div>
+
+  <!-- Markdown parser -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <script src="../theme.js"></script>
+  
+  <script>
+    const slug = "menopause";
+
+    fetch("../articles/" + slug + ".md")
+      .then(res => {
+        if (!res.ok) throw new Error("Markdown not found");
+          return res.text();
+      })
+      .then(md => {
+        document.querySelector(".content").innerHTML = `
+          <article class="article-body">
+            <div class="home-header">
+              <a href="../index.html">← Back to Srijana's thoughts</a>
+            </div>
+
+            ${marked.parse(md)}
+          <div class="article-end">
+            <a href="#">← Back</a>
+            <span class="end-text">✦ The End ✦</span>
+            <a href="#">Next →</a>            
+          </div>
+    
+            </article>
+        `;
+      });
+
+       .catch(err => {
+    document.querySelector(".content").innerHTML =
+      "<p>⚠️ Article failed to load</p>";
+    console.error(err);
+  });
+  </script>
+
+</body>
+</html>
