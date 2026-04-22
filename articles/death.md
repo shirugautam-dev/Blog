@@ -2,7 +2,7 @@
 
 ## What Death Reveals About Who We Are, What We Own, and the Stories We Tell Ourselves
 
-### subheading 
+###
 The one call we had been dreading finally came. My husband picked up the call. His sister was crying on the other end — brother-in-law had passed away. He was battling fourth-stage lung cancer. He fought hard for over a year, went through several rounds of chemo and immunotherapy. But at the end, he left us.
 The man who lived to eat, who loved to travel and who laughed the loudest was no more. “I think 2026 will be a better year for me. The whole of 2025, I was not well”, were his words to me when I visited him just two months earlier.
 His death brought a realisation that I cannot shake off: what we call ours is not ours to have forever.
