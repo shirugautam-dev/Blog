@@ -3,20 +3,77 @@
   <channel>
     <title>Srijana's thoughts</title>
     <link></link>
-    <description>Low-Maintenance Is a Lie We Tell Ourselves</description>
-
+    <item>
+      <title>A Life, Then Silence</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/death.html</link>
+      <description>When someone dies, what actually remains? A thoughtful exploration of identity, ownership, and the illusions we live by.</description>
+      <pubDate>Sun, 19 Apr 2026 10:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Low-Maintenance Is a Lie We Tell Ourselves</title>
-      <link>https://shirugautam-dev.github.io/Blog/index.html?post=low-maintenance</link>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/low-maintenance.html</link>
       <description>Being easy-going shouldn’t cost you your voice. Learn why expressing needs respectfully is essential for emotional well-being.</description>
       <pubDate>Mon, 23 Mar 2026 10:00:00 GMT</pubDate>
     </item>
     <item>
       <title>I Accept Luck Without Surrendering to Fate</title>
-      <link>https://shirugautam-dev.github.io/Blog/index.html?post=luck-fate</link>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/low-maintenance.html</link>
       <description>Do luck and fate exist, or are they just stories we tell ourselves to make sense of a chaotic universe?</description>
       <pubDate>Mon, 23 Mar 2026 10:00:00 GMT</pubDate>
     </item>
-
+    <item>
+      <title>No Gives the Power That Yes Cannot Give</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/no-power.html</link>
+      <description>A personal reflection on the power of saying no, setting boundaries, and choosing honesty in relationships. Discover why a true “no” creates more meaningful “yeses.”</description>
+      <pubDate>Mon, 03 Dec 2025 10:00:00 GMT</pubDate> 
+    </item>
+    <item>
+      <title>We All Are Performing on Social Media</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/social-media.html</link>
+      <description>How social media shapes identity and authenticity, urging mindful use, algorithm awareness, and intentional self-curation.</description>
+      <pubDate>Mon, 23 Nov 2025 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Imposter Syndrome: Do You Feel It Too, or Am I the Only One?</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/imposter.html</link>
+      <description>From self-doubt to self-belief—an honest reflection on imposter syndrome, early career fear, and the courage to trust your own capability.</description>
+      <pubDate>Mon, 17 Nov 2025 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>What Are We, If Not Our Memories?</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/memories.html</link>
+      <description>A reflection essay exploring how memories shape our identity—our joys, pains, and realities—revealing memory as both a blessing and a burden.</description>
+      <pubDate>Mon, 13 Nov 2025 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How to Slow Down in a World That’s Running at Full Speed?</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/slowdown.html</link>
+      <description>Learn practical ways to slow down, find calm, and stay mindful in a world that’s always rushing at full speed.</description>
+      <pubDate>Mon, 01 Nov 2025 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Imagining My Older Self and Accepting It Gracefully</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/ageing-gracefully.html</link>
+      <description>A reflection on ageing, companionship, vanity, and finding peace.</description>
+      <pubDate>Mon, 26 Oct 2025 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>From Good to Real: The Story of the New Indian Woman</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/new-indian-woman.html</link>
+      <description>How Choice, Not Obedience, Defines Her.</description>
+      <pubDate>Mon, 18 Oct 2025 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Growing Up with My 20-Year-Old</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/growing-up.html</link>
+      <description>Lessons in Love, Letting Go, and Late-Night Biryani</description>
+      <pubDate>Mon, 11 Oct 2025 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Menopause Burnt Me First, Then Hurt Me in Other Ways</title>
+      <link>https://shirugautam-dev.github.io/Blog/htmls/menopause.html</link>
+      <description>My journey through ten years of unexpected symptoms, struggles, and finally — acceptance.</description>
+      <pubDate>Mon, 03 Oct 2025 10:00:00 GMT</pubDate>
+    </item>
   </channel>
 </rss>
