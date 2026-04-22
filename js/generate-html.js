@@ -46,11 +46,9 @@ function generateHTML(article) {
   <script src="../theme.js"></script>
 
   <script>
-    const slug = "${article.slug}";
-
-    const articlesData = ${JSON.stringify(articles)};
+  const slug = "${article.slug}";
+  const articlesData = ${JSON.stringify(articles)};
   const currentIndex = articlesData.findIndex(a => a.slug === slug);
-
   const prevArticle = articlesData[currentIndex - 1];
   const nextArticle = articlesData[currentIndex + 1];
 
@@ -63,21 +61,26 @@ function generateHTML(article) {
       })
       .then(md => {
         document.querySelector(".content").innerHTML = \`
-          <article class="article-body">
-            <div class="home-header">
-              <a href="../index.html">← Back to Srijana's thoughts</a>
-              <a href="javascript:history.back()">← Back</a>
-            </div>
+  <article class="article-body">
+    <div class="home-header">
+      <a href="javascript:history.back()">← Back</a>
+    </div>
 
-            \${marked.parse(md)}
+    \${marked.parse(md)}
 
-            const articlesData = ${JSON.stringify(articles)};
-  const currentIndex = articlesData.findIndex(a => a.slug === slug);
+    <div class="article-end">
+      \${ nextArticle 
+        ? '<a href="' + nextArticle.slug + '.html">← Previous</a>' 
+        : '<span></span>' }
 
-  const prevArticle = articlesData[currentIndex - 1];
-  const nextArticle = articlesData[currentIndex + 1];
-          </article>
-        \`;
+      <span class="end-text">✦ The End ✦</span>
+
+      \${ prevArticle 
+        ? '<a href="' + prevArticle.slug + '.html">Next →</a>' 
+        : '<span></span>' }
+    </div>
+  </article>
+\`;
       })
       .catch(err => {
         console.error(err);
