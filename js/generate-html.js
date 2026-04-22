@@ -49,7 +49,10 @@ function generateHTML(article) {
     const slug = "${article.slug}";
 
     fetch("../articles/" + slug + ".md")
-      .then(res => res.text())
+      .then(res => {
+        if (!res.ok) throw new Error("Markdown not found");
+          return res.text();
+      })
       .then(md => {
         document.querySelector(".content").innerHTML = \`
           <article class="article-body">
@@ -67,6 +70,12 @@ function generateHTML(article) {
             </article>
         \`;
       });
+
+       .catch(err => {
+    document.querySelector(".content").innerHTML =
+      "<p>⚠️ Article failed to load</p>";
+    console.error(err);
+  });
   </script>
 
 </body>
