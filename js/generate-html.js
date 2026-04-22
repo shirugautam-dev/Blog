@@ -25,33 +25,35 @@ function generateHTML(article) {
   <meta property="og:image" content="https://shirugautam-dev.github.io/Blog/Images/Self_org.jpg">
   <meta property="og:url" content="https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html">
   <meta property="og:type" content="article">
+
   <script>
-  if (localStorage.getItem("theme") === "dark") {
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("dark");
-    });
-  }
-</script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("dark");
+      });
+    }
+  </script>
+
   <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-  <!-- ✅ THEME TOGGLE BUTTON -->
-  
   <div class="content"></div>
 
   <!-- Markdown parser -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
   <script src="../theme.js"></script>
-  
+
   <script>
     const slug = "${article.slug}";
 
     fetch("../articles/" + slug + ".md")
       .then(res => {
-        if (!res.ok) throw new Error("Markdown not found");
-          return res.text();
+        if (!res.ok) {
+          throw new Error("Markdown file not found: " + slug);
+        }
+        return res.text();
       })
       .then(md => {
         document.querySelector(".content").innerHTML = \`
@@ -61,21 +63,20 @@ function generateHTML(article) {
             </div>
 
             \${marked.parse(md)}
-          <div class="article-end">
-            <a href="#">← Back</a>
-            <span class="end-text">✦ The End ✦</span>
-            <a href="#">Next →</a>            
-          </div>
-    
-            </article>
-        \`;
-      });
 
-       .catch(err => {
-    document.querySelector(".content").innerHTML =
-      "<p>⚠️ Article failed to load</p>";
-    console.error(err);
-  });
+            <div class="article-end">
+              <a href="#">← Back</a>
+              <span class="end-text">✦ The End ✦</span>
+              <a href="#">Next →</a>
+            </div>
+          </article>
+        \`;
+      })
+      .catch(err => {
+        console.error(err);
+        document.querySelector(".content").innerHTML =
+          "<p style='color:red;'>❌ Failed to load article</p>";
+      });
   </script>
 
 </body>
