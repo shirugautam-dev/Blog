@@ -61,13 +61,12 @@ function generateHTML(article) {
       })
       .then(md => {
         document.querySelector(".content").innerHTML = \`
-  <article class="article-body">
+    <article class="article-body">
     <div class="home-header">
-      <a href="../index.html">← Srijana's thoughts</a>
-      <a href="javascript:history.back()">← Back</a>
+      <a href="../index.html" class="nav-left">Srijana’s thoughts</a>
+      <a href="javascript:history.back()" class="nav-right"> ← Back </a>
     </div>
-
-    \${marked.parse(md)}
+     \${marked.parse(md)}
 
     <div class="article-end">
       \${ nextArticle 
