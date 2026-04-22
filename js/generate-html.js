@@ -48,6 +48,12 @@ function generateHTML(article) {
   <script>
     const slug = "${article.slug}";
 
+    const articlesData = ${JSON.stringify(articles)};
+  const currentIndex = articlesData.findIndex(a => a.slug === slug);
+
+  const prevArticle = articlesData[currentIndex - 1];
+  const nextArticle = articlesData[currentIndex + 1];
+
     fetch("../articles/" + slug + ".md")
       .then(res => {
         if (!res.ok) {
@@ -60,15 +66,16 @@ function generateHTML(article) {
           <article class="article-body">
             <div class="home-header">
               <a href="../index.html">← Back to Srijana's thoughts</a>
+              <a href="javascript:history.back()">← Back</a>
             </div>
 
             \${marked.parse(md)}
 
-            <div class="article-end">
-              <a href="#">← Back</a>
-              <span class="end-text">✦ The End ✦</span>
-              <a href="#">Next →</a>
-            </div>
+            const articlesData = ${JSON.stringify(articles)};
+  const currentIndex = articlesData.findIndex(a => a.slug === slug);
+
+  const prevArticle = articlesData[currentIndex - 1];
+  const nextArticle = articlesData[currentIndex + 1];
           </article>
         \`;
       })
