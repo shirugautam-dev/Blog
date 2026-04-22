@@ -63,6 +63,7 @@ function generateHTML(article) {
         document.querySelector(".content").innerHTML = \`
   <article class="article-body">
     <div class="home-header">
+      <a href="../index.html">← Srijana's thoughts</a>
       <a href="javascript:history.back()">← Back</a>
     </div>
 
