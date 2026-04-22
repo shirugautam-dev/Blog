@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../favicon.ico">
+  <title>A Life, Then Silence</title>
+  <meta name="description" content="When someone dies, what actually remains? A thoughtful exploration of identity, ownership, and the illusions we live by.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="A Life, Then Silence">
+  <meta property="og:description" content="When someone dies, what actually remains? A thoughtful exploration of identity, ownership, and the illusions we live by.">
+  <meta property="og:image" content="https://shirugautam-dev.github.io/Blog/Images/Self_org.jpg">
+  <meta property="og:url" content="https://shirugautam-dev.github.io/Blog/htmls/death.html">
+  <meta property="og:type" content="article">
+
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("dark");
+      });
+    }
+  </script>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="content"></div>
+
+  <!-- Markdown parser -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <script src="../theme.js"></script>
+
+  <script>
+    const slug = "death";
+
+    fetch("../articles/" + slug + ".md")
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Markdown file not found: " + slug);
+        }
+        return res.text();
+      })
+      .then(md => {
+        document.querySelector(".content").innerHTML = `
+          <article class="article-body">
+            <div class="home-header">
+              <a href="../index.html">← Back to Srijana's thoughts</a>
+            </div>
+
+            ${marked.parse(md)}
+
+            <div class="article-end">
+              <a href="#">← Back</a>
+              <span class="end-text">✦ The End ✦</span>
+              <a href="#">Next →</a>
+            </div>
+          </article>
+        `;
+      })
+      .catch(err => {
+        console.error(err);
+        document.querySelector(".content").innerHTML =
+          "<p style='color:red;'>❌ Failed to load article</p>";
+      });
+  </script>
+
+</body>
+</html>
