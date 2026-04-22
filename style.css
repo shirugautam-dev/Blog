@@ -312,6 +312,21 @@ body.dark .intro p {
   color: #D6D6D6;
 }
 
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.home-header a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6a1b9a;
+}
+
+
 body.dark .home-header h1 {
   color: #efe5e5;
   letter-spacing: -0.5px;
@@ -775,6 +790,4 @@ body.dark .article-body h3,
 body.dark .article-body li {
   color: #E0E0E0;
 }
-
-
 
