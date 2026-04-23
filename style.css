@@ -789,8 +789,12 @@ body.dark .article-body li {
 .pagination-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
+  margin: 40px auto;   /* centers block horizontally */
+  width: fit-content; 
 }
+
 .pagination-container a {
   padding: 2px 5px;
   background: #eee;
