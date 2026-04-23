@@ -82,9 +82,11 @@ if (!postSlug) {
   ];
   const container = document.getElementById("articles");
   const articlesPerPage = 8;
-  const searchInput = document.querySelector(".search-container input");
-  if (searchInput) {
-  searchInput.addEventListener("input", () => {
+  const input = document.querySelector(".search-container input");
+  let searchTerm = "";
+  if (input) {
+    input.addEventListener("input", (e) => {
+    searchTerm = e.target.value.toLowerCase();
     const url = new URL(window.location);
     url.searchParams.set('page', '1');
     window.history.pushState({}, '', url);
@@ -96,8 +98,7 @@ if (!postSlug) {
     if (!container) return;
 
     // 1. Filter based on search input
-    const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
-    const filtered = articles.filter(art =>
+      const filtered = articles.filter(art =>
       art.title.toLowerCase().includes(searchTerm) ||
       art.excerpt.toLowerCase().includes(searchTerm)
     );
@@ -114,7 +115,7 @@ if (!postSlug) {
       <div class="home-header">
         <h1><span>Srijana’s</span> thoughts</h1>
         <div class="search-container">
-          <input type="text" placeholder="Search thoughts..." />
+          <input type="text" placeholder="Search thoughts..." value="${searchTerm}" />        
         </div>
       </div>
     `;
