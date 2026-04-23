@@ -47,6 +47,10 @@ function generateHTML(article) {
 
   <script>
   const slug = "${article.slug}";
+  history.scrollRestoration = "manual";
+  window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+  });
   const articlesData = ${JSON.stringify(articles)};
   const currentIndex = articlesData.findIndex(a => a.slug === slug);
   const prevArticle = articlesData[currentIndex - 1];

@@ -78,11 +78,11 @@ if (!postSlug) {
       slug: "menopause",
       date: "2025-10-03"
     }
-    
+
   ];
   const container = document.getElementById("articles");
   const searchInput = document.querySelector(".search-container input");
-  const articlesPerPage = 3;
+  const articlesPerPage = 8;
 
   function render() {
     if (!container) return;
@@ -114,18 +114,18 @@ if (!postSlug) {
       container.innerHTML += `<p>No articles yet</p>`;
     } else {
       paginatedArticles.forEach(article => {
-  const post = document.createElement("article");
-  post.className = "srijana-post";
+        const post = document.createElement("article");
+        post.className = "srijana-post";
 
-  const url = `https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html"`;
+        const url = `https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html"`;
 
-  const formattedDate = new Date(article.date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  });
+        const formattedDate = new Date(article.date).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        });
 
-  post.innerHTML = `
+        post.innerHTML = `
     <h2><a href="/Blog/htmls/${article.slug}.html">${article.title}</a></h2>
     <p>${article.excerpt}</p>
 
@@ -154,26 +154,43 @@ if (!postSlug) {
 </div>
   `;
 
-  container.appendChild(post);
-});
+        container.appendChild(post);
+      });
     }
-
     // 5. Render Pagination Controls
+    const totalPages = Math.ceil(filtered.length / articlesPerPage);
     const nav = document.createElement("div");
     nav.className = "pagination-container";
     nav.style.display = "flex";
-    nav.style.justifyContent = "space-between";
-    nav.style.marginTop = "20px";
+    nav.style.gap = "10px";
+    nav.style.justifyContent = "center";
+    nav.style.marginTop = "30px";
 
-    if (currentPage > 1) {
-      nav.innerHTML += `<a href="?page=${currentPage - 1}" class="read-more">← Previous</a>`;
+    // Always show first page
+    nav.innerHTML += `<a href="?page=1" class="${currentPage === 1 ? 'active-page' : ''}">1</a>`;
 
-      nav.innerHTML += `<a href="index.html" class="read-more" style="margin-left: 20px;">Home</a>`;
-      
+    // Show "..." if needed before current range
+    if (currentPage > 3) {
+      nav.innerHTML += `<span>...</span>`;
     }
-    if (endIndex < filtered.length) {
-      nav.innerHTML += `<a href="?page=${currentPage + 1}" class="read-more" style="margin-left:auto">Next →</a>`;
+
+    // Show pages around current page
+    for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+      if (i > 1 && i < totalPages) {
+        nav.innerHTML += `<a href="?page=${i}" class="${i === currentPage ? 'active-page' : ''}">${i}</a>`;
+      }
     }
+
+    // Show "..." if needed after current range
+    if (currentPage < totalPages - 2) {
+      nav.innerHTML += `<span>...</span>`;
+    }
+
+    // Always show last page
+    if (totalPages > 1) {
+      nav.innerHTML += `<a href="?page=${totalPages}" class="${currentPage === totalPages ? 'active-page' : ''}">${totalPages}</a>`;
+    }
+
     container.appendChild(nav);
   }
 
