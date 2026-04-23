@@ -81,9 +81,17 @@ if (!postSlug) {
 
   ];
   const container = document.getElementById("articles");
-  const searchInput = document.querySelector(".search-container input");
   const articlesPerPage = 8;
-
+  const searchInput = document.querySelector(".search-container input");
+  if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    const url = new URL(window.location);
+    url.searchParams.set('page', '1');
+    window.history.pushState({}, '', url);
+    render();
+    });
+  }
+  
   function render() {
     if (!container) return;
 
@@ -196,16 +204,7 @@ if (!postSlug) {
     container.appendChild(nav);
   }
 
-  // Event Listeners
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      // Reset to page 1 when searching
-      const url = new URL(window.location);
-      url.searchParams.set('page', '1');
-      window.history.pushState({}, '', url);
-      render();
-    });
-  }
+  
 
   render(); // Initial call
 }
