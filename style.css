@@ -805,12 +805,30 @@ body.dark .article-body li {
 }
 
 .search-container {
-  margin-top: 15px;
-  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .search-container input {
-  padding: 8px 12px;
-  width: 250px;
+  width: 320px;
   max-width: 90%;
+  padding: 10px 14px;
+
+  border: 1px solid #ddd;
+  border-radius: 6px;
+
+  font-size: 15px;
+  font-family: inherit;
+
+  background: #fff;
+  color: #333;
+
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-container input:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
 }
