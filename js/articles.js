@@ -105,7 +105,9 @@ if (!postSlug) {
     container.innerHTML = `
       <div class="home-header">
         <h1><span>Srijana’s</span> thoughts</h1>
-       
+        <div class="search-container">
+          <input type="text" placeholder="Search thoughts..." />
+        </div>
       </div>
     `;
 
