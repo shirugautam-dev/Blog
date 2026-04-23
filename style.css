@@ -787,12 +787,12 @@ body.dark .article-body li {
 }
 
 .pagination-container a {
-  padding: 8px 14px;
+  padding: 2px 5px;
   background: #eee;
   text-decoration: none;
   color: #333;
   border-radius: 4px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .pagination-container a:hover {
