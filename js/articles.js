@@ -1,6 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const postSlug = params.get("post");
 
+if (!postSlug) {
 
   const articles = [
     {
@@ -80,57 +81,25 @@ const postSlug = params.get("post");
     }
 
   ];
-  
-  const container = document.getElementById("articles");
-const articlesPerPage = 8;
+const container = document.getElementById("articles");
+  const articlesPerPage = 8;
 
-let searchTerm = "";
+  function render() {
+    if (!container) return;
 
-function render() {
-  if (!container) return;
+    const pageParams = new URLSearchParams(window.location.search);
+    const currentPage = parseInt(pageParams.get("page")) || 1;
 
-  // 🔍 Filter
-  const filtered = articles.filter(art =>
-    art.title.toLowerCase().includes(searchTerm) ||
-    art.excerpt.toLowerCase().includes(searchTerm)
-  );
+    const startIndex = (currentPage - 1) * articlesPerPage;
+    const endIndex = startIndex + articlesPerPage;
+    const paginatedArticles = articles.slice(startIndex, endIndex);
 
-  // 📄 Pagination
-  const pageParams = new URLSearchParams(window.location.search);
-  const currentPage = parseInt(pageParams.get("page")) || 1;
-  const startIndex = (currentPage - 1) * articlesPerPage;
-  const endIndex = startIndex + articlesPerPage;
-  const paginatedArticles = filtered.slice(startIndex, endIndex);
-
-  // 🧱 Header + Search
-  container.innerHTML = `
-    <div class="home-header">
-      <h1><span>Srijana’s</span> thoughts</h1>
-
-      <div class="search-container">
-        <input type="text" placeholder="Search thoughts..." value="${searchTerm}" />
+    container.innerHTML = `
+      <div class="home-header">
+        <h1><span>Srijana’s</span> thoughts</h1>
       </div>
-    </div>
-  `;
+    `;
 
-  // 🎯 Attach search listener (IMPORTANT: after render)
-  const input = document.querySelector(".search-container input");
-  if (input) {
-    input.addEventListener("input", (e) => {
-      searchTerm = e.target.value.toLowerCase();
-
-      const url = new URL(window.location);
-      url.searchParams.set("page", "1");
-      window.history.pushState({}, "", url);
-
-      render();
-    });
-  }
-
-  // 📝 Articles
-  if (paginatedArticles.length === 0) {
-    container.innerHTML += `<p>No articles found</p>`;
-  } else {
     paginatedArticles.forEach(article => {
       const post = document.createElement("article");
       post.className = "srijana-post";
@@ -154,33 +123,30 @@ function render() {
 
       container.appendChild(post);
     });
-  }
 
-  // 🔢 Pagination UI
-  const totalPages = Math.ceil(filtered.length / articlesPerPage);
+    // Pagination
+    const totalPages = Math.ceil(articles.length / articlesPerPage);
+    const nav = document.createElement("div");
+    nav.className = "pagination-container";
 
-  const nav = document.createElement("div");
-  nav.className = "pagination-container";
+    nav.innerHTML += `<a href="?page=1" class="${currentPage === 1 ? 'active-page' : ''}">1</a>`;
 
-  // First page
-  nav.innerHTML += `<a href="?page=1" class="${currentPage === 1 ? 'active-page' : ''}">1</a>`;
+    if (currentPage > 3) nav.innerHTML += `<span>...</span>`;
 
-  if (currentPage > 3) nav.innerHTML += `<span>...</span>`;
-
-  for (let i = currentPage - 1; i <= currentPage + 1; i++) {
-    if (i > 1 && i < totalPages) {
-      nav.innerHTML += `<a href="?page=${i}" class="${i === currentPage ? 'active-page' : ''}">${i}</a>`;
+    for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+      if (i > 1 && i < totalPages) {
+        nav.innerHTML += `<a href="?page=${i}" class="${i === currentPage ? 'active-page' : ''}">${i}</a>`;
+      }
     }
+
+    if (currentPage < totalPages - 2) nav.innerHTML += `<span>...</span>`;
+
+    if (totalPages > 1) {
+      nav.innerHTML += `<a href="?page=${totalPages}" class="${currentPage === totalPages ? 'active-page' : ''}">${totalPages}</a>`;
+    }
+
+    container.appendChild(nav);
   }
 
-  if (currentPage < totalPages - 2) nav.innerHTML += `<span>...</span>`;
-
-  if (totalPages > 1) {
-    nav.innerHTML += `<a href="?page=${totalPages}" class="${currentPage === totalPages ? 'active-page' : ''}">${totalPages}</a>`;
-  }
-
-  container.appendChild(nav);
-}
-
-// 🚀 Initial render
-render();
+  render();
+}  
