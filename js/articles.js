@@ -80,132 +80,107 @@ const postSlug = params.get("post");
     }
 
   ];
-  const container = document.getElementById("articles");
-  const articlesPerPage = 8;
-  const input = document.querySelector(".search-container input");
-  let searchTerm = "";
-  if (input) {
-    input.addEventListener("input", (e) => {
-    searchTerm = e.target.value.toLowerCase();
-    const url = new URL(window.location);
-    url.searchParams.set('page', '1');
-    window.history.pushState({}, '', url);
-    render();
-    });
-  }
   
-  function render() {
-    if (!container) return;
+  const container = document.getElementById("articles");
+const articlesPerPage = 8;
 
-    // 1. Filter based on search input
-      const filtered = articles.filter(art =>
-      art.title.toLowerCase().includes(searchTerm) ||
-      art.excerpt.toLowerCase().includes(searchTerm)
-    );
+let searchTerm = "";
 
-    // 2. Handle Pagination
-    const pageParams = new URLSearchParams(window.location.search);
-    const currentPage = parseInt(pageParams.get("page")) || 1;
-    const startIndex = (currentPage - 1) * articlesPerPage;
-    const endIndex = startIndex + articlesPerPage;
-    const paginatedArticles = filtered.slice(startIndex, endIndex);
+function render() {
+  if (!container) return;
 
-    // 3. Render Header
-    container.innerHTML = `
-      <div class="home-header">
-        <h1><span>Srijana’s</span> thoughts</h1>
-        <div class="search-container">
-          <input type="text" placeholder="Search thoughts..." value="${searchTerm}" />        
-        </div>
+  // 🔍 Filter
+  const filtered = articles.filter(art =>
+    art.title.toLowerCase().includes(searchTerm) ||
+    art.excerpt.toLowerCase().includes(searchTerm)
+  );
+
+  // 📄 Pagination
+  const pageParams = new URLSearchParams(window.location.search);
+  const currentPage = parseInt(pageParams.get("page")) || 1;
+  const startIndex = (currentPage - 1) * articlesPerPage;
+  const endIndex = startIndex + articlesPerPage;
+  const paginatedArticles = filtered.slice(startIndex, endIndex);
+
+  // 🧱 Header + Search
+  container.innerHTML = `
+    <div class="home-header">
+      <h1><span>Srijana’s</span> thoughts</h1>
+
+      <div class="search-container">
+        <input type="text" placeholder="Search thoughts..." value="${searchTerm}" />
       </div>
-    `;
-
-    // 4. Render Articles
-    if (paginatedArticles.length === 0) {
-      container.innerHTML += `<p>No articles yet</p>`;
-    } else {
-      paginatedArticles.forEach(article => {
-        const post = document.createElement("article");
-        post.className = "srijana-post";
-
-        const url = `https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html"`;
-
-        const formattedDate = new Date(article.date).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric"
-        });
-
-        post.innerHTML = `
-    <h2><a href="/Blog/htmls/${article.slug}.html">${article.title}</a></h2>
-    <p>${article.excerpt}</p>
-
-    <p class="post-meta">
-      Published in Medium on ${formattedDate}
-    </p>
-
-    <div class="share-container">
-  <span class="share-label">Share:</span>
-
-  <a href="https://twitter.com/intent/tweet?url=${url}&text=${article.title}" target="_blank" class="share-btn">
-    <i class="fa-brands fa-x-twitter"></i>
-  </a>
-
-  <a href="https://www.linkedin.com/sharing/share-offsite/?url=${url}" target="_blank" class="share-btn">
-    <i class="fa-brands fa-linkedin"></i>
-  </a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=${url}" target="_blank" class="share-btn">
-    <i class="fa-brands fa-facebook"></i>
-  </a>
-
-  <a href="https://wa.me/?text=${url}" target="_blank" class="share-btn">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-</div>
+    </div>
   `;
 
-        container.appendChild(post);
-      });
-    }
-    // 5. Render Pagination Controls
-    const totalPages = Math.ceil(filtered.length / articlesPerPage);
-    const nav = document.createElement("div");
-    nav.className = "pagination-container";
-    nav.style.display = "flex";
-    nav.style.gap = "10px";
-    nav.style.justifyContent = "center";
-    nav.style.marginTop = "30px";
+  // 🎯 Attach search listener (IMPORTANT: after render)
+  const input = document.querySelector(".search-container input");
+  if (input) {
+    input.addEventListener("input", (e) => {
+      searchTerm = e.target.value.toLowerCase();
 
-    // Always show first page
-    nav.innerHTML += `<a href="?page=1" class="${currentPage === 1 ? 'active-page' : ''}">1</a>`;
+      const url = new URL(window.location);
+      url.searchParams.set("page", "1");
+      window.history.pushState({}, "", url);
 
-    // Show "..." if needed before current range
-    if (currentPage > 3) {
-      nav.innerHTML += `<span>...</span>`;
-    }
-
-    // Show pages around current page
-    for (let i = currentPage - 1; i <= currentPage + 1; i++) {
-      if (i > 1 && i < totalPages) {
-        nav.innerHTML += `<a href="?page=${i}" class="${i === currentPage ? 'active-page' : ''}">${i}</a>`;
-      }
-    }
-
-    // Show "..." if needed after current range
-    if (currentPage < totalPages - 2) {
-      nav.innerHTML += `<span>...</span>`;
-    }
-
-    // Always show last page
-    if (totalPages > 1) {
-      nav.innerHTML += `<a href="?page=${totalPages}" class="${currentPage === totalPages ? 'active-page' : ''}">${totalPages}</a>`;
-    }
-
-    container.appendChild(nav);
+      render();
+    });
   }
 
-  
+  // 📝 Articles
+  if (paginatedArticles.length === 0) {
+    container.innerHTML += `<p>No articles found</p>`;
+  } else {
+    paginatedArticles.forEach(article => {
+      const post = document.createElement("article");
+      post.className = "srijana-post";
 
-  render(); // Initial call
+      const url = `https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html`;
 
+      const formattedDate = new Date(article.date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+
+      post.innerHTML = `
+        <h2><a href="/Blog/htmls/${article.slug}.html">${article.title}</a></h2>
+        <p>${article.excerpt}</p>
+
+        <p class="post-meta">
+          Published in Medium on ${formattedDate}
+        </p>
+      `;
+
+      container.appendChild(post);
+    });
+  }
+
+  // 🔢 Pagination UI
+  const totalPages = Math.ceil(filtered.length / articlesPerPage);
+
+  const nav = document.createElement("div");
+  nav.className = "pagination-container";
+
+  // First page
+  nav.innerHTML += `<a href="?page=1" class="${currentPage === 1 ? 'active-page' : ''}">1</a>`;
+
+  if (currentPage > 3) nav.innerHTML += `<span>...</span>`;
+
+  for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+    if (i > 1 && i < totalPages) {
+      nav.innerHTML += `<a href="?page=${i}" class="${i === currentPage ? 'active-page' : ''}">${i}</a>`;
+    }
+  }
+
+  if (currentPage < totalPages - 2) nav.innerHTML += `<span>...</span>`;
+
+  if (totalPages > 1) {
+    nav.innerHTML += `<a href="?page=${totalPages}" class="${currentPage === totalPages ? 'active-page' : ''}">${totalPages}</a>`;
+  }
+
+  container.appendChild(nav);
+}
+
+// 🚀 Initial render
+render();
