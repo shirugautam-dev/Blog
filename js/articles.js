@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const postSlug = params.get("post");
 
-if (!postSlug) {
+
   const articles = [
     {
       title: "A Life, Then Silence",
@@ -208,4 +208,4 @@ if (!postSlug) {
   
 
   render(); // Initial call
-}
+
