@@ -786,6 +786,11 @@ body.dark .article-body li {
   color: #E0E0E0;
 }
 
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 .pagination-container a {
   padding: 2px 5px;
   background: #eee;
