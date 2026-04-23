@@ -326,7 +326,6 @@ body.dark .intro p {
   color: #6a1b9a;
 }
 
-
 body.dark .home-header h1 {
   color: #efe5e5;
   letter-spacing: -0.5px;
@@ -732,10 +731,6 @@ body.dark .book-meta {
   }
 }
 
-
-
-
-
 @media (max-width: 768px) {
   .book-banner {
     background-attachment: scroll;
@@ -791,3 +786,20 @@ body.dark .article-body li {
   color: #E0E0E0;
 }
 
+.pagination-container a {
+  padding: 8px 14px;
+  background: #eee;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.pagination-container a:hover {
+  background: #ddd;
+}
+
+.pagination-container a.active-page {
+  background: #e74c3c;
+  color: white;
+}
