@@ -208,6 +208,7 @@ body.dark .read-more {
   font-size: 0.9rem;
   text-decoration: none;
 }
+
 .container #theme-toggle {
   position: absolute;
   top: 15px;
@@ -297,15 +298,14 @@ body.dark .container {
 }
 
 body.dark .intro {
-   background: #1E1E1E;
+  background: #1E1E1E;
   border: 2px solid #FFC300;
   color: #E0E0E0;
 }
 
 body.dark {
-  background: #121212;
- color: #e0e0e0;*/
- 
+ background: #121212;
+ color: #e0e0e0;
 }
 
 body.dark .intro p {
