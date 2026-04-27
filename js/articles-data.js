@@ -1,5 +1,11 @@
 module.exports = [
     {
+      title: "The Strange Comfort of Keeping Busy",
+      excerpt: "The Strange Comfort of Keeping Busy On leaving a job, filling the silence, and what I found when I stopped.",
+      slug: "busyness",
+      date: "2026-04-24"
+    },
+    {
       title: "A Life, Then Silence",
       excerpt: "When someone dies, what actually remains? A thoughtful exploration of identity, ownership, and the illusions we live by.",
       slug: "death",
