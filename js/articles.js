@@ -102,9 +102,17 @@ const container = document.getElementById("articles");
 
     container.innerHTML = `
       <div class="home-header">
-        <h1><span>Srijana’s</span> thoughts</h1>
+        <div class="header-bar">
+          <h1><span>Srijana’s</span> thoughts</h1>
+          <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off" />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
       </div>
     `;
+
+
 
     paginatedArticles.forEach(article => {
       const post = document.createElement("article");
