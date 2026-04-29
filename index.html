@@ -51,21 +51,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
     <script src="js/articles.js"></script>
     <script src="js/article-loader.js"></script>
-
     <script src="js/theme.js"></script>
-<script>
-  if (document.querySelector(".article-body")) {
-    window.addEventListener("scroll", () => {
+    <script src="js/search-data.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+      if (document.querySelector(".article-body")) {
+      window.addEventListener("scroll", () => {
       const scrollTop = window.scrollY;
       const docHeight = document.body.scrollHeight - window.innerHeight;
       const progress = (scrollTop / docHeight) * 100;
-
       document.getElementById("progress-bar").style.width = progress + "%";
-    });
-  }
-</script>
-</body>
-<footer class="site-footer">
+        });
+      }
+    </script>
+  </body>
+  <footer class="site-footer">
       <p class="footer-social">
       <a href="https://twitter.com/YOUR_USERNAME" target="_blank"><i class="fab fa-twitter"></i></a>
       <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -75,5 +75,5 @@
       <a href="rss.xml"><i class="fas fa-rss"></i></a>
     </p>
     <p class="footer-copy">© 2026 Srijana Gautam</p>
-</footer>
+  </footer>
 </html>

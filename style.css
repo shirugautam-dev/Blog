@@ -841,3 +841,46 @@ body.dark .article-body li {
   border-color: #e74c3c;
   box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
 }
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.search-container {
+  position: relative;
+  width: 260px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-results {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: var(--bg-color, #fff);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: none;
+  z-index: 999;
+}
+
+.search-results a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-results a:hover {
+  background: #f2f2f2;
+}
