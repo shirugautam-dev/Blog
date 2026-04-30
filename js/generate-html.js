@@ -78,7 +78,7 @@ function generateHTML(article) {
         <h3>Subscribe to Srijana’s Thoughts</h3>
         <p>Enjoyed this piece? Get more like this in your inbox.</p>
           <div class="subscribe-box">
-            <iframe src="YOUR_BEEHIIV_EMBED_LINK"
+            <iframe src="https://subscribe-forms.beehiiv.com/e8cd9df8-6170-495d-a150-d30e37e48b24"
               data-test-id="beehiiv-embed"
               height="320"
               frameborder="0"
