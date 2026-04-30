@@ -77,8 +77,9 @@ function generateHTML(article) {
       <div class="subscribe-section">
         <p>Enjoyed this piece? Get more like this in your inbox.</p>
           <div class="subscribe-box">
-            <iframe src="https://embeds.beehiiv.com/e8cd9df8-6170-495d-a150-d30e37e48b24" 
-              class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no">
+            <iframe src="https://subscribe-forms.beehiiv.com/e8cd9df8-6170-495d-a150-d30e37e48b24" 
+              class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no"
+              sandbox="allow-scripts allow-forms allow-same-origin allow-popups">
             </iframe>
           </div>
       </div>
