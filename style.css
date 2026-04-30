@@ -177,6 +177,10 @@ body.dark .rss a {text-decoration: none;
   background: #FFF8F2;
 }
 
+.article-body p:last-of-type {
+  margin-bottom: 20px; /* reduce gap after article text */
+}
+
 .article-body h1 {
   font-size: 2.2rem;
   line-height: 1.25;
@@ -752,11 +756,24 @@ body.dark .book-meta {
   margin-top: 20px;
   font-size: 14px;
   margin-bottom: 40px;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.article-end a {
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+}
+
+
+.article-end a,
+.article-end .end-text {
+  display: block;
   text-decoration: none
 }
+
 
 body.dark .article-end a {
   text-decoration: none;
@@ -887,8 +904,8 @@ body.dark .article-body li {
 
 .subscribe-section {
   text-align: center;
-  margin: 60px 0;
-  padding: 30px 20px;
+  margin: 30px 0 40px 0; /* reduce top gap */
+  padding-top: 10px;
   border-top: 1px solid #ddd;
 }
 
