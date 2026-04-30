@@ -930,10 +930,17 @@ max-width: 100%;
   margin-bottom: 20px;
 }
 
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+}
+
 .subscribe-box iframe {
   width: 100%;
-  max-width: 480px;
-  border-radius: 8px;
+  max-width: 500px;
+  height: 150px;
+  border: none;
+  overflow: hidden;
 }
 
 /* Dark mode fix */
