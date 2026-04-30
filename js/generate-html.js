@@ -75,14 +75,20 @@ function generateHTML(article) {
     <div class="article-end">
       <!-- Subscription Box -->
       <div class="subscribe-section">
-        <h3>Subscribe to Srijana’s Thoughts</h3>
         <p>Enjoyed this piece? Get more like this in your inbox.</p>
           <div class="subscribe-box">
-            <iframe src="https://subscribe-forms.beehiiv.com/e8cd9df8-6170-495d-a150-d30e37e48b24"
-              data-test-id="beehiiv-embed"
-              height="320"
-              frameborder="0"
-              scrolling="no">
+          <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/e8cd9df8-6170-495d-a150-d30e37e48b24" 
+              class="beehiiv-embed" 
+              data-test-id="beehiiv-embed" 
+              frameborder="0" scrolling="no" 
+              style="width: 400px; 
+              height: 47px; 
+              margin: 0; 
+              border-radius: 0px 0px 0px 0px !important; 
+              background-color: transparent; 
+              box-shadow: 0 0 #0000; 
+              max-width: 100%;">
             </iframe>
           </div>
       </div>
