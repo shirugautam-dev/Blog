@@ -73,6 +73,19 @@ function generateHTML(article) {
      \${marked.parse(md)}
 
     <div class="article-end">
+      <!-- Subscription Box -->
+      <div class="subscribe-section">
+        <h3>Subscribe to Srijana’s Thoughts</h3>
+        <p>Enjoyed this piece? Get more like this in your inbox.</p>
+          <div class="subscribe-box">
+            <iframe src="YOUR_BEEHIIV_EMBED_LINK"
+              data-test-id="beehiiv-embed"
+              height="320"
+              frameborder="0"
+              scrolling="no">
+            </iframe>
+          </div>
+      </div>
       \${ nextArticle 
         ? '<a href="' + nextArticle.slug + '.html">← Previous</a>' 
         : '<span></span>' }
