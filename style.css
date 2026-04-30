@@ -52,7 +52,13 @@ img {
   background: #FFF8F2; 
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.content,
+.posts {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .intro {
@@ -755,9 +761,9 @@ body.dark .book-meta {
   align-items: center;
   margin-top: 20px;
   font-size: 14px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .article-nav {
@@ -784,11 +790,13 @@ body.dark .article-end a {
 .article-end .end-text {
   letter-spacing: 2px;
   color: #777;
+  margin: 5px 0;
 }
 
 body.dark .article-end .end-text {
   letter-spacing: 2px;
   color: #FFC300;
+  margin: 5px 0;
 }
 
 body.dark .article-body {
@@ -916,6 +924,7 @@ max-width: 100%;
   text-align: center;
   margin: 10px 0 10px 0; /* reduce top gap */
   padding-top: 10px;
+  padding-bottom: 0;
   border-top: 1px solid #ddd;
 }
 
