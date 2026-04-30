@@ -914,7 +914,7 @@ max-width: 100%;
                
 .subscribe-section {
   text-align: center;
-  margin: 30px 0 40px 0; /* reduce top gap */
+  margin: 10px 0 10px 0; /* reduce top gap */
   padding-top: 10px;
   border-top: 1px solid #ddd;
 }
