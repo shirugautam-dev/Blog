@@ -91,7 +91,7 @@ function generateHTML(article) {
             </iframe>
           </div>
       </div>
-      <div>  
+      <div class="article-nav">  
         \${ nextArticle 
           ? '<a href="' + nextArticle.slug + '.html">← Previous</a>' 
           : '<span></span>' }
