@@ -344,6 +344,7 @@ body.dark .home-header h1 {
   line-height: 1;         /* remove extra vertical spacing */
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 body.dark .home-header a {
@@ -362,7 +363,8 @@ body.dark .home-header a {
   margin: 0;              /* remove default top/bottom margin */
   line-height: 1;         /* remove extra vertical spacing */
   display: flex;
-  align-items: center;    /* aligns text vertically */
+  align-items: center;
+  gap: 10px;    /* aligns text vertically */
 }
 
 body.dark .srijana-post {
