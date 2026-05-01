@@ -943,6 +943,7 @@ max-width: 100%;
 .subscribe-box {
   display: flex;
   justify-content: center;
+  height: 140px;
 }
 
 .subscribe-box iframe {
