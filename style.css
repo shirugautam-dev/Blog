@@ -162,14 +162,11 @@ body.dark .rss a {text-decoration: none;
   height: 34px;
   border: 1px solid black;
   border-radius: 50%;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 0;
   line-height: 0;
-
   text-decoration: none;
 }
 
@@ -178,6 +175,12 @@ body.dark .rss a {text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.share-btn,
+.share-btn:visited,
+.share-btn:hover,
+.share-btn:active {
+  color: black;
 }
 
 .share-btn:hover {
