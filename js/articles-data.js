@@ -1,5 +1,11 @@
 module.exports = [
     {
+      title: "I Was on the List",
+      excerpt: "A true story about immigration, student visa issues, and the risk of deportation. A young student’s experience of fear, mistakes, and the second chance that shaped everything that followed.",
+      slug: "list",
+      date: "2026-05-01"
+    },
+    {
       title: "The Strange Comfort of Keeping Busy",
       excerpt: "The Strange Comfort of Keeping Busy On leaving a job, filling the silence, and what I found when I stopped.",
       slug: "busyness",
