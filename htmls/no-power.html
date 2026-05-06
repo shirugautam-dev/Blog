@@ -52,19 +52,20 @@
               </div>
               ${marked.parse(md)}
               <div class="article-end">
+                <span class="end-text">✦ The End ✦</span>
+                 
+ 
+                <div class="article-nav">  
+                  ${ nextArticle 
+                  ? '<a href="' + nextArticle.slug + '.html">← Previous</a>' 
+                  : '<span></span>' }
                 <div class="share-container">
                   <span class="share-label">Share:</span>
                   <a href="https://twitter.com/intent/tweet?url=https://shirugautam-dev.github.io/Blog/htmls/no-power.html&text=No Gives the Power That Yes Cannot Give" target="_blank" class="share-btn"><i class="fa-brands fa-x-twitter"></i></a>
                   <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://shirugautam-dev.github.io/Blog/htmls/no-power.html" target="_blank" class="share-btn"><i class="fa-brands fa-linkedin"></i></a>
                   <a href="https://www.facebook.com/sharer/sharer.php?u=https://shirugautam-dev.github.io/Blog/htmls/no-power.html" target="_blank" class="share-btn"><i class="fa-brands fa-facebook"></i></a>
                   <a href="https://wa.me/?text=https://shirugautam-dev.github.io/Blog/htmls/no-power.html" target="_blank" class="share-btn"><i class="fa-brands fa-whatsapp"></i></a>
-                </div> 
- 
-                <div class="article-nav">  
-                  ${ nextArticle 
-                  ? '<a href="' + nextArticle.slug + '.html">← Previous</a>' 
-                  : '<span></span>' }
-                  <span class="end-text">✦ The End ✦</span>
+                </div>
                   ${ prevArticle 
                   ? '<a href="' + prevArticle.slug + '.html">Next →</a>' 
                   : '<span></span>' }
