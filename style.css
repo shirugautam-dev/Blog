@@ -158,18 +158,26 @@ body.dark .rss a {text-decoration: none;
 }
 
 .share-btn {
-  width: 34px;
-  height: 34px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
   border-radius: 50%;
-  background: #fff;
-  color: #000;
-  border: 1px solid #000;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  line-height: 0;
+
+  text-decoration: none;
+}
+
+.share-btn i {
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.2s;
-  font-size: 20px;
-  line-height: 1;
 }
 
 .share-btn:hover {
