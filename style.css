@@ -155,20 +155,12 @@ body.dark .rss a {text-decoration: none;
   display: flex;
   align-items: center;
   gap: 14px;
-
-  border: 1px solid rgba(0,0,0,0.1);
+  /* border: 1px solid rgba(0,0,0,0.1);
   padding: 14px 22px;
   border-radius: 16px;
-
   background: rgba(255,255,255,0.4);
-  backdrop-filter: blur(10px);
-
+  backdrop-filter: blur(10px); */
   width: fit-content;
-}
-
-.dark .share-container {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .share-btn {
@@ -819,11 +811,6 @@ body.dark .book-meta {
 .article-end .end-text {
   
   text-decoration: none
-}
-
-.end-text {
-  margin-bottom: 20px;
-  display: block;
 }
 
 
