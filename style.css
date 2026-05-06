@@ -158,8 +158,8 @@ body.dark .rss a {text-decoration: none;
 }
 
 .share-btn {
-  width: 50px;
-  height: 50px;
+  width: 34px;
+  height: 34px;
   border: 1px solid black;
   border-radius: 50%;
 
@@ -800,7 +800,7 @@ body.dark .book-meta {
 
 .article-end a,
 .article-end .end-text {
-  display: block;
+  
   text-decoration: none
 }
 
