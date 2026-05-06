@@ -87,7 +87,7 @@ if (!postSlug) {
     }
 
   ];
-const container = document.getElementById("articles");
+  const container = document.getElementById("articles");
   const articlesPerPage = 8;
 
   function render() {
@@ -133,7 +133,7 @@ const container = document.getElementById("articles");
         <p class="post-meta">
           Published in Medium on ${formattedDate}
         </p>
-          <div class="share-container">
+        <!--  <div class="share-container">
   <span class="share-label">Share:</span>
 
   <a href="https://twitter.com/intent/tweet?url=${url}&text=${article.title}" target="_blank" class="share-btn">
@@ -151,7 +151,7 @@ const container = document.getElementById("articles");
   <a href="https://wa.me/?text=${url}" target="_blank" class="share-btn">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-</div>
+</div> -->
       `;
 
       container.appendChild(post);
