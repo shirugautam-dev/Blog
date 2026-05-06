@@ -168,6 +168,8 @@ body.dark .rss a {text-decoration: none;
   align-items: center;
   justify-content: center;
   transition: 0.2s;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .share-btn:hover {
