@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 
 const articles = require("./articles-data.js");
-
 const outputDir = path.join(__dirname, "..", "htmls");
 
 if (!fs.existsSync(outputDir)) {
@@ -11,101 +10,88 @@ if (!fs.existsSync(outputDir)) {
 
 function generateHTML(article) {
   return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../favicon.ico">
-  <title>${article.title}</title>
-  <meta name="description" content="${article.excerpt}">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="${article.title}">
-  <meta property="og:description" content="${article.excerpt}">
-  <meta property="og:image" content="https://shirugautam-dev.github.io/Blog/Images/Self_org.jpg">
-  <meta property="og:url" content="https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html">
-  <meta property="og:type" content="article">
-
-  <script>
-    if (localStorage.getItem("theme") === "dark") {
-      document.addEventListener("DOMContentLoaded", () => {
-        document.body.classList.add("dark");
-      });
-    }
-  </script>
-
-  <link rel="stylesheet" href="../style.css">
-</head>
-
-<body>
-
-  <div class="content"></div>
-
-  <!-- Markdown parser -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
-  <script src="../theme.js"></script>
-
-  <script>
-  const slug = "${article.slug}";
-  history.scrollRestoration = "manual";
-  window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
-  });
-  const articlesData = ${JSON.stringify(articles)};
-  const currentIndex = articlesData.findIndex(a => a.slug === slug);
-  const prevArticle = articlesData[currentIndex - 1];
-  const nextArticle = articlesData[currentIndex + 1];
-
-    fetch("../articles/" + slug + ".md")
-      .then(res => {
-        if (!res.ok) {
-          throw new Error("Markdown file not found: " + slug);
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="../favicon.ico">
+      <title>${article.title}</title>
+      <meta name="description" content="${article.excerpt}">
+      <meta property="og:title" content="${article.title}">
+      <meta property="og:description" content="${article.excerpt}">
+      <meta property="og:image" content="https://shirugautam-dev.github.io/Blog/Images/Self_org.jpg">
+      <meta property="og:url" content="https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html">
+      <meta property="og:type" content="article">
+      <script>
+        if (localStorage.getItem("theme") === "dark") {
+          document.addEventListener("DOMContentLoaded", () => {
+          document.body.classList.add("dark");
+          });
         }
-        return res.text();
-      })
-      .then(md => {
-        document.querySelector(".content").innerHTML = \`
-    <article class="article-body">
-    <div class="home-header">
-      <a href="../index.html" class="nav-left">Srijana’s thoughts</a>
-      <a href="javascript:history.back()" class="nav-right"> ← Back </a>
-    </div>
-     \${marked.parse(md)}
+      </script>
 
-    <div class="article-end">
-      <!-- Subscription Box -->
-      <div class="subscribe-section">
-        <p>Enjoyed this piece? Get more like this in your inbox.</p>
-          <div class="subscribe-box">
-            <iframe src="https://subscribe-forms.beehiiv.com/e8cd9df8-6170-495d-a150-d30e37e48b24" 
-              class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no"
-              sandbox="allow-scripts allow-forms allow-same-origin allow-popups">
-            </iframe>
-          </div>
-      </div>
-      <div class="article-nav">  
-        \${ nextArticle 
-          ? '<a href="' + nextArticle.slug + '.html">← Previous</a>' 
-          : '<span></span>' }
-        <span class="end-text">✦ The End ✦</span>
-        \${ prevArticle 
-        ? '<a href="' + prevArticle.slug + '.html">Next →</a>' 
-        : '<span></span>' }
-      </div>  
-    </div>
-  </article>
-\`;
-      })
-      .catch(err => {
-        console.error(err);
-        document.querySelector(".content").innerHTML =
-          "<p style='color:red;'>❌ Failed to load article</p>";
-      });
-  </script>
+      <link rel="stylesheet" href="../style.css">
+    </head>
 
-</body>
-</html>`;
-}
+    <body>
+      <div class="content"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+        <script src="../theme.js"></script>
+        <script>
+          const slug = "${article.slug}";
+          history.scrollRestoration = "manual";
+          window.addEventListener("load", () => {
+          window.scrollTo(0, 0);
+          });
+          const articlesData = ${JSON.stringify(articles)};
+          const currentIndex = articlesData.findIndex(a => a.slug === slug);
+          const prevArticle = articlesData[currentIndex - 1];
+          const nextArticle = articlesData[currentIndex + 1];
+          fetch("../articles/" + slug + ".md")
+          .then(res => {
+            if (!res.ok) {
+            throw new Error("Markdown file not found: " + slug);
+            }
+          return res.text();
+          })
+          .then(md => {
+            document.querySelector(".content").innerHTML = \`
+            <article class="article-body">
+              <div class="home-header">
+                <a href="../index.html" class="nav-left">Srijana’s thoughts</a>
+                <a href="javascript:history.back()" class="nav-right"> ← Back </a>
+              </div>
+              \${marked.parse(md)}
+              <div class="article-end">
+                <div class="share-container">
+                  <span class="share-label">Share:</span>
+                  <a href="https://twitter.com/intent/tweet?url=https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html&text=${article.title}" target="_blank" class="share-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html" target="_blank" class="share-btn"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html" target="_blank" class="share-btn"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://wa.me/?text=https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html" target="_blank" class="share-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                </div> 
+ 
+                <div class="article-nav">  
+                  \${ nextArticle 
+                  ? '<a href="' + nextArticle.slug + '.html">← Previous</a>' 
+                  : '<span></span>' }
+                  <span class="end-text">✦ The End ✦</span>
+                  \${ prevArticle 
+                  ? '<a href="' + prevArticle.slug + '.html">Next →</a>' 
+                  : '<span></span>' }
+                </div>  
+              </div>
+            </article>
+            \`; })
+            .catch(err => {
+              console.error(err);
+              document.querySelector(".content").innerHTML =
+              "<p style='color:red;'>❌ Failed to load article</p>";
+            });
+        </script>
+      </body>
+    </html>`;
+  }
 
 articles.forEach(article => {
   const filePath = path.join(outputDir, `${article.slug}.html`);
