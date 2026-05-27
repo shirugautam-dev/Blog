@@ -1,5 +1,17 @@
 module.exports = [
     {
+      title: "US, Israel-Iran War Is Psychological Destruction",
+      excerpt: "An ordinary Indian reflects on fear, anxiety, media overload, and uncertainty during the US–Israel–Iran war crisis.",
+      slug: "US-Iran_war",
+      date: "2026-05-26"
+    },
+    {
+      title: "Global Warming Is True; I See It in My Husband",
+      excerpt: "A personal reflection on rising heat, air conditioning guilt, and how global warming is changing everyday life.",
+      slug: "global_warming",
+      date: "2026-05-16"
+    },
+    {
       title: "I Was on the List",
       excerpt: "A true story about immigration, student visa issues, and the risk of deportation. A young student’s experience of fear, mistakes, and the second chance that shaped everything that followed.",
       slug: "list",
