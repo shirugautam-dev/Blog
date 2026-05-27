@@ -2,7 +2,7 @@
 
 ## A second chance I did not expect
 
-![](Images/articles/list.jpg)
+![](./Images/articles/list.jpg)
 
 ### 
 When the news was full of ICE crackdowns in the US, one memory kept coming back to me — my own ordeal with Australian immigration in 1999, a year after I landed in Sydney.
