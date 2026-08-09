@@ -1,0 +1,273 @@
+.book-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Site Navigation Link */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.nav-brand {
+  text-decoration: none;
+  font-weight: 500;
+  color: #3a3a3a;
+  transition: color 0.2s;
+}
+
+body.dark .nav-brand {
+  text-decoration: none;
+  font-weight: 500;
+  color: #FFC300;
+  transition: color 0.2s;
+}
+
+.nav-brand:hover {
+  color: #000;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Flex-based Intro Section (Replaces the fixed width/height table) */
+.book-intro {
+  margin: 30px 0;
+  background-color: #FEDB00;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(255, 200, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  width: 100%; /* Flexible width */
+  box-sizing: border-box;
+}
+
+.book-intro .intro-img {
+  border-radius: 12px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.book-intro .intro-text h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+}
+
+.book-intro {
+  margin: 30px 0 40px 0;
+  background: #FEDB00; /* Warm yellow theme matching your design */
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(255, 200, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+/* Filter Pill Buttons */
+.book-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.filter-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #294b73;
+  color: #fff;
+}
+
+.book-card {
+  display: grid;
+  grid-template-columns: 180px 1fr; /* 180px for image on left, remaining space for review */
+  gap: 28px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  align-items: start;
+}
+
+/* Left Column: Image */
+.book-card-left {
+  width: 100%;
+}
+
+.book-card-cover {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Right Column: Review Details */
+.book-card-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+  .book-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .book-card {
+    grid-template-columns: 1fr; /* Stacks image on top on mobile */
+    justify-items: center;
+    text-align: center;
+  }
+
+  .book-card-cover {
+    width: 160px;
+    height: 220px;
+  }
+
+  .book-tags {
+    justify-content: center;
+  }
+}
+
+.book-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  margin: 0 0 2px 0;
+  color: #1a1a1a;
+}
+
+.book-author {
+  font-size: .95rem;
+  font-weight: 400;
+  color: #555;
+  margin: 0 0 4px 0;
+}
+
+.book-meta {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+/* Star Ratings */
+.book-rating {
+  font-size: 1rem;
+  color: #f39c12;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating-number {
+  color: #555;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Review Text Body */
+.book-review-content {
+  font-size: .92rem;
+  line-height: 1.55;
+  color: #444;
+  margin-top: 8px;
+}
+
+.book-review-content p {
+  margin: 0 0 8px 0;
+}
+
+/* Tags */
+.book-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.book-tag {
+  background: #f0f4f8;
+  color: #294b73;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+
+
+/* Image Container & Styling */
+.intro-image-container {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.intro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps image sharp without stretching */
+  transition: transform 0.3s ease;
+}
+
+.intro-img:hover {
+  transform: scale(1.05); /* Gentle zoom effect on hover */
+}
+
+/* Text Content */
+.intro-text h1 {
+  margin: 0 0 10px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  color: #1a1a1a;
+}
+
+.intro-text p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #3a3a3a;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .book-intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .intro-image-container {
+    width: 130px;
+    height: 130px;
+  }
+}
