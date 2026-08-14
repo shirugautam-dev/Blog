@@ -1,6 +1,6 @@
 # The Versions of Myself I have Missed
 
-![Photo by Brooke Cagle on Unsplash](../Images/articles/versions.jpg)  
+![](../Images/articles/versions.jpg "Photo by Brooke Cagle on Unsplash")  
 
 ###
 One evening in the summer of 2016, my husband and I were having dinner with some friends. On that night, we forgot we were adults. We talked, laughed and pulled each other’s leg.We were children in adult bodies. Suddenly, one of us remembered the “Jimmy, Jimmy, Jimmy, aajaa, aajaa, aajaa” song from Disco Dancer, and one of my friends and I just got up and danced like it was our only chance, singing loudly, not bothering about the tune or the voice. We thought that phase of life would last forever.

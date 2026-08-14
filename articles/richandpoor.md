@@ -1,6 +1,6 @@
 # I Am Not Rich, She Is Not Poor
 
-![Photo by Mathieu stern on Unsplash](../Images/articles/richandpoor.jpg)
+![](../Images/articles/richandpoor.jpg "Photo by Mathieu stern on Unsplash")
 ### 
 Anyone who watched Deuba couple’s amassed riches burning during the Gen Z protest in Nepal in September 2025 must have been astonished by the view. The cash burning, gold and silver melting and their house ablaze along with them. It was not a sight one gets to see every day, but that day was not every day, and those are not ordinary couples. They are the ex-PM and the ex-FM of Nepal.
 

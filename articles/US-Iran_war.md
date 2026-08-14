@@ -1,7 +1,7 @@
 # US, Israel-Iran War Is Psychological Destruction
 
 
-![Photo by Jeff Kingma on Unsplash](../Images/articles/explosion.jpg)
+![](../Images/articles/explosion.jpg "Photo by Jeff Kingma on Unsplash")
 ### 
 I am an ordinary person living a cosy life in India. Life has been the same for me for a long time. I spend my day with the same ritual of cooking, eating, reading, writing, exercising and then scrolling. I try to limit the scrolling part, telling myself not to get caught in the rabbit hole. These days, though, I find myself spending a bit more time on the news app than others.
 
