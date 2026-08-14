@@ -26,7 +26,7 @@ body {
 .article-body img {
   width: 600px;
   max-width: 100%;
-  height: auto;
+  height: 342px;
   display: block;
   margin: 25px auto;
 }
