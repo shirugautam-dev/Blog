@@ -31,6 +31,21 @@ body {
   margin: 25px auto;
 }
 
+.article-body .photo-credit {
+  text-align: center;
+  font-size: 0.75rem !important;
+  line-height: 1.3;
+  color: #777;
+  margin-top: -15px !important;
+  margin-bottom: 25px !important;
+  font-style: italic;
+}
+
+body.dark .article-body .photo-credit {
+  color: #aaa;
+}
+
+
 
 body.dark #progress-bar {
   background: #FFC300;
