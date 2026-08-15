@@ -1,6 +1,6 @@
 # Imposter Syndrome: Do You Feel It Too, or Am I the Only One?
 
-![](../Images/articles/imposter.jpg)
+![](../Images/articles/imposter.jpg "Photo by Brett Jordan on Unsplash")
 
 ###
 I still remember the year 2002 — the year I wrote my final exam of BIT, results were four months away, and I found myself offered a teaching job at Southwestern Sydney Institute of TAFE — a job I didn’t feel ready for at all. The offer was good. It paid more than double the wage I was earning otherwise at Burger King. I took it right away. But the doubt crept in.

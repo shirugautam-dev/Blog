@@ -1,10 +1,10 @@
 # What Are We, If Not Our Memories?
 
-![](../Images/articles/memories.jpg)
+![](../Images/articles/memories.jpg "Photo by Mick Haupt on Unsplash")
 
 Alexa is playing Memories by Maroon 5.
 
-#### “There’s a time that I remember when I did not know no pain When I believed in forever and everything would stay the same”
+#### “There’s a time that I remember ...”
 
 I am ridiculously in love with this song. Every word feels like it is tugging me gently and taking me places. It stirs me, and my past comes alive. At one moment, I am in a bustling street of Sydney, and in a split second, in a chaotic gully of Kathmandu. Just then, I find myself in humid Chennai, immediately coming back to the quiet life in Pune.
 

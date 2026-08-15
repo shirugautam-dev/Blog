@@ -1,6 +1,7 @@
 # Global Warming Is True; I See It in My Husband
 
-![](../Images/articles/global_warming.jpg)
+![](../Images/articles/global_warming.jpg "Photo by Immo Wegmann on Unsplash")
+
 ### 
 It’s 10:45 in the morning, and I have just finished cooking. My t-shirt is all sweaty and sticky, and I want to just rush to the bathroom. Once under a cool shower, I regret that I have forgotten to turn on the fan in the bedroom because as soon as I come out of the shower, I am going to sweat profusely again.
 

@@ -1,7 +1,7 @@
 # Why We Feel Life Is Better Somewhere Else
 
+![](../Images/articles/fernwah.jpg "Photo by ross parmly on Unsplash")
 
-![](../Images/articles/fernweh.jpg)
 ###
 A couple of times a month, my son says he can’t wait to get out of this city. He complains about his college, the teachers, the traffic, and the weather. He thinks his friends from Bangalore and Hyderabad are enjoying life more than him. His Japanese friend seems lucky to him. His cousin in Germany has a perfect life. He talks about places he has never been but only seen on screen. He listens to the news that is happening in faraway places and wishes that it would happen here as well.
 

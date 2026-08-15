@@ -1,20 +1,8 @@
-<!--
-
-<manifest>
-{
-    "title": "Imagining My Older Self and Accepting It Gracefully",
-    "subtitle": "",
-    "author": "Srjana Gautam",
-    "date": "11 Nov, 2025"
-}
-</manifest>
-
--->
-
 # Imagining My Older Self and Accepting It Gracefully
 
-![](../Images/articles/aging.jpg)
+![](../Images/articles/aging.jpg "Photo by Doğukan Şahin on Unsplash")
 
+### 
 It was Diwali. Since I am not religious, I like keeping it simple. Earlier, I would cook delicacies. But this year, I decided not to do so, as I was the only one who ended up eating them, gaining a few pounds later. That morning, while still in bed, I thought about what to cook — just aloo bhaji, poori and rice kheer.
 
 When my husband and I were ready to eat, my son was still sleeping. Kheer and bhaji were done by then. I rolled eight poories and he fried them. We sat, ate and took turns in praising our food 😊. Then we took a bowl of kheer each and moved to the sofa.

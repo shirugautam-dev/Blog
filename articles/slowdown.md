@@ -1,6 +1,6 @@
 # How to Slow Down in a World That’s Running at Full Speed?
 
-![](../Images/articles/slowdown.jpg)
+![](../Images/articles/slowdown.jpg "Photo by Roberto Nickson on Unsplash")
 
 Usually, I walk in the evening. We have a reasonable size of green area where I stay. It is well maintained, it is breezy, lighting is good. There is a small pond, and, in the evening, they turn on the fountain. The lights shine in the fountain, making it even more beautiful.
 

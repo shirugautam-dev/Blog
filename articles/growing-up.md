@@ -2,7 +2,7 @@
 
 ## Lessons in Love, Letting Go, and Late-Night Biryani
 
-![](../Images/articles/twenty.jpg)
+![](../Images/articles/twenty.jpg "Photo by Manuel Schinner on Unsplash")
 
 ### Growing Up Together: Parenting Across Generations
 The other night, I heard my son’s guitar humming through the walls at 2 a.m. He was laughing, probably on Discord with his friends. I smiled, realising we live together, yet we live worlds apart.

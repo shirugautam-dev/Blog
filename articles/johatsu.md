@@ -1,7 +1,7 @@
 # We Have Johatsu Everywhere
 
+![](../Images/articles/johatsu.jpg "Photo by Gabriel on Unsplash")
 
-![](../Images/articles/johatsu.jpg)
 ### 
 Whenever I think about my childhood, one memory keeps on coming back to me. That is of Bhotu Kaka. He disappeared from our village without any explanation. Just a few days back, I came across a Japanese term, Johatsu, which is given to people who leave without a trace, and then I thought that is what he would be called if he were in Japan.
 When my maternal grandfather retired from his job and was looking for a place to settle down as he wanted to avoid the crushing winters of Kathmandu, he chose a small village, Simara, which is 20 kilometres from India border. The village was not known to many then. My grandparents were among the first dwellers.

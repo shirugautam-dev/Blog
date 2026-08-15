@@ -1,18 +1,50 @@
-maintenance - Ava Sol
-Memories - Mick Haupt
-death - Brett Jordan
-menopause - Darius Bashar
-list - Ondrej Supitar
-no power - Debby Urken
-johatsu - Gabriel
-busyness - Good Faces
-fernwah - ross parmly
-global warming - Immo Wegmann
-slowdown - Roberto Nickson
-war - Jeff Kingma
-social media - Merakist
-Indian women - Kristin Wilson
-20year - Manuel Schinner
-dandelion - walter Sturn
-richandpoor - Mathieu stern
-imposter -  Brett Jordan
+menopause - Darius Bashar - image, subtext, credit- image left
+list - Ondrej Supitar - image not ok, credit missing, subtext not ok - image left
+busyness - Good Faces - image not ok, credit missing, subtext problem- image left
+slowdown - Roberto Nickson - image, credit - image left
+versions - Brooke Cagle - image bad
+
+
+dandelion - walter Sturn - need to add
+
+
+
+
+
+growing old - image missing - done
+20year - Manuel Schinner - credit and subtext - done
+social media - Merakist - credit and subtext - done
+no power - Debby Urken - credit - done
+global warming - Immo Wegmann - credit missing - done
+war - Jeff Kingma - done
+maintenance - Ava Sol - credit - done
+Memories - Mick Haupt - credit - remove the lyrics - done
+death - Brett Jordan - subtext, credit - done
+richandpoor - Mathieu stern - done
+johatsu - Gabriel - credit missing - done
+fernwah - ross parmly - image not coming, text problem - done
+Indian women - Kristin Wilson - credit and subtext - done
+imposter -  Brett Jordan - credit - done
+luck - credit and subtext - done
+
+
+"Photo by Jeff Kingma on Unsplash"
+
+
+Photo by Doğukan Şahin on Unsplash - growing gracefully
+
+body margin needs to be increased (article-body p margin-left: 50px;  margin-right: 50px;)
+
+gap between the sections need to be increased and uniform (article-body h1 margin-bottom 50px, .article-body .photo-credit margin-bottom 50px)
+
+subtext needs to be italics and lightweight (.article-body h2 margin-bottom: 2em; margin-left: 50px font-style: italic; font-weight: lighter; color: #294b73;)
+
+new add and change
+article-body h3 (    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em; 
+    margin-block-end: 1em;
+    margin-inline-start: 0px; change this
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;

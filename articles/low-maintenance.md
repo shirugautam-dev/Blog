@@ -1,6 +1,6 @@
 # Low-Maintenance Is a Lie We Tell Ourselves
 
-![](../Images/articles/low_maintenance.jpg)
+![](../Images/articles/low_maintenance.jpg "Photo by Ava Sol on Unsplash")
 
 Have you ever felt like you have not expressed enough? That you held it, worrying that the others would dislike the idea even if that’s what you wanted. How many times have you said “it’s ok” when it was not? “Anything is fine with me.” Really? You have no preference?
 

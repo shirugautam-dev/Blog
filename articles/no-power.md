@@ -1,6 +1,6 @@
 # No Gives the Power That Yes Cannot Give
 
-![](../Images/articles/no.jpg)
+![](../Images/articles/no.jpg "Photo by Debby Urken on Unsplash")
 
 “Do you want to come along?” My husband asked me last Monday. He was invited as a guest lecturer at COEP Technological University, Department of Mechanical Engineering.
 

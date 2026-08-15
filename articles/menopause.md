@@ -1,7 +1,9 @@
 # Menopause Burnt Me First, Then Hurt Me in Other Ways
+
 ## My journey through ten years of unexpected symptoms, struggles, and finally — acceptance.
 
-![](../Images/articles/menopause.jpg)
+![](../Images/articles/menopause.jpg "Photo by Darius Bashar on Unsplash")
+
 Yes, you read that correctly, menopause burnt me first, then it showed other signs.
 
 I expected the menopause to arrive with hot flashes, night sweats, and mood swings, like for everyone else. However, mine announced itself in the middle of the night with an unbearable burning at the tip of my tongue. There was no warning, no prior indication.

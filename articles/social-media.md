@@ -1,6 +1,6 @@
 # The Strange Comfort of Keeping Busy
 
-![](../Images/articles/social_media.jpg)
+![](../Images/articles/social_media.jpg "Photo by Merakist on Unsplash")
 
 ## On leaving a job, filling the silence, and what I found when I stopped.
 

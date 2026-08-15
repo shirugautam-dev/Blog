@@ -2,7 +2,8 @@
 
 ## On leaving a job, filling the silence, and what I found when I stopped.
 
-![](../Images/articles/busyness.jpg)
+![](../Images/articles/busyness.jpg "Photo by Good Faces on Unsplash")
+
 ### 
 I’ve been free for a few months now. Not that I spend my days sleeping or binge-watching Netflix. I quit my job and stepped into what felt, at first, like unstructured time. What I did not expect was how quickly I would fill it, and what that would teach me about myself.
 I filled my days with reading, writing and unexpectedly, building my own website from scratch.

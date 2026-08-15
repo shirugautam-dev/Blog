@@ -1,9 +1,8 @@
 # I Accept Luck Without Surrendering to Fate
 
-![](../Images/articles/luck.jpg)
+![](../Images/articles/luck.jpg "Photo by Nick Fewings on Unsplash")
 
 ## Do luck and fate exist, or are they just stories we tell ourselves to make sense of a chaotic universe?
-
 I have been thinking about the role of luck and fate in our lives for about a week now. Until recently, I did not believe in them. But a conversation with a friend, who is battling a serious illness, forced me to think otherwise.
 
 “I thought hard work would sort out my life”, he told me.

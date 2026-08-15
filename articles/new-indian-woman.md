@@ -2,7 +2,7 @@
 
 ## How Choice, Not Obedience, Defines Her
 
-![](../Images/articles/indian_women.jpg)
+![](../Images/articles/indian_women.jpg "Photo by Kristin Wilson on Unsplash")
 
 Marinated chicken was waiting for me in the refrigerator. It was already 7 pm, but the office meeting was nowhere near ending. I was checking the time every few minutes, wishing the meeting would end so that I could make dinner.
 
