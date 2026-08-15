@@ -47,6 +47,14 @@ function generateHTML(article) {
           const currentIndex = articlesData.findIndex(a => a.slug === slug);
           const prevArticle = articlesData[currentIndex - 1];
           const nextArticle = articlesData[currentIndex + 1];
+          
+          function addPhotoCredits(html) {
+          return html.replace(
+            /<img([^>]*?)title="([^"]+)"([^>]*)>/gi,
+            '<img$1title="$2"$3><p class="photo-credit">$2</p>'
+          );
+          }
+          
           fetch("../articles/" + slug + ".md")
           .then(res => {
             if (!res.ok) {
@@ -61,7 +69,7 @@ function generateHTML(article) {
                 <a href="../index.html" class="nav-left">Srijana’s thoughts</a>
                 <a href="javascript:history.back()" class="nav-right"> ← Back </a>
               </div>
-              \${marked.parse(md)}
+              \${addPhotoCredits(marked.parse(md))}
               <div class="article-end">
                 <span class="end-text">✦ The End ✦</span>
                  
