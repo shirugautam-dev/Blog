@@ -316,15 +316,6 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 50px 14px;
-  }
-
-  .article-body h1 {
-    font-size: 1.6rem;
-  }
-}
 
 body.dark .container {
   position: relative;
@@ -950,8 +941,13 @@ body.dark .book-review-link:hover {
   color: #FFC300;
 }
 
-/* Tablet and mobile */
+/* =========================================
+   TABLET & MOBILE
+   ========================================= */
+
 @media (max-width: 768px) {
+
+  /* Home hero */
   .home-hero {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -963,12 +959,32 @@ body.dark .book-review-link:hover {
     gap: 24px;
   }
 
-  .home-hero .intro img {
+  /* .home-hero .intro img {
     aspect-ratio: 4 / 3;
+  } */
+
+  /* Main container */
+  .container {
+    padding: 50px 14px;
   }
+
+  /* Article */
+  .article-body h1 {
+    font-size: 1.6rem;
+  }
+
+  .article-body p {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
 @media (max-width: 480px) {
+
   .home-hero {
     padding: 8px;
     border-radius: 14px;
