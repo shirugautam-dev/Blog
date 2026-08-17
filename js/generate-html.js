@@ -19,8 +19,8 @@ function generateHTML(article) {
       <meta name="description" content="${article.excerpt}">
       <meta property="og:title" content="${article.title}">
       <meta property="og:description" content="${article.excerpt}">
-      <meta property="og:image" content="https://shirugautam-dev.github.io/Blog/Images/Self_org.jpg">
-      <meta property="og:url" content="https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html">
+      <meta property="og:image" content="https://srijanagautam.com/Images/Self_org.jpg">
+      <meta property="og:url" content="https://srijanagautam.com/htmls/${article.slug}.html">
       <meta property="og:type" content="article">
       <script>
         if (localStorage.getItem("theme") === "dark") {
@@ -80,10 +80,10 @@ function generateHTML(article) {
                   : '<span></span>' }
                 <div class="share-container">
                   <span class="share-label">Share:</span>
-                  <a href="https://twitter.com/intent/tweet?url=https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html&text=${article.title}" target="_blank" class="share-btn"><i class="fa-brands fa-x-twitter"></i></a>
-                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html" target="_blank" class="share-btn"><i class="fa-brands fa-linkedin"></i></a>
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html" target="_blank" class="share-btn"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="https://wa.me/?text=https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html" target="_blank" class="share-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                  <a href="https://twitter.com/intent/tweet?url=https://srijanagautam.com/htmls/${article.slug}.html&text=${article.title}" target="_blank" class="share-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://srijanagautam.com/htmls/${article.slug}.html" target="_blank" class="share-btn"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://srijanagautam.com/htmls/${article.slug}.html" target="_blank" class="share-btn"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://wa.me/?text=https://srijanagautam.com/htmls/${article.slug}.html" target="_blank" class="share-btn"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
                   \${ prevArticle 
                   ? '<a href="' + prevArticle.slug + '.html">Next →</a>' 

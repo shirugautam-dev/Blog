@@ -157,7 +157,7 @@ if (!postSlug) {
       const post = document.createElement("article");
       post.className = "srijana-post";
 
-      const url = `https://shirugautam-dev.github.io/Blog/htmls/${article.slug}.html`;
+      const url = `/htmls/${article.slug}.html`;
 
       const formattedDate = new Date(article.date).toLocaleDateString("en-US", {
         year: "numeric",
@@ -166,7 +166,7 @@ if (!postSlug) {
       });
 
       post.innerHTML = `
-        <h2><a href="/Blog/htmls/${article.slug}.html">${article.title}</a></h2>
+        <h2><a href="/htmls/${article.slug}.html">${article.title}</a></h2>
         <p>${article.excerpt}</p>
 
         <p class="post-meta">
