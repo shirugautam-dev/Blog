@@ -5,11 +5,24 @@ if (!postSlug) {
 
   const articles = [
     {
+      title: "My Mother Thought Investing Wasn’t Her Domain. I Disagree.",
+      excerpt: "Don't let fear hold back your financial freedom. Learn how women can take control of their financial future and start investing with confidence.",
+      slug: "invest",
+      date: "2026-08-17"
+    },
+    {
+      title: "I Met an Orchid, and It Made Me Question Myself",
+      excerpt: "Living with an orchid husband made me question my dandelion nature. A personal essay on personality, resilience, flourishing, and family.",
+      slug: "orchid",
+      date: "2026-07-29"
+    },
+    {
       title: "The Versions of Myself I have Missed",
       excerpt: "Why reuniting with old friends never quite feels the same — a personal essay on nostalgia, memory, and the selves we leave behind.",
       slug: "versions",
       date: "2026-07-07"
-    },{
+    },
+    {
       title: "I Am Not Rich, She Is Not Poor",
       excerpt: "A simple lottery question to my domestic help revealed an uncomfortable truth about money, security and the moving goalpost of enough.",
       slug: "richandpoor",
