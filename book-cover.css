@@ -1,10 +1,20 @@
+/* =========================================================
+   BOOK REVIEWS PAGE
+   ========================================================= */
+
 .book-page {
-  max-width: 900px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 24px 60px;
+  box-sizing: border-box;
 }
 
-/* Site Navigation Link */
+
+/* =========================================================
+   SITE NAVIGATION
+   ========================================================= */
+
 .site-nav {
   display: flex;
   justify-content: space-between;
@@ -16,212 +26,37 @@
   text-decoration: none;
   font-weight: 500;
   color: #3a3a3a;
-  transition: color 0.2s;
-}
-
-body.dark .nav-brand {
-  text-decoration: none;
-  font-weight: 500;
-  color: #FFC300;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 .nav-brand:hover {
   color: #000;
 }
 
-.book-list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+body.dark .nav-brand {
+  color: #FFC300;
 }
 
-/* Flex-based Intro Section (Replaces the fixed width/height table) */
-.book-intro {
-  margin: 30px 0;
-  background-color: #FEDB00;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(255, 200, 0, 0.15);
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  padding: 30px;
-  width: 100%; /* Flexible width */
-  box-sizing: border-box;
-}
 
-.book-intro .intro-img {
-  border-radius: 12px;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.book-intro .intro-text h1 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem;
-}
+/* =========================================================
+   INTRO SECTION
+   ========================================================= */
 
 .book-intro {
-  margin: 30px 0 40px 0;
-  background: #FEDB00; /* Warm yellow theme matching your design */
+  margin: 30px 0 40px;
+  background: #FEDB00;
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(255, 200, 0, 0.15);
+
   display: flex;
   align-items: center;
   gap: 32px;
+
   padding: 32px;
+  width: 100%;
   box-sizing: border-box;
 }
 
-/* Filter Pill Buttons */
-.book-filters {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 25px 0;
-}
-
-.filter-btn {
-  background: #f0f0f0;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-  background: #294b73;
-  color: #fff;
-}
-
-.book-card {
-  display: grid;
-  grid-template-columns: 180px 1fr; /* 180px for image on left, remaining space for review */
-  gap: 28px;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  align-items: start;
-}
-
-/* Left Column: Image */
-.book-card-left {
-  width: 100%;
-}
-
-.book-card-cover {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Right Column: Review Details */
-.book-card-right {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* Responsive adjustment for mobile */
-@media (max-width: 600px) {
-  .book-intro {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .book-card {
-    grid-template-columns: 1fr; /* Stacks image on top on mobile */
-    justify-items: center;
-    text-align: center;
-  }
-
-  .book-card-cover {
-    width: 160px;
-    height: 220px;
-  }
-
-  .book-tags {
-    justify-content: center;
-  }
-}
-
-.book-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  margin: 0 0 2px 0;
-  color: #1a1a1a;
-}
-
-.book-author {
-  font-size: .95rem;
-  font-weight: 400;
-  color: #555;
-  margin: 0 0 4px 0;
-}
-
-.book-meta {
-  font-size: 0.8rem;
-  color: #888;
-  margin-bottom: 8px;
-}
-
-/* Star Ratings */
-.book-rating {
-  font-size: 1rem;
-  color: #f39c12;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.rating-number {
-  color: #555;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-/* Review Text Body */
-.book-review-content {
-  font-size: .92rem;
-  line-height: 1.55;
-  color: #444;
-  margin-top: 8px;
-}
-
-.book-review-content p {
-  margin: 0 0 8px 0;
-}
-
-/* Tags */
-.book-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.book-tag {
-  background: #f0f4f8;
-  color: #294b73;
-  font-size: 0.8rem;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-weight: 500;
-}
-
-
-
-/* Image Container & Styling */
 .intro-image-container {
   flex-shrink: 0;
   width: 160px;
@@ -234,19 +69,27 @@ body.dark .nav-brand {
 .intro-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Keeps image sharp without stretching */
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .intro-img:hover {
-  transform: scale(1.05); /* Gentle zoom effect on hover */
+  transform: scale(1.05);
 }
 
-/* Text Content */
+.book-intro .intro-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .intro-text h1 {
-  margin: 0 0 10px 0;
-  font-family: 'Cormorant Garamond', serif;
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 2.2rem;
+  line-height: 1.2;
   color: #1a1a1a;
 }
 
@@ -257,17 +100,485 @@ body.dark .nav-brand {
   color: #3a3a3a;
 }
 
-/* Mobile Responsiveness */
+
+/* =========================================================
+   FILTER BUTTONS
+   ========================================================= */
+
+.book-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 25px 0 35px;
+}
+
+.filter-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  font-size: 0.9rem;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #294b73;
+  color: #fff;
+}
+
+
+/* =========================================================
+   BOOK LIST
+   ========================================================= */
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+
+/* =========================================================
+   BOOK CARD
+   ========================================================= */
+
+.book-card {
+  display: grid;
+
+  /*
+    Fixed cover column + flexible text column.
+    minmax(0, 1fr) prevents the review from
+    pushing outside the page.
+  */
+  grid-template-columns: 280px minmax(0, 1fr);
+
+  gap: 42px;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 10px 0 50px;
+
+  background: #fff;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   BOOK COVER
+   ========================================================= */
+
+.book-card-left {
+  width: 280px;
+  min-width: 0;
+}
+
+.book-card-cover {
+  display: block;
+
+  width: 280px;
+
+  /*
+    IMPORTANT:
+    Do not use height: 250px here.
+    That was cropping your book covers.
+  */
+  height: auto;
+
+  aspect-ratio: 2 / 3;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   RIGHT SIDE OF BOOK CARD
+   ========================================================= */
+
+.book-card-right {
+  min-width: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BOOK HEADER
+   ========================================================= */
+
+.book-card-header {
+  width: 100%;
+  min-width: 0;
+}
+
+.book-title {
+  margin: 0 0 6px;
+
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  font-size: 2.25rem;
+  line-height: 1.15;
+  font-weight: 700;
+
+  color: #1a1a1a;
+
+  overflow-wrap: break-word;
+}
+
+.book-author {
+  margin: 0 0 14px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 1.1rem;
+  font-weight: 400;
+
+  color: #555;
+}
+
+.book-meta {
+  margin-bottom: 16px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  color: #888;
+}
+
+
+/* =========================================================
+   STAR RATING
+   ========================================================= */
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 28px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.book-rating .stars {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+
+  color: #f39c12;
+}
+
+.rating-number {
+  color: #555;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   REVIEW CONTENT
+   ========================================================= */
+
+.book-review-content {
+  width: 100%;
+  max-width: 850px;
+
+  box-sizing: border-box;
+
+  /*
+    This is important.
+    Your screenshot showed a monospace-looking font.
+  */
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 1.08rem;
+  line-height: 1.7;
+
+  color: #333;
+
+  /*
+    Prevent long text from escaping
+    outside the card.
+  */
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+
+/* =========================================================
+   REVIEW PARAGRAPHS
+   ========================================================= */
+
+.book-review-content p {
+  margin: 0 0 22px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 1.08rem;
+  line-height: 1.7;
+
+  color: #333;
+
+  white-space: normal;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.book-review-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   QUOTES
+   ========================================================= */
+
+.book-review-content blockquote {
+  margin: 28px 0;
+
+  padding: 8px 0 8px 26px;
+
+  border-left: 4px solid #e88922;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 1.12rem;
+  line-height: 1.65;
+
+  font-style: italic;
+
+  color: #444;
+}
+
+.book-review-content blockquote p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.book-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  margin-top: 24px;
+}
+
+.book-tag {
+  background: #f0f4f8;
+
+  color: #294b73;
+
+  font-size: 0.8rem;
+
+  padding: 4px 10px;
+
+  border-radius: 12px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   NO REVIEWS MESSAGE
+   ========================================================= */
+
+.no-books {
+  padding: 30px 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .book-page {
+    padding: 30px 20px 50px;
+  }
+
+  .book-card {
+    grid-template-columns: 220px minmax(0, 1fr);
+
+    gap: 30px;
+  }
+
+  .book-card-left {
+    width: 220px;
+  }
+
+  .book-card-cover {
+    width: 220px;
+  }
+
+  .book-title {
+    font-size: 2rem;
+  }
+
+  .book-review-content,
+  .book-review-content p {
+    font-size: 1.02rem;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 640px) {
+
+  .book-page {
+    padding: 25px 16px 40px;
+  }
+
+
+  /* Intro */
+
   .book-intro {
     flex-direction: column;
+
     text-align: center;
+
     padding: 24px;
+
     gap: 20px;
   }
 
   .intro-image-container {
     width: 130px;
     height: 130px;
+  }
+
+  .book-intro .intro-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .intro-text h1 {
+    font-size: 1.9rem;
+  }
+
+
+  /* Filters */
+
+  .book-filters {
+    justify-content: center;
+  }
+
+
+  /* Book card */
+
+  .book-card {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding: 10px 0 40px;
+  }
+
+  .book-card-left {
+    width: 180px;
+
+    margin: 0 auto;
+  }
+
+  .book-card-cover {
+    width: 180px;
+  }
+
+  .book-card-right {
+    width: 100%;
+  }
+
+
+  /* Header */
+
+  .book-title {
+    font-size: 1.9rem;
+
+    text-align: left;
+  }
+
+  .book-author {
+    text-align: left;
+  }
+
+  .book-meta {
+    text-align: left;
+  }
+
+
+  /* Rating */
+
+  .book-rating {
+    margin-bottom: 24px;
+  }
+
+
+  /* Review */
+
+  .book-review-content {
+    max-width: 100%;
+
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .book-review-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+  }
+
+  .book-review-content blockquote {
+    font-size: 1rem;
+
+    margin: 25px 0;
+
+    padding-left: 18px;
+  }
+
+
+  /* Tags */
+
+  .book-tags {
+    justify-content: flex-start;
   }
 }
