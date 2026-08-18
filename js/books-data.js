@@ -12,18 +12,18 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/1662526520.jpg",
     review: `This is my first book by Fredrik Backman. I had not heard about him before. I picked it up only because it was on Kindle Unlimited and was looking for a quick read. But how would I know what I was in for?
               
-            Those sixty pages of humour, wisdom and the sharp observation of human psychology hooked me with the author for life.
+    Those sixty pages of humour, wisdom and the sharp observation of human psychology hooked me with the author for life.
             
-            Being smart is the worst thing one can be in modern society. All it ever means is more work.
+    >"Being smart is the worst thing one can be in modern society. All it ever means is more work."
 
-            The novella explores boundaries, personal space and our relationship with the word “no”. It is about a man who doesn’t want to engage with anyone, wants to be left on his own. But does the society let him? Of course, not.
+    The novella explores boundaries, personal space and our relationship with the word “no”. It is about a man who doesn’t want to engage with anyone, wants to be left on his own. But does the society let him? Of course, not.
           
-            He is, without his intention, gets dragged into a task of the housing society he lives in. He tries his best to get out of it, only to be dragged more.
+    He is, without his intention, gets dragged into a task of the housing society he lives in. He tries his best to get out of it, only to be dragged more.
           
-            The story portrays how we are torn between the societal pressures and our own needs; how difficult it is to say “no” and the conflict we bear inside. Backman tells this deeply human story with a blend of humour, introspecting every now and then, which I have come to know as his signature style.
+    The story portrays how we are torn between the societal pressures and our own needs; how difficult it is to say “no” and the conflict we bear inside. Backman tells this deeply human story with a blend of humour, introspecting every now and then, which I have come to know as his signature style.
           
-            Though it was a quick read, it left a lasting impression on me, not only about the author, but also the topic of self-assertion.
-          `
+    Though it was a quick read, it left a lasting impression on me, not only about the author, but also the topic of self-assertion.
+    `
   },
   {
     slug: "atomic-habits",
