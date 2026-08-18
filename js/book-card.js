@@ -23,7 +23,7 @@ function createStars(rating) {
 function createBookCard(book) {
   const article = document.createElement("article");
   article.className = "book-card";
-  
+
   // Use a provided image path, or default to a placeholder
   const coverImgSrc = book.coverImage || "Images/books/default-cover.jpg";
 
@@ -45,20 +45,22 @@ function createBookCard(book) {
       </div>
 
       <div class="book-review-content">
-        ${
-          book.review
-          ? marked.parse(book.review)
-          : "<p><em>Review coming soon...</em></p>"
+        ${book.review
+        ? book.review
+        .trim()
+        .split(/\n\s*\n/)
+        .map(paragraph => `<p>${paragraph.trim()}</p>`)
+        .join("")
+      : "<p><em>Review coming soon...</em></p>"
         }
       </div>
 
-      ${
-        book.tags && book.tags.length
-        ? `<div class="book-tags">
+      ${book.tags && book.tags.length
+      ? `<div class="book-tags">
             ${book.tags.map(tag => `<span class="book-tag">${tag}</span>`).join("")}
            </div>`
-        : ""
-      }
+      : ""
+    }
     </div>
   `;
 
