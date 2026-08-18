@@ -14,7 +14,7 @@ const books = [
               
     Those sixty pages of humour, wisdom and the sharp observation of human psychology hooked me with the author for life.
             
-    >"Being smart is the worst thing one can be in modern society. All it ever means is more work."
+    *"Being smart is the worst thing one can be in modern society. All it ever means is more work."*
 
     The novella explores boundaries, personal space and our relationship with the word “no”. It is about a man who doesn’t want to engage with anyone, wants to be left on his own. But does the society let him? Of course, not.
           
