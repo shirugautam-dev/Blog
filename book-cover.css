@@ -456,6 +456,10 @@ body.dark .nav-brand {
   }
 }
 
+.book-review-content blockquote,
+.book-review-content blockquote p {
+  font-style: italic !important;
+}
 
 /* =========================================================
    MOBILE
