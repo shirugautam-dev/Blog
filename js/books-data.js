@@ -10,7 +10,7 @@ const books = [
     published: 2024,
     pages: 68,
     coverImage: "https://covers.openlibrary.org/b/isbn/1662526520.jpg",
-    review: ["This is my first book by Fredrik Backman. I had not heard about him before. I picked it up only because it was on Kindle Unlimited and was looking for a quick read. But how would I know what I was in for?
+    review: `This is my first book by Fredrik Backman. I had not heard about him before. I picked it up only because it was on Kindle Unlimited and was looking for a quick read. But how would I know what I was in for?
               
             Those sixty pages of humour, wisdom and the sharp observation of human psychology hooked me with the author for life.
             
@@ -23,7 +23,7 @@ const books = [
             The story portrays how we are torn between the societal pressures and our own needs; how difficult it is to say “no” and the conflict we bear inside. Backman tells this deeply human story with a blend of humour, introspecting every now and then, which I have come to know as his signature style.
           
             Though it was a quick read, it left a lasting impression on me, not only about the author, but also the topic of self-assertion.
-          ]  
+          `
   },
   {
     slug: "atomic-habits",
