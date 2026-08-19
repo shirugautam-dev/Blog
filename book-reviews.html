@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,15 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="book-cover.css">
-
+  <link rel="icon" href="favicon.ico"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container book-page">
-    
-    <!-- Top Navigation -->
     <header class="site-header">
       <nav class="site-nav">
         <a href="index.html" class="nav-brand">← Home</a>
@@ -24,21 +24,17 @@
       </nav>
     </header>
 
-    <!-- Intro Banner matching Home Page profile style -->
-   <section class="book-intro">
-  <div class="intro-image-container">
-    <img 
-      src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" 
-      alt="Cozy books stacked on a table" 
-      class="intro-img"
-    >
-  </div>
-  <div class="intro-text">
-    <h1>Book Reviews</h1>
-    <p>Welcome to my reading world! Here I share my take on the books I've read.</p>
-  </div>
-</section>
-    <!-- Genre Filter Buttons -->
+    <section class="book-intro">
+      <div class="intro-image-container">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80"
+          alt="Cozy books stacked on a table" class="intro-img">
+      </div>
+      <div class="intro-text">
+        <h1>Book Reviews</h1>
+        <p>Welcome to my reading world! Here I share my take on the books I've read.</p>
+      </div>
+    </section>
+
     <section class="book-filters">
       <button class="filter-btn active" data-genre="All">All</button>
       <button class="filter-btn" data-genre="Memoir">Memoir</button>
@@ -48,25 +44,21 @@
       <button class="filter-btn" data-genre="Psychology">Psychology</button>
     </section>
 
-    <!-- Dynamic Book List Container -->
     <main>
-      <div class="book-list">
-        <!-- Generated automatically by JavaScript -->
-      </div>
+      <div class="book-list"> </div>
     </main>
 
-    <!-- Footer matching homepage -->
     <footer class="site-footer">
       <p>© 2026 Srijana Gautam</p>
     </footer>
 
   </div>
 
-  <!-- External & Custom Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/books-data.js"></script>
   <script src="js/book-card.js"></script>
   <script src="js/book-reviews.js"></script>
 </body>
+
 </html>
