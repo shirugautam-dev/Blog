@@ -330,18 +330,12 @@ body.dark .nav-brand {
 
 .book-review-content p {
   margin: 0 0 12px;
-
   font-family: "Lato", Arial, sans-serif;
-
-  font-size: 12px;
+  font-size: 19px;
   font-weight: 300;
-
   line-height: 1.65;
-
   color: #444;
-
   white-space: normal;
-
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: normal;
@@ -463,12 +457,9 @@ body.dark .nav-brand {
   .book-review-content,
   .book-review-content p {
     font-family: "Lato", Arial, sans-serif;
-
     font-size: 19px;
     font-weight: 400;
-
     line-height: 1.65;
-
     color: #444;
   }
 }
