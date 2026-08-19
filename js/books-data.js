@@ -9,6 +9,7 @@ const books = [
     rating: 4.5,
     published: 2024,
     pages: 68,
+    reviewed: "August 19, 2026",
     coverImage: "https://covers.openlibrary.org/b/isbn/1662526520.jpg",
     review: `This is my first book by Fredrik Backman. I had not heard about him before. I picked it up only because it was on Kindle Unlimited and was looking for a quick read. But how would I know what I was in for?
               

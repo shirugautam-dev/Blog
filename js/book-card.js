@@ -40,6 +40,7 @@ function createBookCard(book) {
           <span>Genre: ${book.genre}</span> • 
           <span>Published: ${book.published}</span> • 
           <span>Pages: ${book.pages}</span>
+          <span>Reviewed: ${book.reviewed}</span>
         </div>
         ${createStars(book.rating)}
       </div>
