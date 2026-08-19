@@ -186,28 +186,17 @@ body.dark .nav-brand {
 
 .book-card-left {
   float: left;
-
-  width: 280px;
-
-  margin: 0 42px 25px 0;
+  width: 220px;
+  margin: 0 35px 20px 0;
 }
 
 .book-card-cover {
-  display: block;
-
-  width: 280px;
+   width: 220px;
   height: auto;
-
-  /*
-    Keeps the natural book-cover shape.
-  */
   aspect-ratio: 2 / 3;
-
   object-fit: cover;
-
   border-radius: 10px;
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -237,7 +226,7 @@ body.dark .nav-brand {
 
   font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.15;
   font-weight: 700;
 
@@ -259,15 +248,15 @@ body.dark .nav-brand {
 
 .book-meta {
   margin-bottom: 16px;
-
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.95rem;
   line-height: 1.5;
-
   color: #888;
 }
 
+.book-meta span {
+  margin-right: 14px;
+}
 
 /* =========================================================
    STAR RATING
@@ -277,9 +266,7 @@ body.dark .nav-brand {
   display: flex;
   align-items: center;
   gap: 10px;
-
   margin-bottom: 28px;
-
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -303,21 +290,13 @@ body.dark .nav-brand {
    ========================================================= */
 
 .book-review-content {
-  width: 100%;
-
-  box-sizing: border-box;
-
+ width: 100%;
   font-family: "Lato", Arial, sans-serif;
-
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 400;
-
-  line-height: 1.65;
-
+  line-height: 1.7;
   color: #444;
-
   white-space: normal;
-
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: normal;
@@ -329,16 +308,12 @@ body.dark .nav-brand {
    ========================================================= */
 
 .book-review-content p {
-  margin: 0 0 12px;
+   margin: 0 0 20px;
   font-family: "Lato", Arial, sans-serif;
-  font-size: 19px;
-  font-weight: 300;
-  line-height: 1.65;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
   color: #444;
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: normal;
 }
 
 .book-review-content p:last-child {
@@ -447,7 +422,7 @@ body.dark .nav-brand {
   }
 
   .book-card-cover {
-    width: 220px;
+    width: 120px;
   }
 
   .book-title {
@@ -458,7 +433,7 @@ body.dark .nav-brand {
   .book-review-content p {
     font-family: "Lato", Arial, sans-serif;
     font-size: 19px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.65;
     color: #444;
   }
@@ -527,7 +502,7 @@ body.dark .nav-brand {
   }
 
   .book-card-cover {
-    width: 180px;
+    width: 120px;
   }
 
 
@@ -564,7 +539,7 @@ body.dark .nav-brand {
      ----------------------------------------- */
 
   .book-rating {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
 
