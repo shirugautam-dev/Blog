@@ -109,7 +109,7 @@ body.dark .nav-brand {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin: 25px 0 35px;
+  margin: 25px 0 50px;
 }
 
 .filter-btn {
@@ -159,13 +159,10 @@ body.dark .nav-brand {
 
 .book-card {
   display: block;
-
   width: 100%;
   max-width: 1200px;
-
   margin: 0 auto;
-
-  padding: 10px 0 50px;
+  padding: 10px 0 35px;
 
   background: #fff;
 
@@ -273,13 +270,11 @@ body.dark .nav-brand {
 .book-rating .stars {
   font-size: 1.25rem;
   letter-spacing: 1px;
-
   color: #f39c12;
 }
 
 .rating-number {
   color: #555;
-
   font-size: 1rem;
   font-weight: 500;
 }
@@ -290,7 +285,7 @@ body.dark .nav-brand {
    ========================================================= */
 
 .book-review-content {
- width: 100%;
+  width: 100%;
   font-family: "Lato", Arial, sans-serif;
   font-size: 17px;
   font-weight: 400;
@@ -308,7 +303,7 @@ body.dark .nav-brand {
    ========================================================= */
 
 .book-review-content p {
-   margin: 0 0 20px;
+  margin: 0 0 20px;
   font-family: "Lato", Arial, sans-serif;
   font-size: 17px;
   font-weight: 400;
@@ -341,24 +336,17 @@ body.dark .nav-brand {
 
 .book-review-content blockquote {
   margin: 28px 0;
-
   padding: 8px 0 8px 26px;
-
   border-left: 4px solid #e88922;
-
   font-family: "Lato", Arial, sans-serif;
-
   font-size: 20px;
   line-height: 1.65;
-
   font-style: italic;
-
   color: #444;
 }
 
 .book-review-content blockquote p {
   margin: 0;
-
   font-style: italic;
 }
 
@@ -371,23 +359,16 @@ body.dark .nav-brand {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-
   margin-top: 24px;
-
   clear: both;
 }
 
 .book-tag {
   background: #f0f4f8;
-
   color: #294b73;
-
   font-size: 0.8rem;
-
   padding: 4px 10px;
-
   border-radius: 12px;
-
   font-weight: 500;
 }
 
@@ -398,9 +379,7 @@ body.dark .nav-brand {
 
 .no-books {
   padding: 30px 0;
-
   font-family: Georgia, "Times New Roman", serif;
-
   color: #666;
 }
 
@@ -417,7 +396,6 @@ body.dark .nav-brand {
 
   .book-card-left {
     width: 220px;
-
     margin-right: 30px;
   }
 
@@ -457,11 +435,8 @@ body.dark .nav-brand {
 
   .book-intro {
     flex-direction: column;
-
     text-align: center;
-
     padding: 24px;
-
     gap: 20px;
   }
 
@@ -495,9 +470,7 @@ body.dark .nav-brand {
 
   .book-card-left {
     float: none;
-
     width: 180px;
-
     margin: 0 auto 25px;
   }
 
@@ -521,7 +494,6 @@ body.dark .nav-brand {
 
   .book-title {
     font-size: 1.9rem;
-
     text-align: left;
   }
 
@@ -550,31 +522,23 @@ body.dark .nav-brand {
   .book-review-content {
     width: 100%;
     max-width: 100%;
-
     font-family: "Lato", Arial, sans-serif;
-
     font-size: 18px;
     font-weight: 400;
-
     line-height: 1.65;
   }
 
   .book-review-content p {
     font-family: "Lato", Arial, sans-serif;
-
     font-size: 18px;
     font-weight: 400;
-
     line-height: 1.65;
-
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .book-review-content blockquote {
     font-size: 18px;
-
     margin: 25px 0;
-
     padding-left: 18px;
   }
 

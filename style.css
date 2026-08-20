@@ -46,7 +46,7 @@ body.dark .article-body .photo-credit {
 }
 
 .article-body {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   padding: 20px 16px;
   background: #FFF8F2;
@@ -66,7 +66,7 @@ body.dark .article-body .photo-credit {
   font-size: 1.5rem;
   margin-top: 2em;
   margin-bottom: 2em;
-  margin-left: 50px;
+  margin-left: 20px;
   font-style: italic; 
   font-weight: lighter; 
   color: #294b73;
@@ -77,7 +77,7 @@ body.dark .article-body .photo-credit {
     font-size: 1.17em;
     margin-block-start: 1em; 
     margin-block-end: 1em;
-    margin-inline-start: 50px; 
+    margin-inline-start: 20px; 
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
@@ -88,8 +88,8 @@ body.dark .article-body .photo-credit {
   line-height: 1.8;  
   letter-spacing: 0.2px;
   margin-bottom: 1.6em;
-  margin-left: 50px;  
-  margin-right: 50px;
+  margin-left: 20px;  
+  margin-right: 20px;
 }
 
 
@@ -118,13 +118,12 @@ img {
 
 .container {
   position: relative;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
-  padding: 60px 16px 20px;
-  background: #FFF8F2; 
+  padding: 60px 20px 20px;
+  background: #FFF8F2;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  padding-bottom: 20px;
 }
 
 .content,
@@ -318,14 +317,13 @@ a {
 
 
 body.dark .container {
-  position: relative;
-  max-width: 900px;
+  position:relative;
+  max-width: 1200px;
   margin: auto;
-  padding: 60px 16px 20px;
-  background: #363333; 
+  padding: 60px 20px 40px;
+  background: #363333;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  padding-bottom: 40px;
 }
 
 body.dark .intro {
@@ -469,7 +467,7 @@ body.dark #theme-toggle {
 }
 
 .page-container {
-  max-width: 820px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -946,8 +944,6 @@ body.dark .book-review-link:hover {
    ========================================= */
 
 @media (max-width: 768px) {
-
-  /* Home hero */
   .home-hero {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -959,16 +955,10 @@ body.dark .book-review-link:hover {
     gap: 24px;
   }
 
-  /* .home-hero .intro img {
-    aspect-ratio: 4 / 3;
-  } */
-
-  /* Main container */
   .container {
     padding: 50px 14px;
   }
 
-  /* Article */
   .article-body h1 {
     font-size: 1.6rem;
   }
@@ -976,8 +966,8 @@ body.dark .book-review-link:hover {
   .article-body p {
     margin-left: 0px;
     margin-right: 0px;
+  }
 }
-
 
 /* =========================================
    SMALL PHONES
