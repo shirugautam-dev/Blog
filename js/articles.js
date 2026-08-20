@@ -178,15 +178,37 @@ if (!postSlug) {
         day: "numeric"
       });
 
+      // post.innerHTML = `
+      //   <h2><a href="/htmls/${article.slug}.html">${article.title}</a></h2>
+      //   <p>${article.excerpt}</p>
+
+      //   <p class="post-meta">
+      //      ${formattedDate}
+      //   </p>
+
+      // `;
+
       post.innerHTML = `
-        <h2><a href="/htmls/${article.slug}.html">${article.title}</a></h2>
-        <p>${article.excerpt}</p>
+  <div class="article-card-content">
+    <img 
+      src="${article.thumbnail}" 
+      alt="${article.title}" 
+      class="article-thumbnail"
+    >
 
-        <p class="post-meta">
-           ${formattedDate}
-        </p>
+    <div class="article-card-text">
+      <h2>
+        <a href="/htmls/${article.slug}.html">${article.title}</a>
+      </h2>
 
-      `;
+      <p>${article.excerpt}</p>
+
+      <p class="post-meta">
+        ${formattedDate}
+      </p>
+    </div>
+  </div>
+`;
 
       container.appendChild(post);
     });

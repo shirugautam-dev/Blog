@@ -69,8 +69,11 @@ function generateHTML(article) {
                 <a href="../index.html" class="nav-left">Srijana’s thoughts</a>
                 <a href="javascript:history.back()" class="nav-right"> ← Back </a>
               </div>
-              \${addPhotoCredits(marked.parse(md))}
-              <div class="article-end">
+              \${addPhotoCredits(marked.parse(md)).replace(
+  /(<h1[^>]*>.*?<\/h1>)/i,
+  '$1<div class="book-review-link"><a href="../book-review.html">📚 Read my book reviews →</a></div>'
+)}
+<div class="article-end">
                 <span class="end-text">✦ The End ✦</span>
                  
  
