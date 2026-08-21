@@ -84,7 +84,8 @@ body.dark .article-body .photo-credit {
   }
 
   .article-body p {
-  font-size: 1.1rem;
+  font-size: 17px;
+  font-family: ui-rounded;
   line-height: 1.8;  
   letter-spacing: 0.2px;
   margin-bottom: 1.6em;
@@ -188,7 +189,8 @@ img {
 }
 
 .srijana-post p:not(.post-meta) {
-  font-size: 1.05rem;
+  font-size: 17px;
+  font-family: ui-rounded;
 }
 
 .post-meta {
@@ -866,6 +868,8 @@ h1{
 .book-review-link {
   display: flex;
   align-items: center;
+  text-align: center;
+  margin: 18px 0 35px;
   gap: 12px;
   padding: 13px 14px;
   border: 1px solid rgba(45,45,45,0.25);
@@ -873,6 +877,24 @@ h1{
   color: #2D2D2D;
   background: rgba(255,255,255,0.28);
   transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.book-review-link a {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #c8c8c8;
+  border-radius: 20px;
+  background: transparent;
+  color: #2d4f73;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.book-review-link a:hover {
+  background: #2d4f73;
+  color: white;
+  border-color: #2d4f73;
 }
 
 .book-review-link:hover {

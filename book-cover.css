@@ -25,7 +25,7 @@
 .nav-brand {
   text-decoration: none;
   font-weight: 500;
-  color: #3a3a3a;
+  color: #6a1b9a;
   transition: color 0.2s ease;
 }
 
@@ -283,7 +283,7 @@ body.dark .book-card{
 
 .book-review-content {
   width: 100%;
-  font-family: "Lato", Arial, sans-serif;
+  font-family: ui-rounded;
   font-size: 17px;
   font-weight: 400;
   line-height: 1.7;
@@ -301,7 +301,7 @@ body.dark .book-card{
 
 .book-review-content p {
   margin: 0 0 20px;
-  font-family: "Lato", Arial, sans-serif;
+  font-family: ui-rounded;
   font-size: 17px;
   font-weight: 400;
   line-height: 1.5;
@@ -310,7 +310,7 @@ body.dark .book-card{
 
 body.dark .book-review-content p {
   margin: 0 0 20px;
-  font-family: "Lato", Arial, sans-serif;
+  font-family:ui-rounded;
   font-size: 17px;
   font-weight: 400;
   line-height: 1.5;
@@ -346,7 +346,7 @@ body.dark .book-review-content p {
   margin: 28px 0;
   padding: 8px 0 8px 26px;
   border-left: 4px solid #e88922;
-  font-family: "Lato", Arial, sans-serif;
+  font-family: ui-rounded;
   font-size: 17px;
   line-height: 1.5;
   font-style: italic;
@@ -417,7 +417,7 @@ body.dark .book-review-content p {
 
   .book-review-content,
   .book-review-content p {
-    font-family: "Lato", Arial, sans-serif;
+    font-family: ui-rounded;
     font-size: 17px;
     font-weight: 300;
     line-height: 1.5;
@@ -530,14 +530,14 @@ body.dark .book-review-content p {
   .book-review-content {
     width: 100%;
     max-width: 100%;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: ui-rounded;
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
   }
 
   .book-review-content p {
-    font-family: "Lato", Arial, sans-serif;
+    font-family: ui-rounded;
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
@@ -548,6 +548,7 @@ body.dark .book-review-content p {
     font-size: 17px;
     margin: 25px 0;
     padding-left: 18px;
+    font-family: ui-rounded;
   }
 
 
