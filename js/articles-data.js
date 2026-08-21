@@ -25,7 +25,7 @@ const articlesData = [
       excerpt: "A simple lottery question to my domestic help revealed an uncomfortable truth about money, security and the moving goalpost of enough.",
       slug: "richandpoor",
       date: "2026-06-29",
-      thumbnail: "Images/articles/richnandpoor.jpg"
+      thumbnail: "Images/articles/richandpoor.jpg"
     },
     {
       title: "Why We Feel Life Is Better Somewhere Else",
