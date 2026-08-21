@@ -308,6 +308,17 @@ body.dark .book-card{
   color: #444;
 }
 
+body.dark .book-review-content p {
+  margin: 0 0 20px;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #d6d6d6;
+}
+
+
+
 .book-review-content p:last-child {
   margin-bottom: 0;
 }
