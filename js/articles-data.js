@@ -1,4 +1,4 @@
-module.exports = [
+const articlesData = [
     {
       title: "My Mother Thought Investing Wasn’t Her Domain. I Disagree.",
       excerpt: "Don't let fear hold back your financial freedom. Learn how women can take control of their financial future and start investing with confidence.",
@@ -157,3 +157,9 @@ module.exports = [
       thumbnail: "Images/articles/menopause.jpg"
     }
 ];
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = articlesData;
+} else {
+  window.articlesData = articlesData;
+}
