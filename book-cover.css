@@ -304,7 +304,7 @@ body.dark .book-card{
   font-family: "Lato", Arial, sans-serif;
   font-size: 17px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #444;
 }
 
@@ -313,7 +313,7 @@ body.dark .book-review-content p {
   font-family: "Lato", Arial, sans-serif;
   font-size: 17px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #d6d6d6;
 }
 
@@ -347,8 +347,8 @@ body.dark .book-review-content p {
   padding: 8px 0 8px 26px;
   border-left: 4px solid #e88922;
   font-family: "Lato", Arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.65;
+  font-size: 17px;
+  line-height: 1.5;
   font-style: italic;
   color: #444;
 }
@@ -418,9 +418,9 @@ body.dark .book-review-content p {
   .book-review-content,
   .book-review-content p {
     font-family: "Lato", Arial, sans-serif;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 300;
-    line-height: 1.65;
+    line-height: 1.5;
     color: #444;
   }
 }
@@ -531,21 +531,21 @@ body.dark .book-review-content p {
     width: 100%;
     max-width: 100%;
     font-family: "Lato", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
-    line-height: 1.65;
+    line-height: 1.5;
   }
 
   .book-review-content p {
     font-family: "Lato", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
-    line-height: 1.65;
+    line-height: 1.5;
     margin-bottom: 10px;
   }
 
   .book-review-content blockquote {
-    font-size: 18px;
+    font-size: 17px;
     margin: 25px 0;
     padding-left: 18px;
   }
