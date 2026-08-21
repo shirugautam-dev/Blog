@@ -292,6 +292,7 @@ body.dark .book-card{
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: normal;
+  margin-left: 5px;
 }
 
 
@@ -306,6 +307,7 @@ body.dark .book-card{
   font-weight: 400;
   line-height: 1.5;
   color: #444;
+  margin-left: 5px;
 }
 
 body.dark .book-review-content p {
@@ -315,6 +317,7 @@ body.dark .book-review-content p {
   font-weight: 400;
   line-height: 1.5;
   color: #d6d6d6;
+  margin-left: 5px;
 }
 
 
@@ -351,6 +354,7 @@ body.dark .book-review-content p {
   line-height: 1.5;
   font-style: italic;
   color: #444;
+  margin-left: 5px;
 }
 
 .book-review-content blockquote p {
@@ -422,6 +426,7 @@ body.dark .book-review-content p {
     font-weight: 300;
     line-height: 1.5;
     color: #444;
+    margin-left: 5px;
   }
 }
 
@@ -534,6 +539,7 @@ body.dark .book-review-content p {
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
+    margin-left: 5px;
   }
 
   .book-review-content p {
@@ -542,6 +548,7 @@ body.dark .book-review-content p {
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 10px;
+    margin-left: 5px;
   }
 
   .book-review-content blockquote {
@@ -549,6 +556,7 @@ body.dark .book-review-content p {
     margin: 25px 0;
     padding-left: 18px;
     font-family: ui-rounded;
+    margin-left: 5px;
   }
 
 
