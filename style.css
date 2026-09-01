@@ -24,6 +24,7 @@ img {
 
 a {
   text-decoration: none;
+  color: #6a1b9a;
   transition: color 0.2s ease;
 }
 
@@ -202,6 +203,11 @@ a {
   width: fit-content;
 }
 
+body.dark .share-label {
+  color: #F6BE00;
+}
+
+
 .share-btn {
   width: 34px;
   height: 34px;
@@ -236,6 +242,10 @@ a {
   color: #2D2D2D;
   background: rgba(255, 255, 255, 0.28);
   text-align: left;
+}
+
+body.dark .article-body .book-review-link a {
+  color: #FFC300;
 }
 
 .article-body .book-review-link:hover {
@@ -755,7 +765,7 @@ body.dark .home-intro-content p {
 }
 
 body.dark .home-intro-sidebar .search-box #searchInput {
-  background: #2A2A2A;
+  background: #fff;
   color: #EDEDED;
   border-color: #555;
 }
