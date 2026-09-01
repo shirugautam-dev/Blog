@@ -108,6 +108,7 @@ function generateHTML(article) {
                   data-page-id="${article.slug}"
                   data-page-url="${pageUrl}"
                   data-page-title="${article.title}"
+                  data-theme="\${document.body.classList.contains("dark") ? "dark" : "light"}"
                 ></div>
 
               </section>
