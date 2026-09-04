@@ -70,7 +70,7 @@
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 2.6rem;
   line-height: 1.1;
-  font-weight: 400;
+  /* font-weight: 400; */
   color: #294b73;
 }
 
@@ -288,6 +288,46 @@ book-card:hover {
 }
 
 @media (max-width: 900px) {
+
+  .book-review-sidebar .search-container {
+    height: 58px;
+  }
+
+  .book-review-sidebar .search-container input {
+    font-size: 20px;
+    padding: 0 16px;
+  }
+
+  .book-review-sidebar .search-container button {
+    width: 110px;
+    font-size: 18px;
+  }
+
+  .book-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .intro-image-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    width: 100%;
+  }
+
+  .intro-text h1 {
+    text-align: center;
+  }
+
+  .book-review-sidebar {
+    width: 100%;
+  }
+
   .book-page {
     padding: 30px 20px 50px;
   }
@@ -321,21 +361,29 @@ book-card:hover {
     padding: 25px 16px 40px;
   }
 
-  .book-intro {
-    grid-template-columns: 240px minmax(0, 1fr) 300px;
-    gap: 48px;
-    align-items: stretch;
-  }
+  /* .book-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 24px 18px;
+    gap: 22px;
+    align-items: center;
+  } */
 
   .intro-image-container {
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
   }
 
   .book-intro .intro-img {
-    width: 130px;
-    height: 130px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
+
+  /* .intro-text {
+    width: 100%;
+  } */
 
   .intro-text h1 {
     font-size: 1.9rem;
@@ -381,6 +429,10 @@ book-card:hover {
   .book-rating {
     margin-bottom: 22px;
   }
+
+  /* .book-review-sidebar {
+    width: 100%;
+  } */
 
   .book-review-content {
     width: 100%;
@@ -503,37 +555,41 @@ book-card:hover {
 }
 
 .book-review-sidebar .search-container {
-  display: flex;
+  height: 48px;
+  /* display: flex;
   width: 100%;
-  height: 68px;
+  
   border: 1px solid #000;
   border-radius: 14px;
   overflow: hidden;
-  background: #fff;
+  background: #fff; */
 }
 
 .book-review-sidebar .search-container input {
-  flex: 1;
+  font-size: 16px;
+  padding: 0 12px;
+
+  /* flex: 1;
   min-width: 0;
   border: none;
   outline: none;
-  padding: 0 20px;
+  padding: 0 12px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 25px;
   background: #fff;
-  color: #333;
+  color: #333; */
 }
 
 .book-review-sidebar .search-container button {
-  width: 157px;
-  border: none;
+  width: 80px;
+  font-size: 14px;
+
+  /* border: none;
   background: #000;
   color: #fff;
   font-family: Arial, sans-serif;
-  font-size: 24px;
   font-weight: 700;
   cursor: pointer;
-  border-radius: 0 14px 14px 0;
+  border-radius: 0 14px 14px 0; */
 }
 
 .book-review-sidebar .search-container button:hover {
