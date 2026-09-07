@@ -70,8 +70,9 @@
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 2.6rem;
   line-height: 1.1;
-  /* font-weight: 400; */
+  font-weight: 400;
   color: #294b73;
+  letter-spacing: normal;
 }
 
 .intro-text p {
