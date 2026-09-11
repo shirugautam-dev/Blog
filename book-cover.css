@@ -114,29 +114,38 @@
 .book-list {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 25px;
 }
 
 .book-card {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: 120px 280px minmax(0, 1fr);
+  gap: 50px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 10px 10px 35px;
+  padding: 18px 22px;
   background: #fff;
   box-sizing: border-box;
-  border-bottom: 1px solid #eeeeee;
-  border-radius: 12px;
   border: 1px solid #E7C6FF;
+  border-radius: 12px;
   transform: none;
   transition: all 0.25s ease;
 }
 
+
 .book-card:hover {
   border-color: #CDB4DB;
   transform: translateY(-4px) scale(1.01);
+}
+
+.book-card-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2px;
+  margin-left: 25px;
 }
 
 .beehiiv-embed:hover {
@@ -144,27 +153,14 @@
   transform: translateY(-4px) scale(1.01);
 }
 
-.book-card-left {
-  width: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .book-card-cover {
-  width: 150px;
-  height: 225px;
+  width: 120px;
+  height: 180px;
   aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  margin-bottom: 18px;
-}
-
-.book-card-right {
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
+  margin: 0;
 }
 
 .book-card-header {
@@ -174,7 +170,7 @@
 .book-title {
   margin: 0 0 5px;
   font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  font-size: 1.65rem;
+  font-size: 1.8rem;
   line-height: 1.15;
   font-weight: 700;
   color: #1a1a1a;
@@ -182,7 +178,7 @@
 }
 
 .book-author {
-  margin: 0 0 12px;
+  margin: 0 0 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -190,24 +186,23 @@
 }
 
 .book-meta {
-  margin-bottom: 12px;
+  margin: 0 0 14px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.55;
   color: #888;
 }
 
 .book-meta span {
   display: block;
-  margin-right: 0;
 }
+
 
 .book-rating {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 12px;
 }
 
 .book-rating .stars {
@@ -338,10 +333,6 @@
     padding: 30px 20px 50px;
   }
 
-  .book-card-left {
-    width: 220px;
-    margin-right: 30px;
-  }
 
   .book-card-cover {
     width: 120px;
@@ -388,27 +379,20 @@
   }
 
   .book-card {
-    display: block;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 18px;
+    padding: 15px;
     width: 100%;
-  }
-
-  .book-card-left {
-    width: 100%;
-    margin: 0 0 25px;
   }
 
   .book-card-cover {
-    width: 120px;
-    height: 180px;
-    margin-bottom: 15px;
-  }
-
-  .book-card-right {
-    width: 100%;
+    width: 90px;
+    height: 135px;
+    margin-bottom: 0;
   }
 
   .book-title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-align: left;
   }
 
@@ -418,10 +402,13 @@
 
   .book-meta {
     text-align: left;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    margin-bottom: 10px;
   }
 
   .book-rating {
-    margin-bottom: 22px;
+    margin-bottom: 10px;
   }
 
   .book-review-content {
@@ -451,17 +438,83 @@
     margin-left: 5px;
   }
 
+  .book-card-teaser {
+    grid-column: 1 / -1;
+
+    border-left: none;
+    border-top: 1px solid #eeeeee;
+
+    padding: 15px 0 0;
+    margin-top: 3px;
+  }
+
+  .book-card-teaser p {
+    font-size: 1.05rem;
+  }
+
+  .read-review-link {
+    font-size: 1.05rem;
+  }
+
   .book-tags {
     justify-content: flex-start;
   }
 }
 
-.book-review-link {
-  text-align: left;
-  margin: 12px 0 30px;
+.read-review-link {
+  display: inline-block;
+  margin-top: 0px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #6a1b9a;
+  text-decoration: none;
 }
 
-.book-review-link a {
+.coming-soon {
+  margin: 2px 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: #777;
+}
+
+.read-review-link:hover {
+  text-decoration: underline;
+}
+
+.book-card-teaser {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  margin-right: 50px;
+}
+
+.book-card-teaser>p {
+  margin: 0 0 18px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  font-style: normal;
+  color: #0f0c0c;
+}
+
+.book-card-quote {
+  margin: 0 0 18px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  font-style: italic;
+  font-weight: bold;
+  color: black;
+}
+
+.book-card-quote p {
+  margin: 0;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.read-review-link a {
   color: #6b2a83;
   font-size: 0.95rem;
   text-decoration: none;
@@ -470,9 +523,6 @@
   transition: all 0.2s ease;
 }
 
-.book-review-link a:hover {
-  border-bottom-color: #6b2a83;
-}
 
 .book-search {
   border: 1px solid #000;
