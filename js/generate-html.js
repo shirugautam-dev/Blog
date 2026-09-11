@@ -39,15 +39,19 @@ function generateHTML(article) {
         <script src="../theme.js"></script>
         <script>
           const slug = "${article.slug}";
-          history.scrollRestoration = "manual";
-          window.addEventListener("load", () => {
-          window.scrollTo(0, 0);
-          });
-          const articlesData = ${JSON.stringify(articles)};
-          const currentIndex = articlesData.findIndex(a => a.slug === slug);
-          const prevArticle = articlesData[currentIndex - 1];
-          const nextArticle = articlesData[currentIndex + 1];
-          
+history.scrollRestoration = "manual";
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
+
+const prevArticle = ${JSON.stringify(
+    articles[articles.findIndex(a => a.slug === article.slug) + 1] || null
+  )};
+
+const nextArticle = ${JSON.stringify(
+    articles[articles.findIndex(a => a.slug === article.slug) - 1] || null
+  )};
           function addPhotoCredits(html) {
           return html.replace(
             /<img([^>]*?)title="([^"]+)"([^>]*)>/gi,

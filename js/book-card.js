@@ -1,4 +1,6 @@
 function createStars(rating) {
+  if (!rating) return "";
+
   const full = Math.floor(rating);
   const half = (rating - full) >= 0.5;
   let stars = "";
@@ -23,7 +25,6 @@ function createStars(rating) {
   `;
 }
 
-
 function createBookCard(book) {
   const article = document.createElement("article");
   article.className = "book-card";
@@ -32,61 +33,67 @@ function createBookCard(book) {
     book.coverImage || "Images/books/default-cover.jpg";
 
   article.innerHTML = `
-    <div class="book-card-left">
+    <img
+      src="${coverImgSrc}"
+      alt="${book.title} Cover"
+      class="book-card-cover"
+    >
 
-      <img
-        src="${coverImgSrc}"
-        alt="${book.title} Cover"
-        class="book-card-cover"
-      >
+    <div class="book-card-info">
 
-      <div class="book-card-header">
+      <h2 class="book-title">
+        ${book.title}
+      </h2>
 
-        <h2 class="book-title">${book.title}</h2>
+      <h3 class="book-author">
+        by ${book.author}
+      </h3>
 
-        <h3 class="book-author">by ${book.author}</h3>
+      <div class="book-meta">
 
-        <div class="book-meta">
-          <span>Genre: ${book.genre}</span>
-          <span>Published: ${book.published}</span>
-          <span>Pages: ${book.pages}</span>
-          <span>Reviewed on: ${book.reviewed}</span>
-        </div>
+        <span>Genre: ${book.genre}</span>
 
-        
+        <span>Published: ${book.published}</span>
 
-      </div>
-    </div>
+        <span>Pages: ${book.pages}</span>
 
-
-    <div class="book-card-right">
-
-      <div class="book-review-content">
-        ${book.review
-      ? book.review
-        .trim()
-        .split(/\n\s*\n/)
-        .map(
-          paragraph =>
-            `<p>${paragraph.trim()}</p>`
-        )
-        .join("")
-      : "<p><em>Review coming soon...</em></p>"
-    }
-      </div>
-
-      ${book.tags && book.tags.length
-      ? `
-            <div class="book-tags">
-              ${book.tags
-        .map(tag => `<span class="book-tag">${tag}</span>`)
-        .join("")}
-            </div>
-          `
+        ${book.reviewed
+      ? `<span>Reviewed on: ${book.reviewed}</span>`
       : ""
     }
 
-    </div>
+      </div>
+
+      ${book.rating ? createStars(book.rating) : ""}
+    
+    
+      </div>
+
+
+   <div class="book-card-teaser">  
+    <div class="book-card-quote">
+      ${book.quote ? `<p>${book.quote}</p>` : ""}
+   </div>
+   
+   ${book.teaser ? `<p>${book.teaser}</p>` : ""}
+   
+      ${book.reviewed
+      ? `
+            <a
+              href="books/${book.slug}.html"
+              class="read-review-link"
+            >
+              Read my review →
+            </a>
+          `
+      : `
+            <p class="coming-soon">
+              <em>Review coming soon...</em>
+            </p>
+          `
+    }
+
+    </div> 
   `;
 
   return article;
