@@ -2,14 +2,28 @@
 
 const books = [
   {
+    slug: "the-forty-rules-of-love",
+    title: "The Forty Rules of Love",
+    author: "Elif Shafak",
+    genre: "Fiction",
+    rating: 4.5,
+    published: 2015,
+    pages: 368,
+    reviewed: "14 Sep 2026",
+    teaser: "A great storyteller. Her insights are timeless and relatable across cultures.",
+    quote: "Do not chase love outside—discover and remove the walls within your own heart.",
+    coverImage: "https://covers.openlibrary.org/b/isbn/9780241972939.jpg"
+  },
+  {
     slug: "kin",
     title: "Kin",
     author: "Tayari Jones",
     genre: "Fiction",
-    // rating: 4.5,
     published: 2026,
     pages: 368,
-    reviewed: "",
+    reviewed: "13 Sep 2026",
+    teaser: "This is a story of friendship, racism, inequality and self-discovery.",
+    quote: "“The world wanted so much from me.Love required so much betrayal.Sometimes of myself. Oftentimes, everyone with a heart ended up devastated.",
     coverImage: "https://covers.openlibrary.org/b/isbn/9780525659181.jpg"
   },
   {
