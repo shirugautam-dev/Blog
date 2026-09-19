@@ -7,7 +7,6 @@
   <title>Book reviews | Srijana Gautam</title>
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="book-cover.css">
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,74 +18,97 @@
 </head>
 
 <body>
-  <div class="container book-page">
+  <div class="container">
+
     <header class="site-header">
-      <nav class="site-nav">
-        <a href="index.html" class="nav-brand">← Srijana's thoughts</a>
-        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <a href="index.html" class="site-title"> Srijana’s thoughts </a>
+      <nav class="main-nav">
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About </a>
+        <a href="book-reviews.html" class="active"> Book Reviews </a>
+        <a href="index.html#search-section"> Search </a>
+        <a href="index.html#subscribe-section"> Subscribe </a>
       </nav>
+      <button id="theme-toggle" aria-label="Toggle dark mode"> 🌙 </button>
     </header>
 
-    <section class="book-intro">
-      <div class="intro-image-container">
-        <img src="Images/books/books.jpg" alt="books">
-      </div>
-
-      <div class="intro-text">
-        <h1>Book reviews</h1>
-        <p>Welcome to my reading world! Read my thoughts on the books I have loved, I have hated and everything in
-          between.</p>
-        <h3><em>What am I reading now?</em></h3>
-        <h2>Theo of Golden by Allen Levi</h2>
-      </div>
-
-      <div class="book-review-sidebar">
-        <div class="book-search">
-          <input type="text" id="bookSearchInput" placeholder="Search books..." autocomplete="off"
-            aria-label="Search book reviews">
-          <button type="button" id="bookSearchButton">Search</button>
+    <main class="book-reviews-page">
+      <aside class="book-review-index">
+        <h2>On this page</h2>
+        <div class="book-index-line"></div>
+        <div class="book-filter-list">
+          <button type="button" class="filter-btn active" data-genre="All"> All Books </button>
+          <button type="button" class="filter-btn" data-genre="Fiction"> Fiction </button>
+          <button type="button" class="filter-btn" data-genre="Non-Fiction"> Non-Fiction </button>
+          <button type="button" class="filter-btn" data-genre="Memoir"> Memoir </button>
+          <button type="button" class="filter-btn" data-genre="Contemporary"> Contemporary </button>
+          <button type="button" class="filter-btn" data-genre="Classics"> Classics </button>
+          <button type="button" class="filter-btn" data-genre="Self-Help"> Self-Help </button>
+          <button type="button" class="filter-btn" data-genre="Indian Authors"> Indian Authors </button>
         </div>
 
-        <div class="subscribe-block">
-          <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js"
-            data-beehiiv-form="f967ff6b-901e-495b-bafb-c64aa4ab7863"></script>
+        <div class="book-index-divider"></div>
+        <a href="#book-search"> Search reviews </a>
+        <a href="#all-book-reviews"> All reviews </a>
+        <a href="index.html"> Back to thoughts </a>
+      </aside>
+
+      <section class="book-reviews-main">
+        <div class="book-reviews-heading">
+          <div>
+            <h1>Book Reviews</h1>
+            <div class="book-heading-line"></div>
+            <p> Here are my thoughts on the books I read — the ones that moved me, challenged me, made me think, or
+              simply kept me company. </p>
+            <p> These are honest, personal reviews, not professional critiques. </p>
+          </div>
+          <div class="book-review-quote">
+            <p> “A good book is a conversation that stays with you.” </p>
+            <span>— Unknown</span>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="book-filters">
-      <button class="filter-btn active" data-genre="All">All</button>
-      <button class="filter-btn" data-genre="Memoir">Memoir</button>
-      <button class="filter-btn" data-genre="Fiction">Fiction</button>
-      <button class="filter-btn" data-genre="Non-fiction">Non-fiction</button>
-      <button class="filter-btn" data-genre="Self Help">Self Help</button>
-      <button class="filter-btn" data-genre="Psychology">Psychology</button>
-    </section>
+        <div id="book-search" class="book-review-search">
+          <div class="book-search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="bookSearchInput" placeholder="Search book reviews..." autocomplete="off"
+              aria-label="Search book reviews">
+            <button type="button" id="bookSearchButton"> Search </button>
+          </div>
+        </div>
 
-    <main>
-      <div class="book-list"> </div>
+        <section id="all-book-reviews">
+          <div class="book-list">
+            <!-- Books are inserted here by JavaScript -->
+          </div>
+        </section>
+
+        <div class="book-reviews-more">
+          <a href="book-reviews.html"> View more reviews → </a>
+        </div>
+      </section>
     </main>
   </div>
+
+
   <footer class="site-footer">
     <p class="footer-social">
-      <a href="https://twitter.com/@GautamShiru" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://linkedin.com/in/srijana-raghunath-739bb1221" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://facebook.com/srijana.raghunath" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://wa.me/918408035577" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:srijana.thinks@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="rss.xml"><i class="fas fa-rss"></i></a>
+      <a href="https://twitter.com/@GautamShiru" target="_blank" rel="noopener"> <i class="fab fa-twitter"></i> </a>
+      <a href="https://linkedin.com/in/srijana-raghunath-739bb1221" target="_blank" rel="noopener"> <i
+          class="fab fa-linkedin"></i> </a>
+      <a href="https://facebook.com/srijana.raghunath" target="_blank" rel="noopener"> <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://wa.me/918408035577" target="_blank" rel="noopener"> <i class="fab fa-whatsapp"></i> </a>
+      <a href="mailto:srijana.thinks@gmail.com"> <i class="fas fa-envelope"></i> </a>
     </p>
-    <p class="footer-copy">© 2026 Srijana Gautam</p>
+    <p class="footer-copy"> © 2026 Srijana Gautam </p>
   </footer>
 
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="js/theme.js"></script>
   <script src="js/books-data.js"></script>
   <script src="js/book-card.js"></script>
   <script src="js/book-reviews.js"></script>
+  <script src="js/theme.js"></script>
+
 </body>
 
 </html>
