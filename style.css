@@ -90,7 +90,7 @@ a {
   color: #777;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .container {
     padding: 50px 14px;
   }
@@ -534,7 +534,7 @@ body.dark .homepage-search #searchInput {
 /* =========================
    MOBILE
    ========================= */
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .container {
     padding: 35px 14px 20px;
   }
@@ -763,7 +763,7 @@ body.dark .latest-thought-date {
    TABLET
    ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
 
   .latest-thoughts-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -777,7 +777,7 @@ body.dark .latest-thought-date {
    MOBILE
    ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
   .latest-thoughts-grid {
     grid-template-columns: 1fr;
@@ -924,7 +924,7 @@ body.dark .more-article-date {
 /* =========================
    TABLET
    ========================= */
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .more-articles-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -935,7 +935,7 @@ body.dark .more-article-date {
    MOBILE
    ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .more-articles {
     margin-top: 40px;
     padding-top: 22px;
@@ -1351,7 +1351,7 @@ body.dark .articles-pagination .pagination-number.active {
    TABLET
    ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
 
   .articles-intro {
     padding: 25px 28px;
@@ -1375,7 +1375,7 @@ body.dark .articles-pagination .pagination-number.active {
    MOBILE
    ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
   .articles-intro {
     flex-direction: column;
@@ -1665,6 +1665,7 @@ body.dark .about-contact {
 
 @media (max-width: 800px) {
 
+
   .about-page {
     padding: 35px 20px 55px;
   }
@@ -1707,10 +1708,6 @@ body.dark .about-contact {
     grid-column: 1 / -1;
     justify-self: start;
   }
-}
-
-
-@media (max-width: 600px) {
 
   .about-page {
     padding-left: 16px;
@@ -1728,7 +1725,6 @@ body.dark .about-contact {
   .about-contact {
     padding: 23px 20px;
   }
-
 }
 
 /* =========================================================
@@ -2327,7 +2323,7 @@ body.dark #bookSearchInput::placeholder {
    TABLET
    ========================================================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 950px) {
 
   .book-reviews-page {
     grid-template-columns: 190px 1fr;
