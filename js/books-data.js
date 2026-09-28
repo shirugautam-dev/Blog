@@ -2,6 +2,18 @@
 
 const books = [
   {
+    slug: "atmosphere",
+    title: "Atmosphere",
+    author: "Taylor Jenkins Reid",
+    genre: "Fiction",
+    published: 2025,
+    pages: 352,
+    reviewed: "28 Sep 2026",
+    teaser: "I wanted to love this book. I’m her fan, but Atmosphere left me unmoved.",
+    quote: '"Bravery is being unafraid of something other people are afraid of. Courage is being afraid, but strong enough to do it anyway."',
+    coverImage: "https://covers.openlibrary.org/b/isbn/9780385695824.jpg"
+  },
+  {
     slug: "the-forty-rules-of-love",
     title: "The Forty Rules of Love",
     author: "Elif Shafak",

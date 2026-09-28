@@ -2,11 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("theme-toggle");
 
   // Apply saved theme
-  if (localStorage.getItem("theme") === "dark") {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
     document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
   }
 
-  // Only homepage has toggle
+  // Update button
   if (toggle) {
     toggle.textContent =
       document.body.classList.contains("dark") ? "☀️" : "🌙";
@@ -14,13 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("dark");
 
-      if (document.body.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-        toggle.textContent = "☀️";
-      } else {
-        localStorage.setItem("theme", "light");
-        toggle.textContent = "🌙";
-      }
+      const isDark =
+        document.body.classList.contains("dark");
+
+      localStorage.setItem(
+        "theme",
+        isDark ? "dark" : "light"
+      );
+
+      toggle.textContent =
+        isDark ? "☀️" : "🌙";
     });
   }
 });

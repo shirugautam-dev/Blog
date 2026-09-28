@@ -27,12 +27,6 @@ function generateHTML(article) {
   const currentIndex =
     articles.findIndex(a => a.slug === article.slug);
 
-  /*
-   * articles-data.js is ordered newest → oldest.
-   * Therefore:
-   * +1 = previous article
-   * -1 = next article
-   */
 
   const previousArticle =
     articles[currentIndex + 1];
@@ -82,10 +76,10 @@ function generateHTML(article) {
     content="${escapeHTML(article.title)}"
   >
 
-  <meta
-    property="og:description"
-    content="${escapeHTML(article.excerpt)}"
-  >
+   <meta
+     property="og:description"
+     content="${escapeHTML(article.excerpt)}"
+   >
 
   <meta
     property="og:image"
@@ -117,21 +111,10 @@ function generateHTML(article) {
     rel="stylesheet"
   >
 
-  <script>
-
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.classList.add("dark-loading");
-    }
-
-  </script>
-
 </head>
 
-
 <body>
-
   <div id="progress-bar"></div>
-
 
   <div class="container article-page-container">
 
@@ -175,10 +158,7 @@ function generateHTML(article) {
       </nav>
 
 
-      <button
-        id="theme-toggle"
-        aria-label="Toggle dark mode"
-      >
+      <button id="theme-toggle" aria-label="Toggle dark mode">
         🌙
       </button>
 
@@ -369,6 +349,7 @@ function generateHTML(article) {
             data-page-title="${escapeHTML(article.title)}"
             data-theme="light"
           ></div>
+          <script   async   defer   src="https://cusdis.com/js/cusdis.es.js" ></script>
 
         </section>
 
@@ -445,7 +426,7 @@ function generateHTML(article) {
   ></script>
 
 
-  <script src="../theme.js"></script>
+  <script src="../js/theme.js"></script>
 
 
   <script>
@@ -620,17 +601,7 @@ function generateHTML(article) {
      * Cusdis
      */
 
-    const cusdisScript =
-      document.createElement("script");
-
-    cusdisScript.src =
-      "https://cusdis.com/js/cusdis.es.js";
-
-    document.body.appendChild(
-      cusdisScript
-    );
-
-  </script>
+      </script>
 
 
 </body>
