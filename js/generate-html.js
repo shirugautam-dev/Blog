@@ -609,7 +609,6 @@ function generateHTML(article) {
 </html>`;
 }
 
-
 articles.forEach(article => {
 
   const filePath =
@@ -629,6 +628,93 @@ articles.forEach(article => {
 
 });
 
+
+/*
+ * =========================
+ * GENERATE RSS FEED
+ * =========================
+ */
+
+function escapeXML(str) {
+  return String(str || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+
+function generateRSS() {
+  const siteUrl = "https://srijanagautam.com";
+
+  const rssItems =
+    articles
+      .slice()
+      .sort(
+        (a, b) =>
+          new Date(b.date) - new Date(a.date)
+      )
+      .map(article => {
+
+        const articleUrl =
+          `${siteUrl}/htmls/${article.slug}.html`;
+
+        const pubDate =
+          new Date(
+            `${article.date}T00:00:00+05:30`
+          ).toUTCString();
+
+        return `
+    <item>
+      <title>${escapeXML(article.title)}</title>
+      <link>${articleUrl}</link>
+      <guid isPermaLink="true">${articleUrl}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <description>${escapeXML(article.excerpt)}</description>
+    </item>`;
+      })
+      .join("");
+
+
+  const rss = `<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0">
+
+  <channel>
+
+    <title>Srijana’s thoughts</title>
+
+    <link>${siteUrl}/</link>
+
+    <description>
+      Thoughtful reflections, book reviews,
+      and personal essays by Srijana.
+    </description>
+
+    <language>en</language>
+
+${rssItems}
+
+  </channel>
+
+</rss>`;
+
+
+  fs.writeFileSync(
+    path.join(__dirname, "..", "rss.xml"),
+    rss,
+    "utf8"
+  );
+
+
+  console.log(
+    "Generated: rss.xml"
+  );
+
+}
+
+generateRSS();
 
 console.log(
   "✅ All HTML files generated!"
