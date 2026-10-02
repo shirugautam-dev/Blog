@@ -2,6 +2,8 @@
 
 const books = [
   {
+    type: "book",
+    url: "/books/atmosphere.html",
     slug: "atmosphere",
     title: "Atmosphere",
     author: "Taylor Jenkins Reid",
@@ -14,6 +16,8 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/9780385695824.jpg"
   },
   {
+    type: "book",
+    url: "/books/the-forty-rules-of-love.html",
     slug: "the-forty-rules-of-love",
     title: "The Forty Rules of Love",
     author: "Elif Shafak",
@@ -26,6 +30,8 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/9780241972939.jpg"
   },
   {
+    type: "book",
+    url: "/books/kin.html",
     slug: "kin",
     title: "Kin",
     author: "Tayari Jones",
@@ -38,6 +44,8 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/9780525659181.jpg"
   },
   {
+    type: "book",
+    url: "/books/beartown.html",
     slug: "beartown",
     title: "Beartown",
     author: "Fredrik Backman",
@@ -50,6 +58,8 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/9781410498120.jpg"
   },
   {
+    type: "book",
+    url: "/books/evidence-of-the-affair.html",
     slug: "evidence-of-the-affair",
     title: "Evidence of the Affair",
     author: "Taylor Jenkins Reid",
@@ -62,6 +72,8 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/9789026356018.jpg"
   },
   {
+    type: "book",
+    url: "/books/mother-mary-comes-to-me.html",
     slug: "mother-mary-comes-to-me",
     title: "Mother Mary Comes To Me",
     author: "Arundhati Roy",
@@ -74,6 +86,8 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/9780241761724.jpg",
   },
   {
+    type: "book",
+    url: "/books/on-earth-we-are-briefly-gorgeous.html",
     slug: "on-earth-we-are-briefly-gorgeous",
     title: "On Earth We Are Briefly Gorgeous",
     author: "Ocean Vuong",
@@ -86,6 +100,8 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/9781473564473.jpg"
   },
   {
+    type: "book",
+    url: "/books/the-answer-is-no.html",
     slug: "the-answer-is-no",
     title: "The Answer Is No",
     author: "Fredrik Backman",
@@ -98,6 +114,8 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/1662526520.jpg"
   },
   {
+    type: "book",
+    url: "/books/whistler.html",
     slug: "whistler",
     title: "Whistler",
     author: "Ann Patchett",
@@ -110,6 +128,8 @@ const books = [
     coverImage: "https://covers.openlibrary.org/b/isbn/9781037206498.jpg"
   },
   {
+    type: "book",
+    url: "/books/anxious-people.html",
     slug: "anxious-people",
     title: "Anxious People",
     author: "Fredrik Backman",
