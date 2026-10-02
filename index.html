@@ -38,13 +38,31 @@
         <a href="book-reviews.html">
           Book Reviews
         </a>
-        <a href="#search-section">
+        <button type="button" id="nav-search-button" class="nav-search-button">
           Search
-        </a>
+        </button>
         <a href="#subscribe-section">
           Subscribe
         </a>
       </nav>
+      <div id="floating-search" class="floating-search">
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search..." autocomplete="off"
+            aria-label="Search articles and book reviews">
+
+          <select id="searchType" aria-label="Search type">
+            <option value="all">All</option>
+            <option value="articles">Articles</option>
+            <option value="books">Book Reviews</option>
+          </select>
+
+          <button type="button" id="searchButton">
+            Search
+          </button>
+        </div>
+
+        <div class="search-results" id="searchResults"></div>
+      </div>
       <button id="theme-toggle" aria-label="Toggle dark mode">
         🌙
       </button>
@@ -96,17 +114,24 @@
         </a>
       </div>
 
-      <div id="search-section" class="homepage-search">
+      <!-- <section id="search-section" class="homepage-search">
         <div class="search-container">
-          <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"
-            aria-label="Search articles">
+          <input type="text" id="searchInput" placeholder="Search..." autocomplete="off"
+            aria-label="Search articles and book reviews">
+
+          <select id="searchType" aria-label="Search type">
+            <option value="all">All</option>
+            <option value="articles">Articles</option>
+            <option value="books">Book Reviews</option>
+          </select>
+
           <button type="button" id="searchButton">
             Search
           </button>
         </div>
 
         <div class="search-results" id="searchResults"></div>
-      </div>
+      </section> -->
 
       <div class="latest-thoughts-grid" id="latest-thoughts-grid">
         <!-- Latest three articles will be inserted here -->
