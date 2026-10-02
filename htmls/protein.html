@@ -99,16 +99,38 @@
           Book Reviews
         </a>
 
-        <a href="../index.html#search-section">
-          Search
-        </a>
+        <button type="button" id="nav-search-button" class="nav-search-button">
+  Search
+</button>
 
         <a href="../index.html#subscribe-section">
           Subscribe
         </a>
 
       </nav>
+<div id="floating-search" class="floating-search">
+  <div class="search-container">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search..."
+      autocomplete="off"
+      aria-label="Search articles and book reviews"
+    >
 
+    <select id="searchType" aria-label="Search type">
+      <option value="all">All</option>
+      <option value="articles">Articles</option>
+      <option value="books">Book Reviews</option>
+    </select>
+
+    <button type="button" id="searchButton">
+      Search
+    </button>
+  </div>
+
+  <div class="search-results" id="searchResults"></div>
+</div>
 
       <button id="theme-toggle" aria-label="Toggle dark mode">
         🌙
@@ -363,6 +385,8 @@
 
 
   <script src="../js/theme.js"></script>
+<script src="../js/search-data.js"></script>
+<script src="../js/search.js"></script>
 
 
   <script>
