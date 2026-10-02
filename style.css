@@ -1585,7 +1585,7 @@ body.dark .articles-pagination .pagination-number.active {
 
 .about-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 22px;
 }
 
@@ -3337,6 +3337,7 @@ body.dark .article-share-btn:hover {
 
 .single-book-review em {
   font-style: italic;
+  font-weight: bold;
 }
 
 
