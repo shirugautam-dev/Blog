@@ -51,26 +51,30 @@
       </div>
       <button id="theme-toggle" aria-label="Toggle dark mode"> 🌙 </button>
     </header>
-
+    <a href="index.html"> Back to thoughts </a>
     <main class="book-reviews-page">
       <aside class="book-review-index">
         <h2>On this page</h2>
         <div class="book-index-line"></div>
+
+
+        <div class="book-index-divider"></div>
         <div class="book-filter-list">
           <button type="button" class="filter-btn active" data-genre="All"> All Books </button>
           <button type="button" class="filter-btn" data-genre="Fiction"> Fiction </button>
           <button type="button" class="filter-btn" data-genre="Non-Fiction"> Non-Fiction </button>
           <button type="button" class="filter-btn" data-genre="Memoir"> Memoir </button>
-          <button type="button" class="filter-btn" data-genre="Contemporary"> Contemporary </button>
+          <!-- <button type="button" class="filter-btn" data-genre="Contemporary"> Contemporary </button>
           <button type="button" class="filter-btn" data-genre="Classics"> Classics </button>
-          <button type="button" class="filter-btn" data-genre="Self-Help"> Self-Help </button>
+          <button type="button" class="filter-btn" data-genre="Self-Help"> Self-Help </button> -->
           <button type="button" class="filter-btn" data-genre="Indian Authors"> Indian Authors </button>
         </div>
-
         <div class="book-index-divider"></div>
-        <a href="#book-search"> Search reviews </a>
-        <a href="#all-book-reviews"> All reviews </a>
-        <a href="index.html"> Back to thoughts </a>
+        <h2>Reviews</h2>
+        <div class="book-index-line"></div>
+        <div id="book-page-index" class="book-page-index"></div>
+
+
       </aside>
 
       <section class="book-reviews-main">
@@ -83,8 +87,8 @@
             <p> These are honest, personal reviews, not professional critiques. </p>
           </div>
           <div class="book-review-quote">
-            <p> “A good book is a conversation that stays with you.” </p>
-            <span>— Unknown</span>
+            <p> “A reader lives a thousand lives before he dies . . . The man who never reads lives only one.” </p>
+            <span>— George R.R. Martin</span>
           </div>
         </div>
 
@@ -104,7 +108,7 @@
         </section>
 
         <div class="book-reviews-more">
-          <a href="book-reviews.html"> View more reviews → </a>
+          <a href="book-reviews.html?page=2"> View more reviews → </a>
         </div>
       </section>
     </main>

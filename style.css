@@ -1846,24 +1846,16 @@ body.dark .about-contact {
 
 .book-filter-list .filter-btn {
   display: block;
-
   width: 100%;
-
   padding: 9px 12px;
-
   border: none;
   border-radius: 7px;
-
   background: transparent;
-  color: inherit;
-
   text-align: left;
-
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
-
+  color: inherit;
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     transform 0.2s ease;
@@ -3763,4 +3755,13 @@ body.dark .single-book-navigation-link span {
 
   cursor: pointer;
   text-decoration: none;
+}
+
+.book-page-index a {
+  display: block;
+  margin-bottom: 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  color: inherit;
+
 }
