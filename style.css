@@ -3765,3 +3765,151 @@ body.dark .single-book-navigation-link span {
   color: inherit;
 
 }
+
+.book-page-index a {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.4;
+}
+
+.book-page-index a:last-child {
+  border-bottom: none;
+}
+
+/*======*/
+/* =========================================================
+   SUBSCRIBE PANEL
+   ========================================================= */
+
+.floating-subscribe-panel {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 78px;
+  right: 80px;
+  width: 400px;
+  max-width: calc(100vw - 40px);
+  padding: 20px;
+  box-sizing: border-box;
+  background: #FFF8F2;
+  border: 1px solid rgba(45, 45, 45, 0.15);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  z-index: 10000;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.floating-subscribe-panel.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.floating-subscribe-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.floating-subscribe-header h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+
+  color: #294b73;
+}
+
+.floating-subscribe-close {
+  flex-shrink: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #555;
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+  padding: 0;
+}
+
+.floating-subscribe-text {
+  margin: 0 0 14px;
+
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #555;
+}
+
+.floating-subscribe-form {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Keep Beehiiv form inside the panel */
+.floating-subscribe-form iframe {
+  display: block;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  min-width: 0 !important;
+
+  border: none;
+}
+
+/* Dark mode */
+body.dark .floating-subscribe-panel {
+  background: #363333;
+  border-color: rgba(255, 255, 255, 0.14);
+
+}
+
+body.dark .floating-subscribe-header h3 {
+  color: #F6BE00;
+}
+
+body.dark .floating-subscribe-close {
+  color: #DDD;
+}
+
+body.dark .floating-subscribe-text {
+  color: #CCC;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .floating-subscribe-panel {
+    top: 70px;
+    right: 14px;
+
+    width: 380px;
+    max-width: calc(100vw - 28px);
+
+    padding: 18px;
+  }
+
+  .floating-subscribe-header h3 {
+    font-size: 20px;
+  }
+
+  .floating-subscribe-text {
+    font-size: 13px;
+  }
+}
