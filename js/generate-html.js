@@ -151,9 +151,7 @@ function generateHTML(article) {
   Search
 </button>
 
-        <a href="../index.html#subscribe-section">
-          Subscribe
-        </a>
+        <a href="#" class="nav-subscribe-trigger">Subscribe</a>
 
       </nav>
 <div id="floating-search" class="floating-search">
@@ -185,6 +183,32 @@ function generateHTML(article) {
       </button>
 
     </header>
+    <div id="floating-subscribe-panel" class="floating-subscribe-panel">
+
+  <div class="floating-subscribe-header">
+    <h3>Subscribe to Srijana’s thoughts</h3>
+
+    <button
+      type="button"
+      class="floating-subscribe-close"
+      aria-label="Close subscription form"
+    >×</button>
+  </div>
+
+  <p class="floating-subscribe-text">
+    Whenever I publish something new, I’ll send it to you.
+  </p>
+
+  <div class="floating-subscribe-form">
+
+    <script async
+      src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+      data-beehiiv-form="f967ff6b-901e-495b-bafb-c64aa4ab7863">
+    </script>
+
+  </div>
+
+</div>
 
 
 
@@ -451,6 +475,7 @@ function generateHTML(article) {
   <script src="../js/theme.js"></script>
 <script src="../js/search-data.js"></script>
 <script src="../js/search.js"></script>
+<script src="../js/subscribe.js"></script>
 
 
   <script>
