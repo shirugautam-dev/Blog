@@ -1489,6 +1489,16 @@ body.dark .articles-pagination .pagination-number.active {
   line-height: 1.1;
 }
 
+body.dark .about-heading h1,
+body.dark .about-intro-text h2,
+body.dark .about-signature,
+body.dark .about-section-heading h2,
+body.dark .about-contact-text h2,
+body.dark .about-card h3 {
+  color: #F6BE00;
+}
+
+
 .about-title-line {
   width: 54px;
   height: 3px;
@@ -1676,26 +1686,19 @@ body.dark .articles-pagination .pagination-number.active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 11px 22px;
-
   border: 1px solid currentColor;
   border-radius: 30px;
-
   color: inherit;
   text-decoration: none;
-
   font-family: Georgia, "Times New Roman", serif;
   font-size: 15px;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .about-contact-button:hover {
   background: var(--text-color);
-  color: var(--background-color);
+  color: #FFC300;
 }
 
 
@@ -1705,18 +1708,24 @@ body.dark .articles-pagination .pagination-number.active {
 
 body.dark .about-card {
   border-color: rgba(255, 255, 255, 0.15);
+
 }
 
 body.dark .about-card:hover {
   border-color: rgba(255, 255, 255, 0.30);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border: 1px solid #FFC300;
 }
 
 body.dark .about-contact {
   border-color: rgba(255, 255, 255, 0.12);
   background: rgba(229, 162, 43, 0.08);
+
 }
 
+body.dark .about-contact:hover {
+  border: 1px solid #FFC300;
+}
 
 /* =========================================================
    MOBILE
@@ -1921,12 +1930,21 @@ body.dark .about-contact {
 
 .book-reviews-heading h1 {
   margin: 0;
-
   font-family: Georgia, "Times New Roman", serif;
   font-size: 52px;
   font-weight: 500;
   line-height: 1.05;
 }
+
+body.dark .book-reviews-heading h1,
+body.dark .book-review-index h2,
+body.dark .book-review-index h2,
+body.dark .book-reviews-more a,
+body.dark .book-title,
+body.dark .read-review-link {
+  color: #F6Be00;
+}
+
 
 .book-heading-line {
   width: 52px;
@@ -2337,12 +2355,14 @@ body.dark .book-filter-list .filter-btn:hover {
 
 body.dark .book-card {
   border-color: rgba(255, 255, 255, 0.13);
+
 }
 
 body.dark .book-card:hover {
   border-color: rgba(255, 255, 255, 0.28);
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border: 1px solid #FFC300;
+
 }
 
 body.dark .book-author,
@@ -2806,7 +2826,7 @@ body.dark .article-back-link,
 body.dark .article-sidebar-date,
 body.dark .article-reading-time,
 body.dark .article-share p {
-  color: #E5E5E5;
+  color: #FFC300;
 }
 
 body.dark .article-sidebar-divider {
@@ -2814,7 +2834,7 @@ body.dark .article-sidebar-divider {
 }
 
 body.dark #article-content h1 {
-  color: #F4F1EC;
+  color: #FFC300;
 }
 
 body.dark .article-excerpt {
@@ -3452,7 +3472,7 @@ body.dark .single-book-title,
 body.dark .single-book-main-title,
 body.dark .single-book-review h2,
 body.dark .single-book-review h3 {
-  color: #EEEEEE;
+  color: #F6BE00;
 }
 
 
@@ -3688,6 +3708,11 @@ body.dark .single-book-navigation-link span {
   transform: translateY(0);
 }
 
+body.dark .floating-search.search-open {
+  background: #363333;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
 .nav-search-button {
   background: none;
   border: none;
@@ -3695,6 +3720,10 @@ body.dark .single-book-navigation-link span {
   font: inherit;
   color: inherit;
   cursor: pointer;
+}
+
+body.dark .nav-search-button:hover {
+  color: #FFC300;
 }
 
 .nav-search-button:hover {
