@@ -1865,13 +1865,12 @@ body.dark .about-contact:hover {
   font-size: 16px;
   color: inherit;
   cursor: pointer;
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .book-filter-list .filter-btn:hover {
   background: rgba(229, 162, 43, 0.10);
+  color: #FFC300;
 }
 
 .book-filter-list .filter-btn.active {
@@ -2996,20 +2995,15 @@ body.dark .article-share-btn:hover {
 
 .single-book-nav {
   display: flex;
-
   align-items: center;
-
   gap: 28px;
 }
 
 
 .single-book-nav a {
   font-family: Inter, sans-serif;
-
   font-size: 14px;
-
   color: #294b73;
-
   text-decoration: none;
 }
 
@@ -3023,6 +3017,9 @@ body.dark .article-share-btn:hover {
   color: #294b73;
 }
 
+.single-book-nav a.active:hover {
+  color: #FFC300;
+}
 
 /* =========================================================
    MAIN LAYOUT
@@ -3447,9 +3444,12 @@ body.dark .single-book-header {
 }
 
 
-body.dark .single-book-site-title,
-body.dark .single-book-nav a {
+body.dark .single-book-site-title {
   color: #F6BE00;
+}
+
+body.dark .single-book-nav a {
+  color: inherit;
 }
 
 
@@ -3778,7 +3778,7 @@ body.dark .nav-search-button:hover {
 }
 
 .single-book-nav .nav-search-button:hover {
-  color: inherit;
+  color: #FFC300;
   text-decoration: none;
   opacity: 0.7;
 }
@@ -3796,7 +3796,6 @@ body.dark .nav-search-button:hover {
   border: none;
   padding: 0;
   margin: 0;
-
   cursor: pointer;
   text-decoration: none;
 }
@@ -3807,18 +3806,21 @@ body.dark .nav-search-button:hover {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
   color: inherit;
-
-}
-
-.book-page-index a {
-  display: block;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  /* padding: 10px 0; */
+  /* border-bottom: 1px solid #ddd; */
   line-height: 1.4;
+  border-radius: 7px;
+  padding: 9px 12px;
+  border: none;
 }
 
 .book-page-index a:last-child {
   border-bottom: none;
+}
+
+.book-page-index a:hover {
+  background: rgba(229, 162, 43, 0.10);
+  color: #FFC300;
 }
 
 /*======*/
@@ -3862,36 +3864,29 @@ body.dark .nav-search-button:hover {
 
 .floating-subscribe-header h3 {
   margin: 0;
-
   font-family: Georgia, "Times New Roman", serif;
   font-size: 22px;
   font-weight: 500;
   line-height: 1.25;
-
   color: #294b73;
 }
 
 .floating-subscribe-close {
   flex-shrink: 0;
-
   border: none;
   background: transparent;
-
   color: #555;
   font-size: 22px;
   line-height: 1;
-
   cursor: pointer;
   padding: 0;
 }
 
 .floating-subscribe-text {
   margin: 0 0 14px;
-
   font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 1.5;
-
   color: #555;
 }
 
