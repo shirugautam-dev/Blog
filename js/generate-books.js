@@ -271,21 +271,21 @@ function generateHTML(book) {
 
         <div class="single-book-details">
 
-          <h1 class="single-book-title">
-            ${book.title}
-          </h1>
+          <!-- <h1 class="single-book-title">
+             ${book.title}
+           </h1> 
 
           <p class="single-book-author">
             ${book.author}
-          </p>
+          </p>-->
 
 
           <div class="single-book-meta">
 
-            <div>
+            <!-- <div>
               <i class="fa-regular fa-user"></i>
               <span>${book.author}</span>
-            </div>
+            </div> -->
 
             <div>
               <i class="fa-regular fa-calendar"></i>
