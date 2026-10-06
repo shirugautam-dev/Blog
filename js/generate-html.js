@@ -201,10 +201,7 @@ function generateHTML(article) {
 
   <div class="floating-subscribe-form">
 
-    <script async
-      src="https://subscribe-forms.beehiiv.com/v3/loader.js"
-      data-beehiiv-form="f967ff6b-901e-495b-bafb-c64aa4ab7863">
-    </script>
+    
 
   </div>
 
