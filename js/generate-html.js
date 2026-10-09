@@ -648,7 +648,13 @@ function generateHTML(article) {
      */
 
       </script>
-
+ <!-- Cloudflare Web Analytics -->
+  <script
+    type="module"
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f02dd259e66b4dcc94e9c5cb2f06e2c6"}'></script>"}'
+  ></script>
+  <!-- End Cloudflare Web Analytics -->
 
 </body>
 
