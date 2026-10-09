@@ -1962,10 +1962,8 @@ body.dark .read-review-link {
 
 .book-reviews-heading>div:first-child>p {
   margin: 0 0 10px;
-
   max-width: 700px;
-
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: ui-rounded;
   font-size: 17px;
   line-height: 1.6;
 }
@@ -3329,7 +3327,7 @@ body.dark .article-share-btn:hover {
 
 .single-book-review p {
   margin: 0 0 1.45em;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: ui-rounded;
   font-size: 18px;
   line-height: 1.75;
 }
