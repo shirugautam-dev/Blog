@@ -274,6 +274,36 @@
         <!-- =========================
              ARTICLE NAVIGATION
              ========================= -->
+             
+        <!-- ARTICLE REACTIONS -->
+        <section class="article-reactions" aria-label="Article reactions">
+          <h2>What did you think of this article?</h2>
+          <p class="reaction-subtitle">I'd love to know what stayed with you.</p>
+
+          <div class="reaction-buttons">
+            <button type="button" class="reaction-btn" data-reaction="thoughtful">
+              <span class="reaction-emoji">💡</span>
+              <span>Thoughtful</span>
+              <span class="reaction-count" data-count="thoughtful">0</span>
+            </button>
+
+            <button type="button" class="reaction-btn" data-reaction="enjoyed">
+              <span class="reaction-emoji">❤️</span>
+              <span>Enjoyed it</span>
+              <span class="reaction-count" data-count="enjoyed">0</span>
+            </button>
+
+            <button type="button" class="reaction-btn" data-reaction="helpful">
+              <span class="reaction-emoji">👍</span>
+              <span>Helpful</span>
+              <span class="reaction-count" data-count="helpful">0</span>
+            </button>
+          </div>
+
+          <p class="reaction-message" aria-live="polite"></p>
+        </section>
+        <!-- END ARTICLE REACTIONS -->
+
 
         <div class="article-navigation">
 
@@ -329,17 +359,7 @@
           </div>
 
 
-          <div
-            id="cusdis_thread"
-            data-host="https://cusdis.com"
-            data-app-id="53edd7b4-beea-4e0d-b392-b9beb1cab6c3"
-            data-page-id="johatsu"
-            data-page-url="https://srijanagautam.com/htmls/johatsu.html"
-            data-page-title="We Have Johatsu Everywhere"
-            data-theme="light"
-          ></div>
-          <script   async   defer   src="https://cusdis.com/js/cusdis.es.js" ></script>
-
+          
         </section>
 
 
@@ -589,9 +609,135 @@
       });
 
 
+    
     /*
-     * Cusdis
+     * Article reactions
      */
+    const REACTIONS_API =
+      "https://young-firefly-ac88.srijana-thinks.workers.dev";
+
+    const reactionSection =
+      document.querySelector(".article-reactions");
+
+    if (reactionSection) {
+      const reactionMessage =
+        reactionSection.querySelector(".reaction-message");
+
+      const buttons =
+        reactionSection.querySelectorAll(".reaction-btn");
+
+      const storageKey = "article-reaction-" + slug;
+
+      let alreadyReacted = false;
+
+      try {
+        alreadyReacted = Boolean(localStorage.getItem(storageKey));
+      } catch (error) {
+        console.warn("Browser storage is unavailable.");
+      }
+
+      function displayReactionCounts(counts) {
+        for (const type of ["thoughtful", "enjoyed", "helpful"]) {
+          const countElement = reactionSection.querySelector(
+            '[data-count="' + type + '"]'
+          );
+
+          if (countElement) {
+            countElement.textContent = counts[type] ?? 0;
+          }
+        }
+      }
+
+      function updateReactionButtons() {
+        buttons.forEach(button => {
+          button.disabled = alreadyReacted;
+          button.classList.toggle("reaction-selected",
+            button.dataset.reaction ===
+            (() => {
+              try {
+                return localStorage.getItem(storageKey);
+              } catch (error) {
+                return null;
+              }
+            })()
+          );
+        });
+      }
+
+      fetch(
+        REACTIONS_API + "?slug=" + encodeURIComponent(slug)
+      )
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Could not load reaction counts.");
+          }
+          return response.json();
+        })
+        .then(data => {
+          displayReactionCounts(data.counts);
+          updateReactionButtons();
+        })
+        .catch(error => {
+          console.error("Reaction counts could not be loaded:", error);
+          reactionMessage.textContent =
+            "Reactions are temporarily unavailable.";
+        });
+
+      buttons.forEach(button => {
+        button.addEventListener("click", async () => {
+          if (alreadyReacted) return;
+
+          const reaction = button.dataset.reaction;
+
+          buttons.forEach(item => {
+            item.disabled = true;
+          });
+
+          reactionMessage.textContent = "Saving your reaction…";
+
+          try {
+            const response = await fetch(REACTIONS_API, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                slug: slug,
+                reaction: reaction
+              })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+              throw new Error(data.error || "Reaction could not be saved.");
+            }
+
+            displayReactionCounts(data.counts);
+
+            alreadyReacted = true;
+
+            try {
+              localStorage.setItem(storageKey, reaction);
+            } catch (error) {
+              console.warn("Could not remember this reaction in this browser.");
+            }
+
+            updateReactionButtons();
+
+            reactionMessage.textContent = "Thank you for sharing your reaction!";
+          } catch (error) {
+            console.error("Could not save reaction:", error);
+            buttons.forEach(item => {
+              item.disabled = false;
+            });
+            reactionMessage.textContent =
+              "Sorry, your reaction could not be saved. Please try again.";
+          }
+        });
+      });
+    }
+
 
       </script>
  <!-- Cloudflare Web Analytics -->
