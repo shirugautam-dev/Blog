@@ -338,6 +338,35 @@
         </div>
 
 
+        <!-- BOOK REVIEW REACTIONS -->
+        <section class="article-reactions" aria-label="Book review reactions">
+          <h2>What did you think of this book review?</h2>
+          <p class="reaction-subtitle">I'd love to know what stayed with you.</p>
+
+          <div class="reaction-buttons">
+            <button type="button" class="reaction-btn" data-reaction="thoughtful">
+              <span class="reaction-emoji">💡</span>
+              <span>Thoughtful</span>
+              <span class="reaction-count" data-count="thoughtful">0</span>
+            </button>
+
+            <button type="button" class="reaction-btn" data-reaction="enjoyed">
+              <span class="reaction-emoji">❤️</span>
+              <span>Enjoyed it</span>
+              <span class="reaction-count" data-count="enjoyed">0</span>
+            </button>
+
+            <button type="button" class="reaction-btn" data-reaction="helpful">
+              <span class="reaction-emoji">👍</span>
+              <span>Helpful</span>
+              <span class="reaction-count" data-count="helpful">0</span>
+            </button>
+          </div>
+
+          <p class="reaction-message" aria-live="polite"></p>
+        </section>
+        <!-- END BOOK REVIEW REACTIONS -->
+
         <!-- PREVIOUS / NEXT -->
 
         <div class="single-book-navigation">
@@ -387,38 +416,7 @@
 
 
 
-    <!-- =====================================================
-         COMMENTS
-         ===================================================== -->
-
-    <section
-      class="single-book-comments comments-section"
-      aria-label="Comments"
-    >
-
-      <div class="comments-header">
-
-        <h2>
-          Comments
-        </h2>
-
-        <p>
-          What did you think? I’d love to hear from you.
-        </p>
-
-      </div>
-
-
-      <div
-        id="cusdis_thread"
-        data-host="https://cusdis.com"
-        data-app-id="53edd7b4-beea-4e0d-b392-b9beb1cab6c3"
-        data-page-id="kin"
-        data-page-url="https://srijanagautam.com/books/kin.html"
-        data-page-title="Kin"
-        data-theme="light"
-      ></div>
-
+   
     </section>
 
   </div>
@@ -538,24 +536,146 @@
       });
 
 
-    /* CUSDIS */
+    
+    /*
+     * Book review reactions
+     */
+    const REACTIONS_API =
+      "https://young-firefly-ac88.srijana-thinks.workers.dev";
 
-    const cusdisScript =
-      document.createElement("script");
+    const reactionSection =
+      document.querySelector(".article-reactions");
 
-    cusdisScript.src =
-      "https://cusdis.com/js/cusdis.es.js";
+    if (reactionSection) {
+      const reactionMessage =
+        reactionSection.querySelector(".reaction-message");
 
-    document.body.appendChild(cusdisScript);
+      const buttons =
+        reactionSection.querySelectorAll(".reaction-btn");
+
+      const storageKey = "book-reaction-" + bookSlug;
+
+      let alreadyReacted = false;
+
+      try {
+        alreadyReacted = Boolean(localStorage.getItem(storageKey));
+      } catch (error) {
+        console.warn("Browser storage is unavailable.");
+      }
+
+      function displayBookReactionCounts(counts) {
+        for (const type of ["thoughtful", "enjoyed", "helpful"]) {
+          const countElement = reactionSection.querySelector(
+            '[data-count="' + type + '"]'
+          );
+
+          if (countElement) {
+            countElement.textContent = counts[type] ?? 0;
+          }
+        }
+      }
+
+      function updateBookReactionButtons() {
+        let savedReaction = null;
+
+        try {
+          savedReaction = localStorage.getItem(storageKey);
+        } catch (error) {}
+
+        buttons.forEach(button => {
+          button.disabled = alreadyReacted;
+          button.classList.toggle(
+            "reaction-selected",
+            button.dataset.reaction === savedReaction
+          );
+        });
+      }
+
+      fetch(
+        REACTIONS_API + "?slug=" + encodeURIComponent(bookSlug)
+      )
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Could not load reaction counts.");
+          }
+          return response.json();
+        })
+        .then(data => {
+          displayBookReactionCounts(data.counts);
+          updateBookReactionButtons();
+        })
+        .catch(error => {
+          console.error("Book reaction counts could not be loaded:", error);
+          reactionMessage.textContent =
+            "Reactions are temporarily unavailable.";
+        });
+
+      buttons.forEach(button => {
+        button.addEventListener("click", async () => {
+          if (alreadyReacted) return;
+
+          const reaction = button.dataset.reaction;
+
+          buttons.forEach(item => {
+            item.disabled = true;
+          });
+
+          reactionMessage.textContent = "Saving your reaction…";
+
+          try {
+            const response = await fetch(REACTIONS_API, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                slug: bookSlug,
+                reaction: reaction
+              })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+              throw new Error(
+                data.error || "Reaction could not be saved."
+              );
+            }
+
+            displayBookReactionCounts(data.counts);
+            alreadyReacted = true;
+
+            try {
+              localStorage.setItem(storageKey, reaction);
+            } catch (error) {
+              console.warn("Could not remember this reaction in this browser.");
+            }
+
+            updateBookReactionButtons();
+
+            reactionMessage.textContent =
+              "Thank you for sharing your thoughts!";
+          } catch (error) {
+            console.error("Could not save book reaction:", error);
+
+            buttons.forEach(item => {
+              item.disabled = false;
+            });
+
+            reactionMessage.textContent =
+              "Sorry, your reaction could not be saved. Please try again.";
+          }
+        });
+      });
+    }
 
   </script>
- <!-- Cloudflare Web Analytics -->
-  <script
-    type="module"
-    src="https://static.cloudflareinsights.com/beacon.min.js"
-    data-cf-beacon='{"token": "<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f02dd259e66b4dcc94e9c5cb2f06e2c6"}'></script>"}'
-  ></script>
-  <!-- End Cloudflare Web Analytics -->
+  <!-- Cloudflare Web Analytics -->
+<script defer
+  src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token": "f02dd259e66b4dcc94e9c5cb2f06e2c6"}'>
+</script>
+<!-- End Cloudflare Web Analytics -->
 
 
 </body>
