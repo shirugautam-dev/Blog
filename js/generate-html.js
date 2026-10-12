@@ -393,7 +393,7 @@ function generateHTML(article) {
 
         <!-- =========================
              COMMENTS
-             ========================= -->
+             ========================= 
 
         <section
           class="comments-section"
@@ -410,11 +410,11 @@ function generateHTML(article) {
               What did you think? I’d love to hear from you.
             </p>
 
-          </div>
+          </div> 
 
 
           
-        </section>
+        </section> -->
 
 
       </main>
