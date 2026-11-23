@@ -24,6 +24,25 @@ a {
   transition: color 0.2s ease;
 }
 
+.homepage-welcome h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-style: italic;
+  color: rgb(41, 75, 115);
+  margin: 0px;
+}
+
+h1 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -104,6 +123,10 @@ a {
   .article-body h3 {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .book-cover-wrapper {
+    width: 105px;
   }
 }
 
@@ -2559,6 +2582,9 @@ body.dark #bookSearchInput::placeholder {
     font-size: 11px;
   }
 
+  .book-cover-wrapper {
+    width: 90px;
+  }
 }
 
 .nav-brand {
@@ -2669,11 +2695,11 @@ body.dark .nav-brand {
 }
 
 #article-content h1 {
-  font-family: ui-rounded;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 40px;
   line-height: 1.08;
   font-weight: 600;
-  color: #172333;
+  color: #294b73;
   margin: 0 0 18px;
   text-align: left;
 }
@@ -2716,6 +2742,18 @@ body.dark .nav-brand {
 #article-content p {
   margin: 0 0 1.5em;
 }
+
+/* Article subtitle 
+#article-content h2:first-of-type {
+  font-style: italic;
+  font-weight: 400;
+  color: #718096;
+  margin-top: 0;
+}
+
+body.dark #article-content h2:first-of-type {
+  color: #D7D7D7;
+} */
 
 #article-content h2 {
   font-family: Georgia, "Times New Roman", serif;
@@ -4057,4 +4095,62 @@ body.dark .floating-subscribe-text {
     padding: 9px 11px;
     font-size: 0.82rem;
   }
+}
+
+/* Internal links within article content */
+#article-content a {
+  color: #2878a8;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  /*  font-weight: 600; */
+  transition: color 0.2s ease;
+}
+
+/* Keep visited links the same colour */
+#article-content a:visited {
+  color: #2878a8;
+}
+
+/* Hover effect */
+#article-content a:hover {
+  color: #174f73;
+  text-decoration-thickness: 2px;
+}
+
+.article-subtitle {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.45rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #718096;
+  line-height: 1.5;
+  margin: 0 0 28px;
+}
+
+body.dark .article-subtitle {
+  color: #D7D7D7;
+}
+
+.book-cover-wrapper {
+  width: 125px;
+}
+
+.book-cover-credit {
+  margin: 7px 0 0;
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  color: #888;
+}
+
+.book-cover-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.book-cover-credit a:hover {
+  color: #294b73;
 }
