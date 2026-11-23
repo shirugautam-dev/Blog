@@ -10,6 +10,10 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
+  <link
+    rel="canonical"
+    href="https://srijanagautam.com/books/the-answer-is-no.html"
+>
 
   <title>
     The Answer Is No | Srijana Gautam
@@ -17,8 +21,8 @@
 
   <meta
     name="description"
-    content="My review of The Answer Is No by Fredrik Backman."
-  >
+    content="Explores boundaries, personal space and our relationship with the word “no”."
+    >
 
   <meta
     property="og:title"
@@ -27,7 +31,7 @@
 
   <meta
     property="og:description"
-    content="My review of The Answer Is No by Fredrik Backman."
+    content="Explores boundaries, personal space and our relationship with the word “no”."
   >
 
   <meta
@@ -198,6 +202,9 @@
           src="https://covers.openlibrary.org/b/isbn/1662526520.jpg"
           alt="The Answer Is No book cover"
           class="single-book-cover"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         >
 
 
@@ -503,11 +510,23 @@
 
       .then(markdown => {
 
-        document.querySelector(
-          "#book-review-content"
-        ).innerHTML = marked.parse(markdown);
+  const reviewContent = document.querySelector(
+    "#book-review-content"
+  );
 
-      })
+  reviewContent.innerHTML = marked.parse(markdown);
+
+  // Optimise images inside the review
+  const reviewImages = reviewContent.querySelectorAll("img");
+
+  reviewImages.forEach(img => {
+
+    img.loading = "lazy";
+    img.decoding = "async";
+
+  });
+
+})
 
       .catch(error => {
 

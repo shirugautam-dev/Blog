@@ -10,6 +10,10 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
+  <link
+    rel="canonical"
+    href="https://srijanagautam.com/books/mother-mary-comes-to-me.html"
+>
 
   <title>
     Mother Mary Comes To Me | Srijana Gautam
@@ -17,8 +21,8 @@
 
   <meta
     name="description"
-    content="My review of Mother Mary Comes To Me by Arundhati Roy."
-  >
+    content="A brutally honest and beautifully written memoir of the author’s journey from escaping her fierce mother to finding her own political consciousness."
+    >
 
   <meta
     property="og:title"
@@ -27,7 +31,7 @@
 
   <meta
     property="og:description"
-    content="My review of Mother Mary Comes To Me by Arundhati Roy."
+    content="A brutally honest and beautifully written memoir of the author’s journey from escaping her fierce mother to finding her own political consciousness."
   >
 
   <meta
@@ -198,6 +202,9 @@
           src="https://covers.openlibrary.org/b/isbn/9780241761724.jpg"
           alt="Mother Mary Comes To Me book cover"
           class="single-book-cover"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         >
 
 
@@ -518,11 +525,23 @@
 
       .then(markdown => {
 
-        document.querySelector(
-          "#book-review-content"
-        ).innerHTML = marked.parse(markdown);
+  const reviewContent = document.querySelector(
+    "#book-review-content"
+  );
 
-      })
+  reviewContent.innerHTML = marked.parse(markdown);
+
+  // Optimise images inside the review
+  const reviewImages = reviewContent.querySelectorAll("img");
+
+  reviewImages.forEach(img => {
+
+    img.loading = "lazy";
+    img.decoding = "async";
+
+  });
+
+})
 
       .catch(error => {
 
