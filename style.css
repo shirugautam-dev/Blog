@@ -4154,3 +4154,10 @@ body.dark .article-subtitle {
 .book-cover-credit a:hover {
   color: #294b73;
 }
+
+.article-author {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
