@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const books = require("./books-data.js");
+const articles = require("./articles-data.js");
 
 const outputDir = path.join(__dirname, "..", "books");
 
@@ -790,3 +791,55 @@ books.forEach(book => {
 console.log(
   "✅ All book review pages generated!"
 );
+
+
+/* =========================================================
+   GENERATE XML SITEMAP
+   ========================================================= */
+
+function escapeSitemapXML(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+function generateSitemap() {
+
+  const siteUrl = "https://srijanagautam.com";
+
+  const pages = [
+    "/",
+    "/about.html",
+    "/articles-list.html",
+    "/book-reviews.html"
+  ];
+
+  articles.forEach(article => {
+    pages.push(`/htmls/${article.slug}.html`);
+  });
+
+  books.forEach(book => {
+    pages.push(`/books/${book.slug}.html`);
+  });
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(url => `
+  <url>
+    <loc>${escapeSitemapXML(siteUrl + url)}</loc>
+  </url>
+`).join("")}
+</urlset>`;
+
+  const outputPath = path.join(__dirname, "..", "sitemap.xml");
+
+  fs.writeFileSync(outputPath, sitemap, "utf8");
+
+  console.log("✅ Sitemap generated successfully!");
+  console.log(`Total URLs: ${pages.length}`);
+}
+
+generateSitemap();

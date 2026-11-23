@@ -33,12 +33,17 @@ function createBookCard(book) {
     book.coverImage || "Images/books/default-cover.jpg";
 
   article.innerHTML = `
+   <div class="book-cover-wrapper">
     <img
-      src="${coverImgSrc}"
-      alt="${book.title} Cover"
-      class="book-card-cover"
+        src="${coverImgSrc}"
+        alt="${book.title} Cover"
+        class="book-card-cover"
     >
-
+    <p class="book-cover-credit">
+        From <a href="https://openlibrary.org/"
+        target="_blank" rel="noopener noreferrer">Open Library</a>
+    </p>
+</div>
     <div class="book-card-info">
 
       <h2 class="book-title">

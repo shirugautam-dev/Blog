@@ -1,5 +1,19 @@
 const articlesData = [
   {
+    title: "Is Happiness the Goal? I Doubt.",
+    excerpt: "Achieving more doesn’t make us happier. Knowing when enough is enough probably does.",
+    slug: "happiness",
+    date: "2026-11-11",
+    thumbnail: "Images/articles/happiness.jpg"
+  },
+  {
+    title: "Carl Jung’s Synchronicity Gave Me an Eerie Feeling",
+    excerpt: "Three coincidences in two weeks. Mathematics, psychology and Carl Jung. All fail to convince me!",
+    slug: "synchronicity",
+    date: "2026-10-29",
+    thumbnail: "Images/articles/synchronicity.jpg"
+  },
+  {
     title: "Am I Drinking the Hype?",
     excerpt: "Protein Powder: Is it the need or the taste? I’m still trying to figure out.",
     slug: "protein",

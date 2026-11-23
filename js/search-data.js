@@ -1,10 +1,24 @@
 const searchData = [
     {
         type: "article",
+        title: "Is Happiness the Goal? I Doubt.",
+        description: "Achieving more doesn’t make us happier. Knowing when enough is enough probably does.",
+        url: "/htmls/happiness.html",
+        keywords: "happiness happy goal"
+    },
+    {
+        type: "article",
+        title: "Carl Jung’s Synchronicity Gave Me an Eerie Feeling",
+        description: "Three coincidences in two weeks. Mathematics, psychology and Carl Jung. All fail to convince me!",
+        url: "/htmls/synchronicity.html",
+        keywords: "Carl Synchronicity coincidence"
+    },
+    {
+        type: "article",
         title: "Am I Drinking the Hype?",
         description: "Protein Powder: Is it the need or the taste? I’m still trying to figure out.",
         url: "/htmls/protein.html",
-        keywords: "protein plant whey yeast exercise"
+        keywords: "protein plant whey yeast exercise gym"
     },
     {
         type: "article",
@@ -167,30 +181,37 @@ const searchData = [
         url: "/htmls/menopause.html",
         keywords: "memopause symptoms struggles"
     },
+    // ====Book reviews start====
+    {
+        type: "book",
+        title: "London Falling",
+        author: "Patrick Radden Keefe",
+        url: "/books/london-falling.html"
+    },
     {
         type: "book",
         title: "Atmosphere",
         author: "Taylor Jenkins Reid",
         url: "/books/atmosphere.html"
     },
-    {
-        type: "book",
-        title: "The Forty Rules of Love",
-        author: "Elif Shafak",
-        url: "/books/the-forty-rules-of-love.html"
-    },
-    {
-        type: "book",
-        title: "Kin",
-        author: "Tayari Jones",
-        url: "/books/kin.html"
-    },
-    {
-        type: "book",
-        title: "Beartown",
-        author: "Fredrik Backman",
-        url: "/books/beartown.html"
-    },
+    // {
+    //     type: "book",
+    //     title: "The Forty Rules of Love",
+    //     author: "Elif Shafak",
+    //     url: "/books/the-forty-rules-of-love.html"
+    // },
+    // {
+    //     type: "book",
+    //     title: "Kin",
+    //     author: "Tayari Jones",
+    //     url: "/books/kin.html"
+    // },
+    // {
+    //     type: "book",
+    //     title: "Beartown",
+    //     author: "Fredrik Backman",
+    //     url: "/books/beartown.html"
+    // },
     {
         type: "book",
         title: "Evidence of the Affair",
@@ -203,29 +224,36 @@ const searchData = [
         author: "Arundhati Roy",
         url: "/books/mother-mary-comes-to-me.html"
     },
-    {
-        type: "book",
-        title: "On Earth We Are Briefly Gorgeous",
-        author: "Ocean Vuong",
-        url: "/books/on-earth-we-are-briefly-gorgeous.html"
-    },
+    // {
+    //     type: "book",
+    //     title: "On Earth We Are Briefly Gorgeous",
+    //     author: "Ocean Vuong",
+    //     url: "/books/on-earth-we-are-briefly-gorgeous.html"
+    // },
     {
         type: "book",
         title: "The Answer Is No",
         author: "Fredrik Backman",
         url: "/books/the-answer-is-no.html"
     },
+    // {
+    //     type: "book",
+    //     title: "Whistler",
+    //     author: "Ann Patchett",
+    //     url: "/books/whistler.html"
+    // },
+    // {
+    //     type: "book",
+    //     title: "Anxious People",
+    //     author: "Fredrik Backman",
+    //     url: "/books/anxious-people.html"
+    // }
     {
         type: "book",
-        title: "Whistler",
-        author: "Ann Patchett",
-        url: "/books/whistler.html"
+        title: "The Castle",
+        author: "Jon Ronson",
+        url: "/books/the-castle.html"
     },
-    {
-        type: "book",
-        title: "Anxious People",
-        author: "Fredrik Backman",
-        url: "/books/anxious-people.html"
-    }
+
 
 ];
