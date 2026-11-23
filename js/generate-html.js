@@ -45,7 +45,25 @@ function generateHTML(article) {
         day: "numeric"
       }
     );
-
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": article.title,
+    "description": article.excerpt,
+    "image": [
+      `https://srijanagautam.com/${article.thumbnail}`
+    ],
+    "datePublished": article.date,
+    "author": {
+      "@type": "Person",
+      "name": "Srijana Gautam",
+      "url": "https://srijanagautam.com/about.html"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": pageUrl
+    }
+  };
 
   return `<!DOCTYPE html>
 
@@ -59,13 +77,16 @@ function generateHTML(article) {
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-
+    <link
+    rel="canonical"
+    href="${pageUrl}"
+>
   <link
     rel="icon"
     href="../favicon.ico"
   >
 
-  <title>${escapeHTML(article.title)}</title>
+  <title>${escapeHTML(article.title)} | Srijana Gautam</title>
 
   <meta
     name="description"
@@ -96,6 +117,9 @@ function generateHTML(article) {
     property="og:type"
     content="article"
   >
+  <script type="application/ld+json">
+${JSON.stringify(articleSchema).replace(/</g, "\\u003c")}
+</script>
 
   <link
     rel="stylesheet"
@@ -316,8 +340,8 @@ function generateHTML(article) {
       <main class="article-main">
 
         <div id="article-content">
-          Loading article...
-        </div>
+  Loading article...
+</div>
 
 
         <!-- =========================
@@ -576,7 +600,7 @@ function generateHTML(article) {
         document.getElementById(
           "article-content"
         ).innerHTML = html;
-
+        
 
         /*
          * Reading time
@@ -591,23 +615,70 @@ const articleContent =
     "article-content"
   );
       
+  // Add author byline below the article title
+const articleHeading =
+  articleContent.querySelector("h1");
+
+if (articleHeading) {
+  const authorByline =
+    document.createElement("p");
+
+  authorByline.className = "article-author";
+  authorByline.textContent = "By Srijana Gautam";
+
+  articleHeading.insertAdjacentElement(
+    "afterend",
+    authorByline
+  );
+}
 
         /*
-         * Make the first image the
-         * article hero image.
-         */
+ * Optimise article images
+ */
 
-        const firstImage =
-          articleContent.querySelector("img");
+// Store image dimensions here.
+// Add entries for other images as we inspect them.
+const imageDimensions = {
+  "../Images/articles/aging.jpg": {
+    width: 1200,
+    height: 800
+  }
+};
 
+const articleImages =
+  articleContent.querySelectorAll("img");
 
-        if (firstImage) {
+articleImages.forEach((img, index) => {
 
-          firstImage.classList.add(
-            "article-hero-image"
-          );
+  // Improve image decoding
+  img.decoding = "async";
 
-        }
+  // First image is the hero image
+  if (index === 0) {
+
+    img.classList.add("article-hero-image");
+    img.loading = "eager";
+    img.fetchPriority = "high";
+
+  } else {
+
+    // Images further down the article
+    img.loading = "lazy";
+
+  }
+
+  // Set intrinsic dimensions when available
+  const dimensions =
+    imageDimensions[img.getAttribute("src")];
+
+  if (dimensions) {
+
+    img.width = dimensions.width;
+    img.height = dimensions.height;
+
+  }
+
+});
 
 
         /*

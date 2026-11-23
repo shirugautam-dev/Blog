@@ -15,8 +15,7 @@ if (container && articles.length) {
 
   container.innerHTML = "";
 
-  paginatedArticles.forEach(article => {
-
+  paginatedArticles.forEach((article, index) => {
     const post = document.createElement("article");
     post.className = "srijana-post";
 
@@ -32,11 +31,14 @@ if (container && articles.length) {
     post.innerHTML = `
       <div class="article-card-content">
 
-        <img
-          src="${article.thumbnail}"
-          alt="${article.title}"
-          class="article-thumbnail"
-        >
+       <img
+  src="${article.thumbnail}"
+  alt="${article.title}"
+  class="article-thumbnail"
+  loading="${index === 0 ? "eager" : "lazy"}"
+  fetchpriority="${index === 0 ? "high" : "auto"}"
+  decoding="async"
+>
 
         <div class="article-card-text">
 

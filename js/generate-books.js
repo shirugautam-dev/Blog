@@ -4,6 +4,16 @@ const books = require("./books-data.js");
 const articles = require("./articles-data.js");
 
 const outputDir = path.join(__dirname, "..", "books");
+// Escape special HTML characters
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[char]);
+}
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
@@ -79,6 +89,10 @@ function generateHTML(book) {
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
+  <link
+    rel="canonical"
+    href="${pageUrl}"
+>
 
   <title>
     ${book.title} | Srijana Gautam
@@ -86,8 +100,8 @@ function generateHTML(book) {
 
   <meta
     name="description"
-    content="My review of ${book.title} by ${book.author}."
-  >
+    content="${escapeHTML(book.teaser || `A personal review of ${book.title} by ${book.author}.`)}"
+    >
 
   <meta
     property="og:title"
@@ -96,7 +110,7 @@ function generateHTML(book) {
 
   <meta
     property="og:description"
-    content="My review of ${book.title} by ${book.author}."
+    content="${escapeHTML(book.teaser || `A personal review of ${book.title} by ${book.author}.`)}"
   >
 
   <meta
@@ -267,6 +281,9 @@ function generateHTML(book) {
           src="${book.coverImage}"
           alt="${book.title} book cover"
           class="single-book-cover"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         >
 
 
@@ -599,11 +616,23 @@ function generateHTML(book) {
 
       .then(markdown => {
 
-        document.querySelector(
-          "#book-review-content"
-        ).innerHTML = marked.parse(markdown);
+  const reviewContent = document.querySelector(
+    "#book-review-content"
+  );
 
-      })
+  reviewContent.innerHTML = marked.parse(markdown);
+
+  // Optimise images inside the review
+  const reviewImages = reviewContent.querySelectorAll("img");
+
+  reviewImages.forEach(img => {
+
+    img.loading = "lazy";
+    img.decoding = "async";
+
+  });
+
+})
 
       .catch(error => {
 

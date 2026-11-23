@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const booksToDisplay = filteredBooks.slice(startIndex, endIndex);
 
-    booksToDisplay.forEach(book => {
-      bookList.appendChild(createBookCard(book));
+    booksToDisplay.forEach((book, index) => {
+      bookList.appendChild(createBookCard(book, index));
     });
     // Build the "Reviews on this page" list
     if (bookPageIndex) {

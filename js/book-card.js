@@ -25,7 +25,7 @@ function createStars(rating) {
   `;
 }
 
-function createBookCard(book) {
+function createBookCard(book, index = 0) {
   const article = document.createElement("article");
   article.className = "book-card";
 
@@ -35,10 +35,13 @@ function createBookCard(book) {
   article.innerHTML = `
    <div class="book-cover-wrapper">
     <img
-        src="${coverImgSrc}"
-        alt="${book.title} Cover"
-        class="book-card-cover"
-    >
+  src="${coverImgSrc}"
+  alt="${book.title} book cover"
+  class="book-card-cover"
+  loading="${index === 0 ? "eager" : "lazy"}"
+  fetchpriority="${index === 0 ? "high" : "auto"}"
+  decoding="async"
+>
     <p class="book-cover-credit">
         From <a href="https://openlibrary.org/"
         target="_blank" rel="noopener noreferrer">Open Library</a>

@@ -22,7 +22,7 @@ const articlesData = [
   },
   {
     title: "Why Insomniacs Must Read at Night",
-    excerpt: "Reading at night has calmed my mind and help me fall asleep.",
+    excerpt: "How reading before bed helps calm a restless mind and makes sleepless nights a little easier.",
     slug: "reading",
     date: "2026-09-11",
     thumbnail: "Images/articles/reading.jpg"
@@ -64,7 +64,7 @@ const articlesData = [
   },
   {
     title: "We Have Johatsu Everywhere",
-    excerpt: "What makes someone leave everything behind? A thoughtful exploration of voluntary disappearance and personal freedom.",
+    excerpt: "Exploring Johatsu, the Japanese phenomenon of people who voluntarily disappear, and what it reveals about freedom, escape and starting over.",
     slug: "johatsu",
     date: "2026-06-09",
     thumbnail: "Images/articles/johatsu.jpg"
@@ -92,7 +92,7 @@ const articlesData = [
   },
   {
     title: "The Strange Comfort of Keeping Busy",
-    excerpt: "The Strange Comfort of Keeping Busy On leaving a job, filling the silence, and what I found when I stopped.",
+    excerpt: "A personal reflection on leaving a job, filling the silence with activity, and discovering what happens when we finally slow down.",
     slug: "busyness",
     date: "2026-04-24",
     thumbnail: "Images/articles/busyness.jpg"
@@ -164,14 +164,14 @@ const articlesData = [
 
   {
     title: "From Good to Real: The Story of the New Indian Woman",
-    excerpt: "How Choice, Not Obedience, Defines Her.",
+    excerpt: "How the expectations placed on Indian women are changing, and why choice, independence and self-expression matter more than obedience.",
     slug: "new-indian-woman",
     date: "2025-10-18",
     thumbnail: "Images/articles/indian_women.jpg"
   },
   {
     title: "Growing Up with My 20-Year-Old",
-    excerpt: "Lessons in Love, Letting Go, and Late-Night Biryani",
+    excerpt: "A personal essay about motherhood, growing alongside an adult child, learning to let go and finding unexpected joy in everyday moments.",
     slug: "growing-up",
     date: "2025-10-11",
     thumbnail: "Images/articles/twenty.jpg"
