@@ -77,6 +77,46 @@ function generateHTML(book) {
       : null;
 
 
+  // Structured data for the book review
+  const reviewDate = book.reviewed
+    ? new Date(book.reviewed)
+    : null;
+
+  const datePublished =
+    reviewDate && !Number.isNaN(reviewDate.getTime())
+      ? reviewDate.toISOString().slice(0, 10)
+      : undefined;
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": `${book.title} – Book Review`,
+    "description": book.teaser,
+    "datePublished": datePublished,
+    "author": {
+      "@type": "Person",
+      "name": "Srijana Gautam",
+      "url": "https://srijanagautam.com/about.html"
+    },
+    "itemReviewed": {
+      "@type": "Book",
+      "name": book.title,
+      "author": {
+        "@type": "Person",
+        "name": book.author
+      },
+      "image": book.coverImage,
+      "genre": book.genre,
+      "numberOfPages": book.pages
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": pageUrl
+    }
+  };
+
+
+
   return `<!DOCTYPE html>
 
 <html lang="en">
@@ -128,6 +168,12 @@ function generateHTML(book) {
     content="article"
   >
 
+
+<script type="application/ld+json">
+${JSON.stringify(reviewSchema).replace(/</g, "\\u003c")}
+</script>
+
+
   <link
     rel="icon"
     href="../favicon.ico"
@@ -158,6 +204,18 @@ function generateHTML(book) {
     rel="stylesheet"
     href="../style.css"
   >
+
+
+  <style>
+    .medium-source-link {
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .medium-source-link a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  </style>
 
 </head>
 
@@ -408,9 +466,9 @@ function generateHTML(book) {
         </div>
 
 
-        <h2 class="single-book-main-title">
+        <h1 class="single-book-main-title">
           ${book.title}
-        </h2>
+        </h1>
 
 
         <p class="single-book-main-author">
@@ -429,6 +487,15 @@ function generateHTML(book) {
 
         </div>
 
+        ${book.mediumUrl
+          ? `<p class="medium-source-link">
+               <a href="${escapeHTML(book.mediumUrl)}"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                 Read this review on Medium ↗
+               </a>
+             </p>`
+          : ""}
 
         <!-- BOOK REVIEW REACTIONS -->
         <section class="article-reactions" aria-label="Book review reactions">

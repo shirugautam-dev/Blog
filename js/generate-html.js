@@ -136,6 +136,18 @@ ${JSON.stringify(articleSchema).replace(/</g, "\\u003c")}
     rel="stylesheet"
   >
 
+
+  <style>
+    .medium-source-link {
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .medium-source-link a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -343,6 +355,15 @@ ${JSON.stringify(articleSchema).replace(/</g, "\\u003c")}
   Loading article...
 </div>
 
+        ${article.mediumUrl
+          ? `<p class="medium-source-link">
+               <a href="${escapeHTML(article.mediumUrl)}"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                 Read this article on Medium ↗
+               </a>
+             </p>`
+          : ""}
 
         <!-- =========================
              ARTICLE NAVIGATION
